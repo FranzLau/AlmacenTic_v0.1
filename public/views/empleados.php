@@ -15,35 +15,34 @@
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
     <!-- Page Wrapper -->
     <div id="wrapper">
-      <?php include("../include/sidebar.php"); ?>
-
       <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content-wrapper" class="d-flex flex-column vh-100">
 
         <!-- Main Content -->
         <div id="content">
-          <?php include("../include/topbar.php"); ?>
+          <?php include("../include/navbar.php"); ?>
 
           <!-- Begin Page Content -->
-          <div class="container-fluid">
-
-            <!-- Page Heading -->
-            <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-5">
-              <h1 class="h3 mb-0 text-gray-800">Empleados</h1>
-              <button class="d-none d-sm-inline-block btn btn-success btn-sm btn-icon-split" data-toggle="modal" data-target="#modalNuevoEmpleado">
-                <span class="icon text-white-50">
-                  <i class="fas fa-plus fa-sm"></i>
-                </span>
-                <span class="text">Agregar Empleado</span>
-              </button>
-            </div>
+          <div class="container">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+                <li class="breadcrumb-item"><a href="#">Empleados</a></li>
+              </ol>
+            </nav>
 
             <!-- Page Lista de Empleados -->
-            <div class="row mt-3">
+            <div class="row">
               <div class="col-sm-12">
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
+                <div class="card shadow">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-list mr-2"></i>Lista de Empleados</h6>
+                    <button class="d-none d-sm-inline-block btn btn-success btn-sm btn-icon-split" data-toggle="modal" data-target="#modalNuevoEmpleado">
+                      <span class="icon text-white-50">
+                        <i class="fas fa-plus fa-sm"></i>
+                      </span>
+                      <span class="text">Agregar</span>
+                    </button>
                   </div>
                   <div class="card-body">
                     <!-- ************* TARJETA CON TABLA ***************** -->
@@ -59,13 +58,8 @@
           </div>
         </div>
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2019</span>
-            </div>
-          </div>
-        </footer>
+        <?php include('../include/footer.php'); ?>
+        <!-- End of Footer -->
         <!-- End of Footer -->
 
       </div>

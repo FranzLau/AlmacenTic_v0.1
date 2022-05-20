@@ -17,24 +17,23 @@
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
     <!-- Page Wrapper -->
     <div id="wrapper">
-      <?php include("../include/sidebar.php"); ?>
 
       <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content-wrapper" class="d-flex flex-column vh-100">
 
         <!-- Main Content -->
         <div id="content">
-          <?php include("../include/topbar.php"); ?>
+          <?php include("../include/navbar.php"); ?>
 
           <!-- Begin Page Content -->
-          <div class="container-fluid">
+          <div class="container">
 
-            <!-- Page Heading -->
-            <div class="row mt-5">
-              <div class="col-12 text-left">
-                <h1 class="h3 mb-0 text-gray-800">SECCION CONTRATOS</h1>
-              </div>
-            </div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+                <li class="breadcrumb-item"><a href="#">Contratos</a></li>
+              </ol>
+            </nav>
 
             <!-- Content Row -->
             <div class="row mt-4">
@@ -93,6 +92,9 @@
             </div>
           </div>
         </div>
+        <!-- Footer -->
+        <?php include('../include/footer.php'); ?>
+        <!-- End of Footer -->
       </div>
     </div>
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->

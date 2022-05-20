@@ -15,26 +15,24 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-      <?php include("../include/sidebar.php"); ?>
-
       <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content-wrapper" class="d-flex flex-column vh-100">
 
         <!-- Main Content -->
         <div id="content">
 
-          <?php include("../include/topbar.php"); ?>
+          <?php include("../include/navbar.php"); ?>
 
           <!-- Begin Page Content -->
-          <div class="container-fluid">
+          <div class="container">
 
-            <!-- Page Heading -->
-            <div class="row">
-              <div class="col-sm-12">
-                <h1 class="h3 mb-2 text-gray-800">Categorias</h1>
-                <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
-              </div>
-            </div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Almacén</li>
+                <li class="breadcrumb-item active" aria-current="page">Equipos</li>
+                <li class="breadcrumb-item"><a href="#">Categorias</a></li>
+              </ol>
+            </nav>
 
             <!-- Content Row -->
             <div class="row">
@@ -89,6 +87,9 @@
           </div>
         </div>
         <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+        <!-- Footer -->
+        <?php include('../include/footer.php'); ?>
+        <!-- End of Footer -->
       </div>
       <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
     </div>

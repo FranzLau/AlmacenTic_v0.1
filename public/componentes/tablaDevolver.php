@@ -2,7 +2,7 @@
   require '../../config/conexion.php';
   require '../../config/data.php';
   $obj = new data();
-  $sql = $con->query("SELECT * FROM movimiento GROUP BY id_move");
+  $sql = $con->query("SELECT * FROM movimiento GROUP BY id_movimiento");
  ?>
 <div class="table-responsive">
   <table class="table table-sm table-hover datatable-wide" id="tableMovimiento" width="100%" cellspacing="0">

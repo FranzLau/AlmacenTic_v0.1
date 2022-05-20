@@ -2,10 +2,10 @@
   require '../../config/conexion.php';
   require '../../config/data.php';
   $obj = new data();
-  $sql = $con->query("SELECT * FROM asignacion GROUP BY id_asig");
+  $sql = $con->query("SELECT * FROM movimiento GROUP BY id_movimiento");
  ?>
 <div class="table-responsive">
-  <table class="table table-sm table-hover datatable-wide" id="tableAssignment" width="100%" cellspacing="0">
+  <table class="table table-sm table-hover datatable-wide" id="tablaAsignar" width="100%" cellspacing="0">
     <thead class="bg-white">
       <tr>
         <th>FOLIO</th>
@@ -45,7 +45,7 @@
 </div>
 <script>
   $(document).ready(function() {
-    $('#tableAssignment').DataTable({
+    $('#tablaAsignar').DataTable({
       "language": {
         "lengthMenu": "Mostrar _MENU_ registros por página",
         "zeroRecords": "Nada encontrado, lo siento!",

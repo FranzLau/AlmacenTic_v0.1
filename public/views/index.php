@@ -14,21 +14,18 @@
 
   <!-- Page Wrapper -->
   <div id="wrapper">
-    <?php include("../include/sidebar.php"); ?>
+    
 
     <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content-wrapper" class="d-flex flex-column vh-100">
 
       <!-- Main Content -->
       <div id="content">
 
-        <?php include("../include/topbar.php"); ?>
+        <?php include("../include/navbar.php"); ?>
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
-
-
-
+        <div class="container">
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">

@@ -44,8 +44,9 @@ if(isset($_SESSION['loginUser'])){
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center mb-5">
-                    <h1 class="h4 text-gray-900 mb-4">SIDCED</h1>
-                    <p>SISTEMA DIGITAL DE CONTROL DE EQUIPOS DIGITAL</p>
+                    
+                    <h1 class="h3 text-primary mb-4"><i class="fas fa-bolt mr-2"></i>Electrosur</h1>
+                    <p>SISTEMA DE CONTROL DE EQUIPOS DIGITAL</p>
                   </div>
                   <form class="user">
                     <div class="form-group">

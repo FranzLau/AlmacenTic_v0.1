@@ -12,27 +12,27 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-      <?php include("../include/sidebar.php"); ?>
-
       <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content-wrapper" class="d-flex flex-column vh-100">
 
         <!-- Main Content -->
         <div id="content">
 
-          <?php include("../include/topbar.php"); ?>
+          <?php include("../include/navbar.php"); ?>
 
           <!-- Begin Page Content -->
-          <div class="container-fluid">
+          <div class="container">
 
-            <!-- Page Heading -->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Movimientos</li>
+                <li class="breadcrumb-item"><a href="#">Asignación</a></li>
+              </ol>
+            </nav>
 
-            <div class="row mt-5">
-              <div class="col-6 text-left">
-                <h1 class="h3 mb-0 text-gray-800">Asignación de Equipo</h1>
-              </div>
-              <div class="col-6">
-                <ul class="nav nav-pills nav-pills-primary justify-content-end" id="pills-tab" role="tablist">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="nav nav-pills nav-pills-primary" id="pills-tab" role="tablist">
                   <li class="nav-item">
                     <a class="nav-link active" id="pills-list-tab" data-toggle="pill" href="#pills-list" role="tab" aria-controls="pills-list" aria-selected="true"><i class="fas fa-list mr-2 fa-sm"></i>Listado de Asignaciones</a>
                   </li>
@@ -57,7 +57,7 @@
                         <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-desktop mr-2"></i>Lista de Asignaciones</h6>
                       </div>
                       <div class="card-body">
-                        <div id="tableAsig"></div>
+                        <div id="tablaAsignas"></div>
                       </div>
                     </div>
 
@@ -156,14 +156,7 @@
                                     <div class="col-sm-10">
                                       <select class="form-control form-control-sm" id="newAsigContrat" name="newAsigContrat" style="width:100%" disabled>
                                         <option value="">Pertenece a...</option>
-                                        <?php $ctg = $con->query("SELECT * FROM presentacion");
-                                            while ($row = $ctg->fetch_assoc()) {
-                                              echo "<option value='".$row['id_presentacion']."' ";
-                                              echo ">";
-                                              echo $row['nom_presentacion'];
-                                              echo "</option>";
-                                            }
-                                        ?>
+                                        
                                       </select>
                                     </div>
                                   </div>
@@ -189,14 +182,7 @@
                                     <div class="col-sm-9">
                                       <select class="form-control form-control-sm" id="newAsigGerencia" name="newAsigGerencia" style="width:100%">
                                         <option value="">Elije la gerencia</option>
-                                        <?php $gere = $con->query("SELECT * FROM gerencia");
-                                            while ($row = $gere->fetch_assoc()) {
-                                              echo "<option value='".$row['id_gerencia']."' ";
-                                              echo ">";
-                                              echo $row['nom_gerencia'];
-                                              echo "</option>";
-                                            }
-                                        ?>
+                                        
                                       </select>
                                     </div>
                                   </div>
@@ -206,14 +192,7 @@
                                     <div class="col-sm-9">
                                       <select class="form-control form-control-sm" id="newAsigArea" name="newAsigArea" style="width:100%">
                                         <option value="">Elije ubicacion</option>
-                                        <?php $prod = $con->query("SELECT * FROM area");
-                                            while ($row = $prod->fetch_assoc()) {
-                                              echo "<option value='".$row['id_area']."' ";
-                                              echo ">";
-                                              echo $row['nom_area'];
-                                              echo "</option>";
-                                            }
-                                        ?>
+                                       
                                       </select>
                                     </div>
                                   </div>
@@ -269,7 +248,7 @@
 
                         <div class="row mt-3">
                           <div class="col-sm-12">
-                            <div id="TableAsigTempLoad"></div>
+                            <div id="TablaAsignasTempLoad"></div>
                           </div>
                         </div>
 
@@ -291,20 +270,14 @@
         </div>
         <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2019</span>
-            </div>
-          </div>
-        </footer>
+        <?php include('../include/footer.php'); ?>
         <!-- End of Footer -->
         <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
       </div>
       <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
     </div>
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-    <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fas fa-angle-up"></i>
@@ -313,8 +286,8 @@
     <?php include('../include/scripts.php'); ?>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('#tableAsig').load('../componentes/tableAssignment.php');
-        $('#TableAsigTempLoad').load("../componentes/tableAssignmentTemp.php");
+        $('#tablaAsignas').load('../componentes/tablaAsignar.php');
+        //$('#TableAsigTempLoad').load("../componentes/tableAssignmentTemp.php");
       });
     </script>
     <script type="text/javascript">

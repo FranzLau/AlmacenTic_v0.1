@@ -6,13 +6,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <?php include('head.php'); ?>
+    <?php include('../include/head.php'); ?>
   </head>
   <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-      <?php include("sidebar.php"); ?>
+      
 
       <!-- Content Wrapper -->
       <div id="content-wrapper" class="d-flex flex-column">
@@ -20,17 +20,17 @@
         <!-- Main Content -->
         <div id="content">
 
-          <?php include("topbar.php"); ?>
+          <?php include("../include/navbar.php"); ?>
 
           <!-- Begin Page Content -->
-          <div class="container-fluid">
+          <div class="container">
 
             <!-- Page Heading -->
 
             <!-- <<<<<<///////// -->
             <?php
-						$idmy = $_SESSION['loginUser']['id_emp'];
-						$sql=$con->query("SELECT * FROM empleado WHERE id_emp='$idmy' ");
+						$idmy = $_SESSION['loginUser']['id_empleado'];
+						$sql=$con->query("SELECT * FROM empleado WHERE id_empleado='$idmy' ");
 						$date = $sql->fetch_row();
 						 ?>
 
@@ -127,7 +127,7 @@
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
 
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-    <?php include('scripts.php'); ?>
+    <?php include('../include/scripts.php'); ?>
   </body>
 </html>
 <?php
