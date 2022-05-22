@@ -40,17 +40,16 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="card shadow">
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <div class="card-header d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">
-                      <i class="fas fa-list mr-2"></i>
+                      <i class="fa-solid fa-list"></i>
                       Lista de Equipos
                     </h6>
-                    <button class="d-none d-sm-inline-block btn btn-success btn-sm btn-icon-split" data-toggle="modal" data-target="#modalCrearEquipo">
-                      <span class="icon text-white-50">
-                        <i class="fas fa-plus fa-sm"></i>
-                      </span>
-                      <span class="text">Agregar</span>
+                    <button class="d-none d-sm-inline-block btn btn-success btn-sm" data-toggle="modal" data-target="#modalCrearEquipo">
+                      <i class="fa-solid fa-plus"></i>
+                      Agregar
                     </button>
+                    
                   </div>
                   <div class="card-body">
                     <div id="tablaEquipos"></div>

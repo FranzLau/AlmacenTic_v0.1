@@ -100,11 +100,11 @@
       <div class="modal-footer">
 
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
-          <i class="fas fa-times fa-sm"></i>
+          <i class="fa-solid fa-xmark text-white-50"></i>
           Cancelar
         </button>
         <button type="button" class="btn btn-primary btn-sm" id="btnGuardarEmpleado">
-          <i class="fas fa-save fa-sm"></i>
+          <i class="fa-solid fa-floppy-disk text-white-50"></i>
           Guardar
         </button>
       </div>

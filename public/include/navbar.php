@@ -7,41 +7,40 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
-            </li>
+            
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Almacén
+                    <i class="fa-solid fa-warehouse fa-sm mr-2"></i>Almacén
                 </a>
                 <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="equipos.php">
-                    <i class="fas fa-desktop fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <i class="fa-solid fa-computer mr-2 text-gray-400"></i>
                     Equipos
                 </a>
                 <a class="dropdown-item" href="categorias.php">
-                    <i class="fas fa-list-ol fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <i class="fa-solid fa-boxes-stacked mr-2 text-gray-400"></i>
                     Categorias
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                    <i class="fas fa-chart-area fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Reportes
+                <a class="dropdown-item" href="movimientos.php">
+                    <i class="fa-solid fa-people-carry-box mr-2 text-gray-400"></i>
+                    Movimientos
                 </a>
+                
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Movimientos
+                Reportes
                 </a>
                 <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="asignacion.php">
-                        <i class="fas fa-people-carry fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Asignación
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-chart-area fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Reportes
                     </a>
-                    <a class="dropdown-item" href="devolucion.php">
+                    <a class="dropdown-item" href="#">
                         <i class="fas fa-truck-loading fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Devolución
+                        Movimientos
                     </a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">
@@ -61,13 +60,13 @@
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-user fa-sm fa-fw mr-1"></i>
+                    <i class="fa-solid fa-clipboard-user fa-sm fa-fw"></i>
                     <?php echo $_SESSION['loginUser']['nom_usuario'] ?>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" onclick="salir()" href="#">
-                    <i class="fas fa-sign-out-alt fa-sm fa-fw"></i>
+                    <i class="fa-solid fa-right-from-bracket fa-sm fa-fw"></i>
                 </a>
             </li>
         </ul>
