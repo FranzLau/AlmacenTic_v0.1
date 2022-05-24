@@ -3,24 +3,8 @@
 	require '../../config/data.php';
   $obj = new data();
  ?>
+ 
  <div class="row">
-	 <div class="col-sm-6">
-		 <div class="card">
-			<div class="card-body">
-				<p>ORIGEN:</p>
-				<span>Origen:</span>
-			</div>
-		 </div>
-	 </div>
-	 <div class="col-sm-6">
-	 	<div class="card">
-			<div class="card-body">
-				<p>ORIGEN:</p>
-			</div>
-		 </div>
-	 </div>
- </div>
- <div class="row mt-3">
 	 <div class="col-sm-12">
 		<div style="height: 200px; width: 100%;border: 1px solid #e0e0ef;overflow-y: scroll;" class="table-responsive">
 			<table class="table table-sm table-bordered">
@@ -31,6 +15,7 @@
 					<th scope="col">Descripción</th>
 					<th scope="col">Marca</th>
 					<th scope="col">Serie</th>
+					<th scope="col">Observaciones</th>
 					<th scope="col" class="text-center"><i class="fas fa-trash"></i></th>
 					</tr>
 				</thead>

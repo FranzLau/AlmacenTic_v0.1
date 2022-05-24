@@ -57,7 +57,7 @@
                   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <!-- TABLA movimientos -->
                     <div class="card shadow">
-                      <div class="card-header py-3">
+                      <div class="card-header">
                         <h6 class="m-0 font-weight-bold text-primary">
                           <i class="fa-solid fa-list mr-2 fa-sm"></i>Lista de Movimientos
                         </h6>
@@ -73,97 +73,97 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="card shadow">
-                          <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-list mr-2"></i>Nuevo Movimiento</h6>
+                          <div class="card-header d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">
+                              <i class="fas fa-list mr-2"></i>Nuevo Movimiento
+                            </h6>
+                            <div>
+                              <button type="button" class="btn btn-sm btn-success" id="btnaddMov">
+                                <i class="fa-solid fa-cart-plus fa-sm"></i>
+                                Agregar
+                              </button>
+                              <button type="button" class="btn btn-sm btn-danger" id="btncleanMov">
+                                <i class="fa-solid fa-trash fa-sm"></i>
+                                Limpiar
+                              </button>
+                            </div>
                           </div>
                           <div class="card-body">
                             <div class="row">
-                              <div class="col-md-4">
-                                <form id="formNewMove">
+                              <div class="col-md-12">
+                                <form id="formNuevoMovi">
                                   <!--*************************** primer INPUT -->
-                                  <div class="form-group">
-                                    <label class="col-form-label col-form-label-sm" for="dateNewMove">Fecha :</label>
-                                    <input type="date" class="form-control form-control-sm" id="dateNewMove" name="dateNewMove">
-                                  </div>
-                                  <!--*************************** primer INPUT -->
-                                  <div class="form-group">
-                                    <label for="origNewMove" class="col-form-label col-form-label-sm">Origen :</label>
-                                    <select class="form-control form-control-sm" id="origNewMove" name="origNewMove" style="width:100%">
-                                      <option value="">Elije uno</option>
-                                      <?php $ctg = $con->query("SELECT * FROM empleado");
-                                          while ($row = $ctg->fetch_assoc()) {
-                                            echo "<option value='".$row['id_empleado']."' ";
-                                            echo ">";
-                                            echo $row['nombEmpleado'];
-                                            echo " ";
-                                            echo $row['apellidoEmpleado'];
-                                            echo "</option>";
-                                          }
-                                      ?>
-                                    </select>
-                                  </div>
-
-                                  <!--*************************** primer INPUT -->
-                                  <div class="form-group">
-                                    <label for="destiNewMove" class="col-form-label col-form-label-sm">Destino:</label>
-                                    <select class="form-control form-control-sm" id="destiNewMove" name="destiNewMove" style="width:100%">
-                                      <option value="">Elije uno</option>
-                                      <?php $ctg = $con->query("SELECT * FROM empleado");
-                                          while ($row = $ctg->fetch_assoc()) {
-                                            echo "<option value='".$row['id_empleado']."' ";
-                                            echo ">";
-                                            echo $row['nombEmpleado'];
-                                            echo " ";
-                                            echo $row['apellidoEmpleado'];
-                                            echo "</option>";
-                                          }
-                                      ?>
-                                    </select>
+                                  <div class="form-row">
+                                    <div class="form-group col-md-2">
+                                      <label class="col-form-label col-form-label-sm" for="dateNewMove">Fecha :</label>
+                                      <input type="date" class="form-control form-control-sm" id="dateNewMove" name="dateNewMove">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <div class="radio">
+                                        <label class="col-form-label col-form-label-sm" for="dateNewMov">Tipo:</label><br>
+                                        <div class="form-check form-check-inline mr-0">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                          <label class="form-check-label" for="inlineRadio1">Asignación</label>
+                                        </div>
+                                        <div class="form-check form-check-inline ml-0">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                          <label class="form-check-label" for="inlineRadio2">Devolución</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
                                   </div>
 
                                   <!--*************************** primer INPUT -->
-                                  <div class="form-group">
-                                    <label for="obsNewMove" class="col-form-label col-form-label-sm">Observacion:</label>
-                                    <input type="text" class="form-control form-control-sm" id="obsNewMove" name="obsNewMove">
-                                  </div>
-
+                                  
                                   <!--*************************** primer INPUT -->
-                                  <div class="form-group">
-                                    <label for="equiNewMove" class="col-form-label col-form-label-sm">Equipo:</label>
-                                    <select class="form-control form-control-sm" id="equiNewMove" name="equiNewMove" style="width:100%">
-                                      <option value="">Elije serie</option>
-                                      <!-- <?php //$ctg = $con->query("SELECT * FROM asignacion INNER JOIN equipo ON asignacion.id_equipo = equipo.id_equipo");
-                                          //while ($row = $ctg->fetch_assoc()) {
-                                            //echo "<option value='".$row['id_equipo']."' ";
-                                            //echo ">";
-                                            //echo $row['serie_equipo'];
-                                            //echo "</option>";
-                                          //}
-                                      ?> -->
-                                    </select>
+                                  <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                      <label for="destiNewMove" class="col-form-label col-form-label-sm">Usuario:</label>
+                                      <select class="form-control form-control-sm" id="destiNewMove" name="destiNewMove" style="width:100%">
+                                        <option value="">Elije uno</option>
+                                        <?php $ctg = $con->query("SELECT * FROM empleado");
+                                            while ($row = $ctg->fetch_assoc()) {
+                                              echo "<option value='".$row['id_empleado']."' ";
+                                              echo ">";
+                                              echo $row['nom_empleado'];
+                                              echo " ";
+                                              echo $row['ape_empleado'];
+                                              echo "</option>";
+                                            }
+                                        ?>
+                                      </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                      <label for="equiNewMove" class="col-form-label col-form-label-sm">Equipo:</label>
+                                      <select class="form-control form-control-sm" id="equiNewMove" name="equiNewMove" style="width:100%">
+                                        <option value="">Elije serie</option>
+                                        <!-- <?php //$ctg = $con->query("SELECT * FROM asignacion INNER JOIN equipo ON asignacion.id_equipo = equipo.id_equipo");
+                                            //while ($row = $ctg->fetch_assoc()) {
+                                              //echo "<option value='".$row['id_equipo']."' ";
+                                              //echo ">";
+                                              //echo $row['serie_equipo'];
+                                              //echo "</option>";
+                                            //}
+                                        ?> -->
+                                      </select>
+                                    </div>
+                                    <!--*************************** primer INPUT -->
+                                    <div class="form-group col-md-5">
+                                      <label for="obsNewMove" class="col-form-label col-form-label-sm">Observacion:</label>
+                                      <input type="text" class="form-control form-control-sm" id="obsNewMove" name="obsNewMove">
+                                    </div>
                                   </div>
-                                  <!--*************************** FINAL INPUT -->
+                                  <!--*************************** primer INPUT -->
                                 </form>
-                                <hr>
-                                <!-- 2da fila : botones  -->
-                                <div class="row">
-                                  <div class="col-sm-12">
-                                    <button type="button" class="btn btn-sm btn-warning" id="btncleanMov">
-                                      <i class="fas fa-broom fa-sm"></i>
-                                      Limpiar Carrito
-                                    </button>
-                                    <button type="button" class="btn btn-sm btn-success" id="btnaddMov">
-                                      <i class="fas fa-car mr-2 fa-sm"></i>
-                                      Agregar al Carrito
-                                    </button>
-                                  </div>
-                                </div>
-                                <!-- FIN 2da fila de botones  -->
-                              </div>
-                              <div class="col-md-8">
-                                <div id="tableMoveTemp"></div>
+                                
                               </div>
                             </div>
+                          </div>
+                        </div>
+                        <div class="card shadow mt-3">
+                          <div class="card-body">
+                            <div id="tableMoveTemp"></div>
                           </div>
                         </div>
                       </div>
@@ -179,7 +179,7 @@
         </div><!--<<<<<<<<<<<<<<<<< FIN DE CONTENIDO <<<<<<<<<<<<<<<<<-->
 
         <!-- Footer -->
-        <?php include('../include/footer.php'); ?>
+        
         <!-- End of Footer -->
 
       </div>  <!--<<<<<<<<<<<<<< FIN DE CONTENT WRAPPER <<<<<<<<<<<<<<<-->
