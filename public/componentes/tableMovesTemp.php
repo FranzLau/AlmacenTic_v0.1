@@ -60,14 +60,18 @@
 		 <p id="clienteResp"></p>
 		 <h6 class="font-weight-bold">Destino:</h6>
 		 <p id="clienteUbic"></p>
-		 <button class="btn btn-success w-100" onclick="createAssig()">
-       <i class="fas fa-save"></i>
-       Movimiento
-     </button>
+		 
 
 	 </div>
 
 
+ </div>
+ <div class="row">
+	 <div class="col-md-12 text-right">
+		<button class="btn btn-primary btn-sm" onclick="createAssig()">
+			<i class="fa-solid fa-floppy-disk mr-2"></i>Guardar Movimiento
+		</button>
+	 </div>
  </div>
 
  <!-- <div class="row mt-2" >

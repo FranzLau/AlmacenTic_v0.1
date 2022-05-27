@@ -21,28 +21,13 @@ $(document).ready(function(){
   $('#responOrigenEmp').select2({
     width: 'resolve'
   });
-  $('#respNewProd').select2({
-    width: 'resolve'
-  });
-  // ---- select para Asignaciones -------
-  $('#newAsigEmp').select2({
-    width: 'resolve'
-  });
-  $('#newAsigSerie').select2({
-    width: 'resolve'
-  });
-  $('#newAsigArea').select2({
-    width: 'resolve'
-  });
 
-  // ---- select para MOVIMIENTOS -------
-  $('#origNewMove').select2({
+  
+  // ---- select para PROYECTO 2022-------
+  $('#serieNuevoMov').select2({
     width: 'resolve'
   });
-  $('#destiNewMove').select2({
-    width: 'resolve'
-  });
-  $('#equiNewMove').select2({
+  $('#empNuevoMov').select2({
     width: 'resolve'
   });
 
