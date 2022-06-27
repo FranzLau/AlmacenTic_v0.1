@@ -88,16 +88,17 @@
                                       <input type="date" class="form-control form-control-sm" id="fechaNuevoMov" name="fechaNuevoMov">
                                     </div>
                                     <!--*************************** primer INPUT -->
-                                    <div class="form-group col-md-4">
-                                      <label class="col-form-label col-form-label-sm" for="tipoNuevoMov">Tipo de Movimiento:</label><br>
+                                    <div class="form-group col-md-2">
+                                      <label class="col-form-label col-form-label-sm" for="tipoNuevoMov">Tipo:</label><br>
                                       <select class="form-control form-control-sm" name="tipoNuevoMov" id="tipoNuevoMov">
                                         <option>Elije una opción</option>
-                                        <option value="OUTPUT">Asignación de Equipo</option>
-                                        <option value="INPUT">Devolución de Equipo</option>
+                                        <option value="OUTPUT">Asignación</option>
+                                        <option value="INPUT">Devolución</option>
+                                        <option value="MOVE">Movimiento</option>
                                       </select>
                                     </div>
                                     <!--*************************** primer INPUT -->
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-5">
                                       <label for="empNuevoMov" class="col-form-label col-form-label-sm">Usuario:</label>
                                       <select class="form-control form-control-sm" id="empNuevoMov" name="empNuevoMov" style="width:100%">
                                         <option value="">Elije uno</option>
@@ -113,6 +114,19 @@
                                         ?>
                                       </select>
                                     </div>
+                                    <!--*************************** primer INPUT -->
+                                    <div class="form-group col-md-3">
+                                      <label class="col-form-label col-form-label-sm" for="ubicNuevoMov">Ubicación:</label><br>
+                                      <select class="form-control form-control-sm" name="ubicNuevoMov" id="ubicNuevoMov">
+                                        <option>Elije una opción</option>
+                                        <option value="OUTPUT">Sede 28 de Julio</option>
+                                        <option value="INPUT">Sede Para</option>
+                                        <option value="INPUT">Sede Leguia</option>
+                                        <option value="INPUT">Sede Parque Industrial</option>
+                                        <option value="INPUT">Sede Almacén Viñani</option>
+                                      </select>
+                                    </div>
+                                    <!--*************************** primer INPUT -->
                                   </div>
                                   <div class="form-row">
                                     <!--*************************** primer INPUT -->
@@ -123,21 +137,17 @@
                                       </select>
                                     </div>
                                     <!--*************************** primer INPUT -->
+                                    <div class="form-group col-md-3">
+                                      <label for="descNuevoMov" class="col-form-label col-form-label-sm">Descripcion:</label>
+                                      <input type="text" class="form-control form-control-sm" id="descNuevoMov" name="descNuevoMov" readonly>
+                                    </div>
+                                    <!--*************************** primer INPUT -->
                                     <div class="form-group col-md-1">
                                       <label for="cantNuevoMov" class="col-form-label col-form-label-sm">Cant.</label>
                                       <input type="number" class="form-control form-control-sm" id="cantNuevoMov" name="cantNuevoMov">
                                     </div>
                                     <!--*************************** primer INPUT -->
-                                    <div class="form-group col-md-2">
-                                      <label for="estadoNuevoMov" class="col-form-label col-form-label-sm">Estado:</label>
-                                      <select class="form-control form-control-sm" name="estadoNuevoMov" id="estadoNuevoMov">
-                                        <option value="">Elije aqui</option>
-                                        <option value="">Operativo</option>
-                                        <option value="">Inoperativo</option>
-                                      </select>
-                                    </div>
-                                    <!--*************************** primer INPUT -->
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-5">
                                       <label for="obsNuevoMov" class="col-form-label col-form-label-sm">Observacion:</label>
                                       <input type="text" class="form-control form-control-sm" id="obsNuevoMov" name="obsNuevoMov">
                                     </div>
@@ -153,14 +163,14 @@
                                 </button>
                                 <button type="button" class="btn btn-sm btn-danger" id="btnLimpiarTodo">
                                   <i class="fa-solid fa-trash fa-sm"></i>
-                                  Limpiar
+                                  Limpiar todo
                                 </button>
                               </div>
                             </div>
                             
                             <div class="row mt-3">
                               <div class="col-md-12">
-                                <div id="tableMoveTemp"></div>
+                                <div id="tablaMovTemp"></div>
                               </div>
                             </div>
                             
@@ -191,7 +201,7 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('#tablaDevolver').load('../componentes/tablaDevolver.php');
-        $('#tableMoveTemp').load("../componentes/tableMovesTemp.php");
+        $('#tablaMovTemp').load("../componentes/tablaMovTemp.php");
       });
     </script>
     <script type="text/javascript">

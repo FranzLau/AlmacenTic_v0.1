@@ -6,15 +6,15 @@
  
  <div class="row">
 	 <div class="col-sm-12">
-		<div style="height: 200px; width: 100%;border: 1px solid #e0e0ef;overflow-y: scroll;" class="table-responsive">
+		<div style="height: 250px; width: 100%;border: 1px solid #e0e0ef;" class="table-responsive">
 			<table class="table table-sm table-bordered">
 				<thead class="bg-light">
 					<tr>
-					<th scope="col">Codigo</th>
-					<th scope="col">Cant.</th>
+					<th scope="col" class="text-center">Codigo</th>
+					<th scope="col" class="text-center">Cant.</th>
 					<th scope="col">Descripción</th>
-					<th scope="col">Marca</th>
-					<th scope="col">Serie</th>
+					<th scope="col" class="text-center">Marca</th>
+					<th scope="col" class="text-center">Serie</th>
 					<th scope="col">Observaciones</th>
 					<th scope="col" class="text-center"><i class="fas fa-trash"></i></th>
 					</tr>
