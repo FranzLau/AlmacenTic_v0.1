@@ -45,7 +45,7 @@ if(isset($_SESSION['loginUser'])){
                 <div class="p-5">
                   <div class="text-center mb-5">
                     
-                    <h1 class="h3 text-primary mb-4"><i class="fas fa-bolt mr-2"></i>Electrosur</h1>
+                    <h1 class="h3 text-primary mb-4"><i class="fas fa-bolt mr-2"></i>SIDCED</h1>
                     <p>SISTEMA DE CONTROL DE EQUIPOS DIGITAL</p>
                   </div>
                   <form class="user">
@@ -62,7 +62,7 @@ if(isset($_SESSION['loginUser'])){
                   </form>
                   <hr>
                   <div class="text-center">
-                    <p>Todos los derechos Reservados 2022</p>
+                  <span>Copyright &copy; SIDCED 2022</span>
                   </div>
                   
                 </div>
