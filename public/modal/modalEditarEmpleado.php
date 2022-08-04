@@ -1,17 +1,16 @@
 <!-- Modal EDITAR EMPLEADO-->
 <div class="modal fade" id="modalEditarEmpleado" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h6 class="modal-title font-weight-bold" id="exampleModalCenterTitle">
-          <i class="fa-solid fa-pen-to-square mr-2"></i>
-          EDITAR EMPLEADO
-        </h6>
+      <div class="modal-header px-5 py-4">
+        <h5 class="modal-title" id="exampleModalCenterTitle">
+          Editar Empleado
+        </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body px-5">
         <div class="row">
           <div class="col-sm-12">
             <form id="formEditarEmpleado">

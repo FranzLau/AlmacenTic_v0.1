@@ -24,7 +24,7 @@ if(isset($_SESSION['loginUser'])){
 
   <!-- Custom styles for this template-->
   <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/sp-admin-index.css">
+  <link rel="stylesheet" href="assets/css/st-admin-index.css">
 
 </head>
 <body class="bg-gradient-primary">

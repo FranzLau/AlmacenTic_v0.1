@@ -45,7 +45,7 @@
                       <i class="fa-solid fa-list"></i>
                       Lista de Equipos
                     </h6>
-                    <button class="d-none d-sm-inline-block btn btn-success btn-sm" data-toggle="modal" data-target="#modalCrearEquipo">
+                    <button class="d-sm-inline-block btn btn-success btn-sm" data-toggle="modal" data-target="#modalCrearEquipo">
                       <i class="fa-solid fa-plus"></i>
                       Agregar
                     </button>

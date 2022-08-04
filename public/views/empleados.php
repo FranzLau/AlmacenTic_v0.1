@@ -39,7 +39,7 @@
                     <h6 class="m-0 font-weight-bold text-primary">
                       <i class="fa-solid fa-list"></i> Lista de Empleados
                     </h6>
-                    <button class="d-none d-sm-inline-block btn btn-success btn-sm" data-toggle="modal" data-target="#modalNuevoEmpleado">
+                    <button class="d-sm-inline-block btn btn-success btn-sm" data-toggle="modal" data-target="#modalNuevoEmpleado">
                       <i class="fa-solid fa-plus"></i> Agregar
                     </button>
                     

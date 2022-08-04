@@ -1,96 +1,77 @@
 <!-- Modal NUEVO EMPLEADO-->
 <div class="modal fade" id="modalNuevoEmpleado" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h6 class="modal-title font-weight-bold" id="exampleModalCenterTitle">
-          <i class="fa-solid fa-file mr-2"></i>
-          NUEVO EMPLEADO
-        </h6>
+      <div class="modal-header px-5 py-4">
+        <h5 class="modal-title" id="exampleModalCenterTitle">
+          Registrar Empleado
+        </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body px-5 my-4">
         <div class="row">
-          
           <div class="col-sm-12">
             <!--******************   INICIO DEL FORMULARIO   *******************-->
             <form id="formNuevoEmpleado">
-              <div class="row">
-                <div class="col-md-12">
-                  <label class="col-form-label font-weight-bold">Datos Personales:</label>
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="nombreEmpleado" class="col-form-label col-form-label-sm">Nombre:</label>
-                      <input type="text" class="form-control form-control-sm" id="nombreEmpleado" name="nombreEmpleado">
+              <div class="form-group row">
+                <label for="nombreEmpleado" class="col-sm-3 col-form-label col-form-label-sm">Nombre:</label>
+                <div class="col-md-5">
+                  <input type="text" class="form-control form-control-sm font-weight-bold" id="nombreEmpleado" name="nombreEmpleado">
+                </div>
+              </div>
+              <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+              <div class="form-group row">
+                <label for="apellidoEmpleado" class="col-md-3 col-form-label col-form-label-sm">Apellidos:</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control form-control-sm font-weight-bold" id="apellidoEmpleado" name="apellidoEmpleado">
+                </div>
+              </div>
+              <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+              <div class="form-group row">
+                <label for="cargoEmpleado" class="col-sm-3 col-form-label col-form-label-sm">Cargo:</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control form-control-sm font-weight-bold" id="cargoEmpleado" name="cargoEmpleado">
+                </div>
+              </div>
+              <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+              <div class="form-group row">
+                <label for="gerenciaEmpleado" class="col-sm-3 col-form-label col-form-label-sm">Gerencia:</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control form-control-sm font-weight-bold" id="gerenciaEmpleado" name="gerenciaEmpleado">
+                </div>
+              </div>
+              <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+              <div class="form-group row">
+                <label for="" class="col-sm-3 col-form-label col-form-label-sm">Grupo:</label>
+                <div class="col-sm-4">
+                  <div class="radio">
+                    <div>
+                      <input type="radio" name="grupoEmpleado" id="grupoEmpleado1" value="1" checked>
+                      <label for="grupoEmpleado1">Contratado</label>
                     </div>
-                    <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                    <div class="form-group col-md-6">
-                      <label for="apellidoEmpleado" class="col-form-label col-form-label-sm">Apellidos:</label>
-                      <input type="text" class="form-control form-control-sm" id="apellidoEmpleado" name="apellidoEmpleado">
+                    <div>
+                      <input type="radio" name="grupoEmpleado" id="grupoEmpleado2" value="2">
+                      <label for="grupoEmpleado2">Practicante</label>
+                    </div>
+                    <div>
+                      <input type="radio" name="grupoEmpleado" id="grupoEmpleado3" value="3">
+                      <label for="grupoEmpleado3">Tercero</label>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              <div class="row">
-                <div class="col-md-12">
-                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                  <label class="col-form-label font-weight-bold">Datos de Empresa:</label>
-                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                  <div class="form-group">
-                    <label for="cargoEmpleado" class="col-form-label col-form-label-sm">Cargo:</label>
-                    <input type="text" class="form-control form-control-sm" id="cargoEmpleado" name="cargoEmpleado">
-                  </div>
-                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                  <div class="form-group">
-                    <label for="gerenciaEmpleado" class="col-form-label col-form-label-sm">Gerencia:</label>
-                    <input type="text" class="form-control form-control-sm" id="gerenciaEmpleado" name="gerenciaEmpleado">
-                  </div>
+              <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+              <div class="form-group row mb-0">
+                <label for="estadoEmpleado" class="col-sm-3 col-form-label col-form-label-sm">Estado:</label>
+                <div class="col-sm-4">
                   <div class="radio">
-                    <label for="" class="col-form-label col-form-label-sm">Grupo:</label><br>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="grupoEmpleado" id="grupoEmpleado1" value="1" checked>
-                      <label class="form-check-label" for="grupoEmpleado1">
-                        Contratado
-                      </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="grupoEmpleado" id="grupoEmpleado2" value="2">
-                      <label class="form-check-label" for="grupoEmpleado2">
-                        Practicante
-                      </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="grupoEmpleado" id="grupoEmpleado3" value="3">
-                      <label class="form-check-label" for="grupoEmpleado3">
-                        Tercero
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="row">
-                <div class="col-md-12">
-                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                  <label class="col-form-label font-weight-bold">Otros Datos:</label>
-                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                  <div class="radio">
-                    <label for="estadoEmpleado" class="col-form-label col-form-label-sm">Estado:</label><br>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="estadoEmpleado" id="estadoEmpleado1" value="1" checked>
-                      <label class="form-check-label" for="estadoEmpleado1">
-                        Activo
-                      </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="estadoEmpleado" id="estadoEmpleado2" value="2">
-                      <label class="form-check-label" for="estadoEmpleado2">
-                        No Activo
-                      </label>
-                    </div>
+                    <input type="radio" name="estadoEmpleado" id="estadoEmpleado1" value="1" checked>
+                    <label for="estadoEmpleado1">Activo</label>
+
+                    <input type="radio" name="estadoEmpleado" id="estadoEmpleado2" value="2">
+                    <label for="estadoEmpleado2">No Activo</label>
                   </div>
                 </div>
               </div>
@@ -99,7 +80,7 @@
           </div>
         </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer px-5 py-4">
 
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
           <i class="fa-solid fa-xmark text-white-50"></i>
