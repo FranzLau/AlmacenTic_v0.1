@@ -16,7 +16,7 @@
             <!--******************   INICIO DEL FORMULARIO   *******************-->
             <form id="formNuevoEmpleado">
               <div class="form-group row">
-                <label for="nombreEmpleado" class="col-sm-3 col-form-label col-form-label-sm">Nombre:</label>
+                <label for="nombreEmpleado" class="col-md-3 col-form-label col-form-label-sm">Nombre:</label>
                 <div class="col-md-5">
                   <input type="text" class="form-control form-control-sm font-weight-bold" id="nombreEmpleado" name="nombreEmpleado">
                 </div>
@@ -24,7 +24,7 @@
               <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
               <div class="form-group row">
                 <label for="apellidoEmpleado" class="col-md-3 col-form-label col-form-label-sm">Apellidos:</label>
-                <div class="col-sm-5">
+                <div class="col-md-5">
                   <input type="text" class="form-control form-control-sm font-weight-bold" id="apellidoEmpleado" name="apellidoEmpleado">
                 </div>
               </div>
