@@ -33,26 +33,32 @@
 
           <!-- Begin Page Content -->
           <div class="container-fluid">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Inicio</li>
-                <li class="breadcrumb-item"><a href="#">Empleados</a></li>
-              </ol>
-            </nav>
+
+
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">Panel de Trabajadores</h1>
+              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalNuevoEmpleado"><i class="fa-solid fa-plus fa-sm text-white-50"></i> Nuevo Trabajador</a>
+            </div>
+
+            <!-- Page title -->
+            <div class="page-title">
+              <div class="page-title-wrapper">
+                <div class="page-title-heading">
+                  <i class="fa-solid fa-house"></i>
+                  <h5>Material prueba</h5>
+                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                </div>
+                <div class="page-title-actions"></div>
+              </div>
+            </div>
+            <!-- End Page title -->
 
             <!-- Page Lista de Empleados -->
             <div class="row">
               <div class="col-sm-12">
                 <div class="card shadow">
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      <i class="fa-solid fa-list"></i> Lista de Empleados
-                    </h6>
-                    <button class="d-sm-inline-block btn btn-success btn-sm" data-toggle="modal" data-target="#modalNuevoEmpleado">
-                      <i class="fa-solid fa-plus"></i> Agregar
-                    </button>
-                    
-                  </div>
+                  
                   <div class="card-body">
                     <!-- ************* TARJETA CON TABLA ***************** -->
                     <div id="tablaEmpleados"></div>

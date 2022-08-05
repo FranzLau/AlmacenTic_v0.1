@@ -21,10 +21,10 @@ create table usuario(
     primary key(id_usuario)
 );
 
-create table empelado(
+create table empleado(
     id_empleado int auto_increment,
     nom_empleado varchar(200),
-    ape_empelado varchar(200),
+    ape_empleado varchar(200),
     cargo_empleado varchar(245),
     gerencia_empleado varchar(245),
     grupo_empleado int,

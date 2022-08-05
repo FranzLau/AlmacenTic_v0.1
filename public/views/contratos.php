@@ -18,15 +18,23 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
+    
+      <!-- Sidebar -->
+      <?php include("../include/sidebar.php"); ?>
+      <!-- End of Sidebar -->
+
       <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column vh-100">
+      <div id="content-wrapper" class="d-flex flex-column">
 
         <!-- Main Content -->
         <div id="content">
-          <?php include("../include/navbar.php"); ?>
+
+          <!-- Topbar -->  
+          <?php include("../include/topbar.php"); ?>
+          <!-- End Topbar -->
 
           <!-- Begin Page Content -->
-          <div class="container">
+          <div class="container-fluid">
 
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">

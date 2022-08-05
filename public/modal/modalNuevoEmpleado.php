@@ -2,7 +2,7 @@
 <div class="modal fade" id="modalNuevoEmpleado" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header px-5 py-4">
+      <div class="modal-header px-5 py-3">
         <h5 class="modal-title" id="exampleModalCenterTitle">
           Registrar Empleado
         </h5>
@@ -10,7 +10,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body px-5 my-4">
+      <div class="modal-body px-5">
         <div class="row">
           <div class="col-sm-12">
             <!--******************   INICIO DEL FORMULARIO   *******************-->
@@ -80,7 +80,7 @@
           </div>
         </div>
       </div>
-      <div class="modal-footer px-5 py-4">
+      <div class="modal-footer px-5">
 
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
           <i class="fa-solid fa-xmark text-white-50"></i>

@@ -2,7 +2,7 @@
 <div class="modal fade" id="modalEditarEquipo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header px-5 py-4 bg-gradient-warning">
+      <div class="modal-header px-5 py-3 bg-gradient-warning">
         <h5 class="modal-title" id="exampleModalCenterTitle">
           Editar Equipo
         </h5>
@@ -10,7 +10,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body px-5 my-4">
+      <div class="modal-body px-5">
 
         <form id="formEditarEquipo">
 
@@ -100,7 +100,7 @@
           </div>
         </form><!-- Fin de Form -->
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer px-5">
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fas fa-times mr-2 fa-sm text-white-50"></i>Cancelar</button>
         <button type="button" class="btn btn-warning btn-sm" id="btnEditarEquipo"><i class="fas fa-pen mr-2 fa-sm text-white-50"></i>Guardar Cambios</button>
       </div>

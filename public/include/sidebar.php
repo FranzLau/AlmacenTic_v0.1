@@ -27,30 +27,29 @@
         Almacén
     </div>
 
-    
-    <!-- Nav Item - Charts -->
-    <li class="nav-item">
-        <a class="nav-link" href="equipos.php">
-            <i class="fa-solid fa-desktop"></i>
-            <span>Equipos</span>
-        </a>
-    </li>
-
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Utilities</span>
+            
+            <i class="fa-solid fa-desktop"></i>
+            <span>Equipos</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="utilities-color.html">Colors</a>
-                <a class="collapse-item" href="utilities-border.html">Borders</a>
-                <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                <a class="collapse-item" href="utilities-other.html">Other</a>
+                <h6 class="collapse-header">Equipos Tecnologicos:</h6>
+                <a class="collapse-item" href="equipos.php">Listado</a>
+                <a class="collapse-item" href="#">Categorias</a>
+                <a class="collapse-item" href="#">Contratos</a>
             </div>
         </div>
+    </li>
+
+    <!-- Nav Item - Charts -->
+    <li class="nav-item">
+        <a class="nav-link" href="contratos.php">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Contratos</span>
+        </a>
     </li>
 
     <!-- Divider -->
@@ -58,7 +57,7 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Addons
+        Administracion
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
