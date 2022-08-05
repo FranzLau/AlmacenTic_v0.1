@@ -16,21 +16,35 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
+
+      <!-- Sidebar -->
+      <?php include("../include/sidebar.php"); ?>
+      <!-- End of Sidebar -->
+
       <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column vh-100">
+      <div id="content-wrapper" class="d-flex flex-column">
 
         <!-- Main Content -->
         <div id="content">
 
-          <?php include("../include/navbar.php"); ?>
+          <!-- Topbar -->  
+          <?php include("../include/topbar.php"); ?>
+          <!-- End Topbar -->
 
           <!-- Begin Page Content -->
-          <div class="container">
+          <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">Panel Equipos</h1>
+              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearEquipo"><i class="fa-solid fa-plus fa-sm text-white-50"></i> Nuevo Equipo</a>
+            </div>
 
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Almacén</li>
-                <li class="breadcrumb-item"><a href="#">Equipos</a></li>
+                <li class="breadcrumb-item"><a href="#"><i class="fa-solid fa-house"></i></a></li>
+                <li class="breadcrumb-item"><a href="#">Almacén</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Equipos</li>
               </ol>
             </nav>
             
@@ -40,17 +54,6 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="card shadow">
-                  <div class="card-header d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      <i class="fa-solid fa-list"></i>
-                      Lista de Equipos
-                    </h6>
-                    <button class="d-sm-inline-block btn btn-success btn-sm" data-toggle="modal" data-target="#modalCrearEquipo">
-                      <i class="fa-solid fa-plus"></i>
-                      Agregar
-                    </button>
-                    
-                  </div>
                   <div class="card-body">
                     <div id="tablaEquipos"></div>
                   </div>

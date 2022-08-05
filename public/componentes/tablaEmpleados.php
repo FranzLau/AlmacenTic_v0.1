@@ -10,25 +10,25 @@
       <thead>
           <tr>
             <th>ID</th>
-            <th class="text-center">GRUPO</th>
+            <th>GRUPO</th>
             <th>NOMBRES y APELLIDO</th>
             
             <th>CARGO</th>
             <th>GERENCIA</th>
-            <th class="text-center">ESTADO</th>
-            <th class="text-center">ACCIONES</th>
+            <th>ESTADO</th>
+            <th>ACCIONES</th>
           </tr>
       </thead>
       <tfoot>
         <tr>
           <th>ID</th>
-          <th class="text-center">GRUPO</th>
+          <th>GRUPO</th>
           <th>NOMBRES Y APELLIDO</th>
           
           <th>CARGO</th>
           <th>GERENCIA</th>
-          <th class="text-center">ESTADO</th>
-          <th class="text-center">ACCIONES</th>
+          <th>ESTADO</th>
+          <th>ACCIONES</th>
         </tr>
       </tfoot>
       <tbody>
@@ -37,19 +37,19 @@
           ?>
           <tr>
               <td><?php echo $mostrar[0] ?></td>
-              <td class="text-center">
+              <td>
                 <?php
                 if ($mostrar[5]=="1") {
                 ?>
-                  <div class="badge badge-primary">
-                    <i class="fas fa-bolt mr-2"></i> Electrosur
-                  </div>
+                  <span class="badge bg-primary"><i class="fas fa-bolt mr-2"></i>Electrosur</span>
                 <?php
-                }else {
+                }else if ($mostrar[5]=="2") {
                 ?>
-                <div class="badge badge-warning">
-                  <i class="fas fa-user mr-2"></i> Tercero
-                </div>
+                  <span class="badge bg-info text-dark"><i class="fas fa-user mr-2"></i>Practicante</span>
+                <?php
+                } else {
+                ?>
+                  <span class="badge bg-warning text-dark"><i class="fa-solid fa-user-ninja mr-2"></i>Tercero</span>
                 <?php
                 }
                 ?>
@@ -58,25 +58,21 @@
               
               <td><?php echo $mostrar[3] ?></td>
               <td><?php echo $mostrar[4] ?></td>
-              <td class="text-center">
+              <td>
                 <?php
                 if ($mostrar[6]=="1") {
                 ?>
-                  <div class="badge badge-success">
-                    <i class="fas fa-user mr-2"></i> Activo
-                  </div>
+                  <span class="badge bg-success"><i class="fas fa-user mr-2"></i>Activo</span>
                 <?php
                 }else {
                 ?>
-                <div class="badge badge-danger">
-                  <i class="fas fa-user-slash mr-2"></i>Inactivo
-                </div>
+                  <span class="badge bg-danger"><i class="fas fa-user-slash mr-2"></i>Inactivo</span>
                 <?php
                 }
                 ?>
               </td>
 
-              <td class="text-center">
+              <td>
                 
                 <a href="#" class="mr-3 btn-link-edit" title="Editar" data-toggle="modal" data-target="#modalEditarEmpleado" onclick="verDatosEmpleado('<?php echo $mostrar[0] ?>')"><i class="fas fa-pen"></i></a>
                 <a href="#" class="btn-link-delete" title="Eliminar" onclick="borrarEmpleado('<?php echo $mostrar[0] ?>')"><i class="fas fa-trash-alt"></i></a>

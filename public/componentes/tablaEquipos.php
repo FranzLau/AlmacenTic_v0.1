@@ -13,10 +13,10 @@
         <th>TIPO</th>
         <th>NOMBRE</th>
         <th>SERIE</th>
-        <th>MARCA</th>
-        <th>STOCK</th>
-        <th>CONTRATO</th>
-        <th>ESTADO</th>
+        <th class="text-center">MARCA</th>
+        <th class="text-center">STOCK</th>
+        <th class="text-center">CONTRATO</th>
+        <th class="text-center">ESTADO</th>
         <th class="text-center">ACCION</th>
       </tr>
     </thead>
@@ -26,10 +26,10 @@
         <th>TIPO</th>
         <th>NOMBRE</th>
         <th>SERIE</th>
-        <th>MARCA</th>
-        <th>STOCK</th>
-        <th>CONTRATO</th>
-        <th>ESTADO</th>
+        <th class="text-center">MARCA</th>
+        <th class="text-center">STOCK</th>
+        <th class="text-center">CONTRATO</th>
+        <th class="text-center">ESTADO</th>
         <th class="text-center">ACCION</th>
       </tr>
     </tfoot>
@@ -40,22 +40,18 @@
         <td><?php echo $obj->nomCategoria( $mostrarprod[1]) ?></td>
         <td><?php echo $mostrarprod[3] ?></td>
         <td><?php echo $mostrarprod[4] ?></td>
-        <td><?php echo $mostrarprod[6] ?></td>
-        <td><?php echo $mostrarprod[8] ?></td>
-        <td><?php echo $obj->nomContrato( $mostrarprod[2]) ?></td>
-        <td>
+        <td class="text-center"><?php echo $mostrarprod[6] ?></td>
+        <td class="text-center"><?php echo $mostrarprod[8] ?></td>
+        <td class="text-center"><?php echo $obj->nomContrato( $mostrarprod[2]) ?></td>
+        <td class="text-center">
           <?php
           if ($mostrarprod[9]=="1") {
           ?>
-            <div class="badge badge-pill badge-outline-success">
-              <i class="fas fa-user mr-2"></i> Operativo
-            </div>
+            <span class="badge bg-success">Operativo</span>
           <?php
           }else {
           ?>
-          <div class="badge badge-pill badge-outline-danger">
-            <i class="fas fa-user-slash mr-2"></i>Inoperativo
-          </div>
+            <span class="badge bg-danger">No operativo</span>
           <?php
           }
           ?>
