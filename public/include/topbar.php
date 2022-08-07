@@ -162,16 +162,22 @@
                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                     Configuracion
                 </a>
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">
                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                     Actividades
                 </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" onclick="salir()">
-                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Cerrar Sesión
-                </a>
+                
+                
             </div>
+        </li>
+
+        <div class="topbar-divider d-none d-sm-block"></div>
+
+        <li class="nav-item no-arrow mx-1">
+            <a class="nav-link" href="#" id="btnlogout" role="button" onclick="salir()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
         </li>
     </ul>
 </nav>
