@@ -15,24 +15,42 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
+
+      <!-- Sidebar -->
+      <?php include("../include/sidebar.php"); ?>
+      <!-- End of Sidebar -->
+
       <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column vh-100">
+      <div id="content-wrapper" class="d-flex flex-column">
 
         <!-- Main Content -->
         <div id="content">
 
-          <?php include("../include/navbar.php"); ?>
+          <!-- Topbar -->  
+          <?php include("../include/topbar.php"); ?>
+          <!-- End Topbar -->
 
           <!-- Begin Page Content -->
-          <div class="container">
+          <div class="container-fluid">
 
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Almacén</li>
-                <li class="breadcrumb-item active" aria-current="page">Equipos</li>
-                <li class="breadcrumb-item"><a href="#">Categorias</a></li>
-              </ol>
-            </nav>
+            <!-- Page title -->
+            <div class="page-title mb-4">
+              <div class="page-title-wrapper d-flex align-items-center justify-content-between">
+                <div class="page-title-heading d-flex align-items-center">
+                  <div class="page-title-icon shadow-sm">
+                    <i class="fa-solid fa-boxes-stacked m-auto"></i>
+                  </div>
+                  <div>
+                    <h3 class="mb-0">Panel de Categorias</h3>
+                    <span>Categorias para cada equipo tecnologico.</span>
+                  </div>
+                </div>
+                <div class="page-title-actions">
+                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearCategoria"><i class="fa-solid fa-plus fa-sm text-white-50"></i> Nueva Categoria</a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page title -->
 
             <div class="row mt-4">
               <div class="col-md-4">

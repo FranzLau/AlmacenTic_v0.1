@@ -36,12 +36,24 @@
           <!-- Begin Page Content -->
           <div class="container-fluid">
 
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Inicio</li>
-                <li class="breadcrumb-item"><a href="#">Contratos</a></li>
-              </ol>
-            </nav>
+            <!-- Page title -->
+            <div class="page-title mb-4">
+              <div class="page-title-wrapper d-flex align-items-center justify-content-between">
+                <div class="page-title-heading d-flex align-items-center">
+                  <div class="page-title-icon shadow-sm">
+                    <i class="fa-solid fa-file-contract m-auto"></i>
+                  </div>
+                  <div>
+                    <h3 class="mb-0">Panel de Contratos</h3>
+                    <span>Listado de contratos de Equipos de Tecnologicos.</span>
+                  </div>
+                </div>
+                <div class="page-title-actions">
+                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearContrato"><i class="fa-solid fa-plus fa-sm text-white-50"></i> Nuevo Contrato</a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page title -->
 
             <!-- Content Row -->
             <div class="row mt-4">

@@ -12,24 +12,42 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
+      <!-- Sidebar -->
+      <?php include("../include/sidebar.php"); ?>
+      <!-- End of Sidebar -->
+
       <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column vh-100">
+      <div id="content-wrapper" class="d-flex flex-column">
 
         <!-- Main Content -->
         <div id="content">
 
-          <?php include("../include/navbar.php"); ?>
+          <!-- Topbar -->  
+          <?php include("../include/topbar.php"); ?>
+          <!-- End Topbar -->
 
           <!-- Begin Page Content -->
-          <div class="container">
+          <div class="container-fluid">
             
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Almacén</li>
-                <li class="breadcrumb-item"><a href="#">Equipos</a></li>
-                <li class="breadcrumb-item"><a href="#">Movimientos</a></li>
-              </ol>
-            </nav>
+            <!-- Page title -->
+            <div class="page-title mb-4">
+              <div class="page-title-wrapper d-flex align-items-center justify-content-between">
+                <div class="page-title-heading d-flex align-items-center">
+                  <div class="page-title-icon shadow-sm">
+                    <i class="fa-solid fa-people-carry-box m-auto"></i>
+                  </div>
+                  <div>
+                    <h3 class="mb-0">Panel de Movimientos</h3>
+                    <span>Registre todo movimiento de equipo.</span>
+                  </div>
+                  
+                </div>
+                <div class="page-title-actions">
+                  <a href="#" class="d-none d-sm-inline-block btn btn-success btn-sm shadow-sm"><i class="fa-solid fa-square-plus text-white-50 mr-2"></i> Nuevo Movimiento</a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page title -->
 
             <div class="row">
               <div class="col-md-12">

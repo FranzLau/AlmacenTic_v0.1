@@ -32,13 +32,24 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Panel Principal</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-          </div>
-
-          <hr>
+          <!-- Page title -->
+          <div class="page-title mb-4">
+              <div class="page-title-wrapper d-flex align-items-center justify-content-between">
+                <div class="page-title-heading d-flex align-items-center">
+                  <div class="page-title-icon shadow-sm">
+                    <i class="fa-solid fa-gauge-high m-auto"></i>
+                  </div>
+                  <div>
+                    <h3 class="mb-0">Panel Principal</h3>
+                    <span>Resumen de todas las actividades.</span>
+                  </div>
+                </div>
+                <div class="page-title-actions">
+                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                </div>
+              </div>
+            </div>
+            <!-- End Page title -->
 
           <div class="row mb-3">
             <div class="col-sm-12">
