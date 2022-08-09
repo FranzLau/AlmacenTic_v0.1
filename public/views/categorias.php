@@ -9,12 +9,12 @@
     <?php include('../include/head.php'); ?>
   </head>
   <body id="page-top">
+
+    <?php include('../modal/modalNuevoCategoria.php'); ?>
     <?php include('../modal/modalEditarCategoria.php'); ?>
 
-    <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
     <!-- Page Wrapper -->
     <div id="wrapper">
-
 
       <!-- Sidebar -->
       <?php include("../include/sidebar.php"); ?>
@@ -53,47 +53,20 @@
             <!-- End Page title -->
 
             <div class="row mt-4">
-              <div class="col-md-4">
+              <div class="col-md-12">
                 <div class="card shadow">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">
-                      <i class="fas fa-folder-plus mr-2"></i>
-                      Registro de Categoria
+                      <i class="fas fa-list mr-2 fa-sm"></i>
+                      Lista de Categoria
                     </h6>
                   </div>
                   <div class="card-body">
-                    <form id="formNuevaCategoria">
-                      <div class="form-group">
-                        <label for="nomCateg" class="col-form-label col-form-label-sm font-weight-bold">Nombre:</label>
-                        <input type="text" class="form-control form-control-sm" id="nomCateg" name="nomCateg" placeholder="Escriba Aquí...">
-                      </div>
-                    </form>
-                    <hr>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <button type="button" class="btn btn-sm btn-primary w-100" id="btnCrearCategoria">
-                          <i class="fas fa-save text-white-50 mr-2"></i>
-                          Guardar
-                        </button>
-                      </div>
-                    </div>
+                    <div id="tablaCategoria"></div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-8">
-                <div class="card shadow">
-                  <div class="card-header">
-                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-list mr-2 fa-sm"></i>Lista de Categoria</h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div id="tablaCategoria"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
 
           </div>
@@ -126,7 +99,7 @@
             var datos= $.parseJSON(r);
             $('#idEditarCategoria').val(datos['idCategoria']);
             $('#nomEditarCategoria').val(datos['nomCategoria']);
-
+            $('#descEditarCategoria').val(datos['descCategoria']);
           }
         })
         .done(function(r) {

@@ -13,9 +13,10 @@ class crud
                         'nomempphp'=>$ver[1],
                         'apempphp'=>$ver[2],
                         'cargoempphp'=>$ver[3],
-                        'grempphp'=>$ver[4],
-                        'gpoempphp'=>$ver[5],
-                        'estaempphp'=>$ver[6]);
+                        'areaempphp'=>$ver[4],
+                        'grempphp'=>$ver[5],
+                        'gpoempphp'=>$ver[6],
+                        'estaempphp'=>$ver[7]);
         return $datos;
 	}
     public function eliminarEmpleado($idemp){
@@ -31,8 +32,9 @@ class crud
         $sql = $con->query("SELECT * FROM categoria WHERE id_categoria = '$idcateg' ");
         $dataCategoria = $sql->fetch_row();
         $datos = array('idCategoria' => $dataCategoria[0],
-                        'nomCategoria'=>$dataCategoria[1]);
-    return $datos;
+                        'nomCategoria'=>$dataCategoria[1],
+                        'descCategoria'=>$dataCategoria[2]);
+        return $datos;
     }
 
     public function eliminarCategoria($idcateg){
@@ -84,6 +86,23 @@ class crud
     public function eliminarEquipos($idprod){
         require 'conexion.php';
         $sql = $con->query("DELETE FROM equipo WHERE id_equipo = '$idprod' ");
+        return $sql;
+    }
+
+    //------------------------ PARA SEDES CONTROL ------------------------------
+    public function leerDatosSede($idsede){
+        require 'conexion.php';
+        $sql = $con->query("SELECT * FROM sede WHERE id_sede = '$idsede' ");
+        $dataSede = $sql->fetch_row();
+        $datos = array('idSede' => $dataSede[0],
+                        'nomSede' => $dataSede[1],
+                        'direccionSede' => $dataSede[2],
+                        'ciudadSede'=>$dataSede[3]);
+        return $datos;
+    }
+    public function eliminarDatosSede($idsede){
+        require 'conexion.php';
+        $sql = $con->query("DELETE FROM sede WHERE id_sede = '$idsede' ");
         return $sql;
     }
 

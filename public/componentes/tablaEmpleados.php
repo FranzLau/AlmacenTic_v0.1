@@ -12,8 +12,8 @@
             <th>ID</th>
             <th>GRUPO</th>
             <th>NOMBRES y APELLIDO</th>
-            
             <th>CARGO</th>
+            <th>AREA</th>
             <th>GERENCIA</th>
             <th>ESTADO</th>
             <th>ACCIONES</th>
@@ -24,8 +24,8 @@
           <th>ID</th>
           <th>GRUPO</th>
           <th>NOMBRES Y APELLIDO</th>
-          
           <th>CARGO</th>
+          <th>AREA</th>
           <th>GERENCIA</th>
           <th>ESTADO</th>
           <th>ACCIONES</th>
@@ -39,11 +39,11 @@
               <td><?php echo $mostrar[0] ?></td>
               <td>
                 <?php
-                if ($mostrar[5]=="1") {
+                if ($mostrar[6]=="1") {
                 ?>
                   <span class="badge bg-primary"><i class="fas fa-bolt mr-2"></i>Electrosur</span>
                 <?php
-                }else if ($mostrar[5]=="2") {
+                }else if ($mostrar[6]=="2") {
                 ?>
                   <span class="badge bg-info text-dark"><i class="fas fa-user mr-2"></i>Practicante</span>
                 <?php
@@ -55,12 +55,12 @@
                 ?>
               </td>
               <td><?php echo $mostrar[1] ?> <?php echo $mostrar[2] ?></td>
-              
               <td><?php echo $mostrar[3] ?></td>
               <td><?php echo $mostrar[4] ?></td>
+              <td><?php echo $mostrar[5] ?></td>
               <td>
                 <?php
-                if ($mostrar[6]=="1") {
+                if ($mostrar[7]=="1") {
                 ?>
                   <span class="badge bg-success"><i class="fas fa-user mr-2"></i>Activo</span>
                 <?php

@@ -31,7 +31,7 @@ jQuery(document).ready(function() {
 			}else if(!r.error){
 				$('#tablaCategoria').load('../componentes/tablaCategoria.php');
 				$('#formNuevaCategoria')[0].reset();
-				
+				$('#modalCrearCategoria').modal('hide');
 				Swal.fire({
 					icon: 'success',
 					title: 'Se registro con éxito',

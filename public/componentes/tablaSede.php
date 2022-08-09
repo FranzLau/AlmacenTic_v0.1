@@ -11,7 +11,8 @@
        <tr>
          <th>ID</th>
          <th>NOMBRE</th>
-         <th>DESCRIPCION</th>
+         <th>CIUDAD</th>
+         <th>DIRECCION</th>
          <th>OPCIONES</th>
        </tr>
      </thead>
@@ -19,7 +20,8 @@
        <tr>
          <th>ID</th>
          <th>NOMBRE</th>
-         <th>DESCRIPCION</th>
+         <th>CIUDAD</th>
+         <th>DIRECCION</th>
          <th>OPCIONES</th>
        </tr>
      </tfoot>
@@ -28,15 +30,11 @@
        <tr>
          <td><?php echo $versede[0] ?></td>
          <td><?php echo $versede[1] ?></td>
+         <td><?php echo $versede[3] ?></td>
          <td><?php echo $versede[2] ?></td>
          <td>
-            <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#ModalUpdateSede" onclick="ReadSedes('<?php echo $versede[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
-            <?php
-             if ($_SESSION['loginUser']['tipo_user'] == "administrador"):
-            ?>
-            <a href="#" class="btn-link-delete" title="Eliminar" onclick="deleteSedes('<?php echo $versede[0] ?>')"><i class="fas fa-trash-alt"></i></a>
-
-            <?php endif; ?>
+            <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#modalEditarSede" onclick="leerSede('<?php echo $versede[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
+            <a href="#" class="btn-link-delete" title="Eliminar" onclick="eliminarSede('<?php echo $versede[0] ?>')"><i class="fas fa-trash-alt"></i></a>
          </td>
        </tr>
        <?php } ?>

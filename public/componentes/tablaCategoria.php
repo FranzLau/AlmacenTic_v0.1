@@ -7,16 +7,26 @@
      <thead>
        <tr>
          <th>ID</th>
-         <th>Nombre</th>
-         <th class="text-center">Opciones</th>
+         <th>NOMBRE</th>
+         <th>DESCRIPCION</th>
+         <th>OPCIONES</th>
        </tr>
      </thead>
+     <tfoot>
+       <tr>
+          <th>ID</th>
+          <th>NOMBRE</th>
+          <th>DESCRIPCION</th>
+          <th>OPCIONES</th>
+       </tr>
+     </tfoot>
      <tbody>
        <?php while($vercateg = $sql->fetch_row()){ ?>
          <tr>
            <td><?php echo $vercateg[0] ?></td>
            <td><?php echo $vercateg[1] ?></td>
-           <td class="text-center">
+           <td><?php echo $vercateg[2] ?></td>
+           <td>
              <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#modalEditarCategoria" onclick="leerCategoria('<?php echo $vercateg[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
              <a href="#" class="btn-link-delete" title="Eliminar" onclick="eliminaCategoria('<?php echo $vercateg[0] ?>')"><i class="fas fa-trash-alt"></i></a>
 

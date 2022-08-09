@@ -1,19 +1,19 @@
 jQuery(document).ready(function() {
-  $('#btnAgregarContrato').click(function() {
-    vacios = validarFrmVacio('formNuevoContrato');
+  $('#btnCrearSede').click(function() {
+    vacios = validarFrmVacio('formNuevaSede');
     if(vacios > 0){
-      
+
       Swal.fire({
 				icon: 'warning',
 				title: 'Advertencia',
 				text: 'Debes llenar los campos!'
-			})
+			  })
 
-      return false;
+			return false;
     }
-    var datos=$('#formNuevoContrato').serialize();
+    var datos=$('#formNuevaSede').serialize();
     $.ajax({
-      url: '../../public/procesos/contratos/crearContrato.php',
+      url: '../../public/procesos/sedes/crearSede.php',
       type: 'POST',
       dataType: 'json',
       data: datos,
@@ -23,21 +23,18 @@ jQuery(document).ready(function() {
     })
     .done(function(r) {
       if (r==0) {
-
         Swal.fire({
 					icon: 'error',
 					title: 'Error',
-					text: 'El contrato ya existe!'
-				  })
-       
+					text: 'La sede ya existe!'
+				})
       }else if(!r.error){
-        
-        $('#tablaContratos').load('../componentes/tablaContratos.php');
-        $('#formNuevoContrato')[0].reset();
-		$('#modalCrearContrato').modal('hide');
+        $('#tablaSede').load('../componentes/tablaSede.php');
+        $('#formNuevaSede')[0].reset();
+        $('#modalCrearSede').modal('hide');
         Swal.fire({
 					icon: 'success',
-					title: 'Se registró con éxito',
+					title: 'Se registro con éxito',
 					showConfirmButton: false,
 					timer: 1500
 				})
@@ -57,11 +54,12 @@ jQuery(document).ready(function() {
     });
     return false;
   });
-  //---------------------------UPDATE AREA-----------------------------
-  $('#btnEditarContrato').click(function() {
-		var datos=$('#formEditarContrato').serialize();
+
+  //---------------------------UPDATE SEDE---------------
+  $('#btnEditarSede').click(function() {
+		var datos=$('#formEditarSede').serialize();
 		$.ajax({
-			url: '../../public/procesos/contratos/actualizarContrato.php',
+			url: '../../public/procesos/sedes/actualizarSede.php',
 			type: 'POST',
 			dataType: 'json',
 			data: datos,
@@ -71,9 +69,9 @@ jQuery(document).ready(function() {
 		})
 		.done(function(r) {
 			if (!r.error) {
-			  $('#tablaContratos').load('../componentes/tablaContratos.php');
-				$('#modalEditarContrato').modal('hide');
-				Swal.fire({
+			  $('#tablaSede').load('../componentes/tablaSede.php');
+				$('#modalEditarSede').modal('hide');
+        Swal.fire({
 					icon: 'success',
 					title: 'Se actualizó con éxito',
 					showConfirmButton: false,
@@ -84,7 +82,7 @@ jQuery(document).ready(function() {
 					icon: 'error',
 					title: 'Error',
 					text: 'Hubo un error!'
-				  })
+				})
 			}
 		})
 		.fail(function() {
@@ -94,5 +92,6 @@ jQuery(document).ready(function() {
 			console.log("complete");
 		});
   });
+
 
 });

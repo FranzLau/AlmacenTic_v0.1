@@ -1,7 +1,7 @@
-create database almacentic;
-CREATE SCHEMA `almacentic` DEFAULT CHARACTER SET utf8 ;
+create database db_almacentic;
+CREATE SCHEMA `db_almacentic` DEFAULT CHARACTER SET utf8 ;
 
-use almacentic;
+use db_almacentic;
 
 create table rol(
     id_rol int auto_increment,
@@ -26,6 +26,7 @@ create table empleado(
     nom_empleado varchar(200),
     ape_empleado varchar(200),
     cargo_empleado varchar(245),
+    area_empleado varchar(245),
     gerencia_empleado varchar(245),
     grupo_empleado int,
     estado_empleado int,
@@ -49,28 +50,37 @@ create table equipo(
 
 create table categoria(
     id_categoria int auto_increment,
-    nom_categoria varchar(100),
+    nom_categoria varchar(50),
+    desc_categoria varchar(100),
     fecha_captura date,
     primary key(id_categoria)
 );
 
 create table contrato(
     id_contrato int auto_increment,
-    nom_contrato varchar(245),
+    nom_contrato varchar(50),
     adquiere_contrato date,
     garantia_contrato varchar(100),
-    proveedor_contrato varchar(245),
+    proveedor_contrato varchar(100),
     fecha_captura date,
     primary key(id_contrato)
+);
+
+create table sede(
+    id_sede int auto_increment,
+    nom_sede varchar(50),
+    direccion_sede varchar(200),
+    ciudad_sede varchar(50),
+    primary key(id_sede)
 );
 
 create table movimiento(
     id_movimiento int not null,
     id_usuario int,
     id_equipo int,
-    origen_movimiento int,
-    destino_movimiento int,
+    id_empleado int,
+    id_sede int,
     fecha_movimiento date,
-    observacion_movimiento varchar(245),
-    nota_movimiento varchar(245)
+    tipo_movimiento varchar(100),
+    obs_movimiento varchar(245)
 );

@@ -25,11 +25,11 @@
 <script src="../../assets/js/helpers.js"></script>
 <script src="../../assets/js/select2-admin.js"></script>
 
-<script src="../../assets/js/categoriaCrearEditar.js"></script>
+<script src="../../assets/js/categoriasCrearEditar.js"></script>
 <script src="../../assets/js/empleadoCrearEditar.js"></script>
 <script src="../../assets/js/contratoCrearEditar.js"></script>
 <script src="../../assets/js/equipoCrearEditar.js"></script>
-
+<script src="../../assets/js/sedeCrearEditar.js"></script>
 
 
 <script src="../../assets/js/customers.js"></script>
@@ -39,5 +39,3 @@
 <script src="../../assets/js/presentjs.js"></script>
 
 
-<script src="../../assets/js/gerencia.js"></script>
-<script src="../../assets/js/sede.js"></script>

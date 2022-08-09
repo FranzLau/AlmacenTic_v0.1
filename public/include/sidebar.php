@@ -80,7 +80,7 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="sede.php">
             <i class="fa-solid fa-location-dot"></i>
             <span>Sedes</span>
         </a>

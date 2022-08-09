@@ -10,18 +10,14 @@
   </head>
   <body id="page-top">
 
-    <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-    <?php include('../modal/modalNuevoContrato.php'); ?>
-    <?php include('../modal/modalEditarContrato.php'); ?>
+    <!-- modal para sede nueva -->
+    <?php include('../modal/modalNuevoSede.php'); ?>
+    <?php include('../modal/modalEditarSede.php'); ?>
 
-    <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-    
-      <!-- Sidebar -->
       <?php include("../include/sidebar.php"); ?>
-      <!-- End of Sidebar -->
 
       <!-- Content Wrapper -->
       <div id="content-wrapper" class="d-flex flex-column">
@@ -29,9 +25,7 @@
         <!-- Main Content -->
         <div id="content">
 
-          <!-- Topbar -->  
           <?php include("../include/topbar.php"); ?>
-          <!-- End Topbar -->
 
           <!-- Begin Page Content -->
           <div class="container-fluid">
@@ -41,70 +35,71 @@
               <div class="page-title-wrapper d-flex align-items-center justify-content-between">
                 <div class="page-title-heading d-flex align-items-center">
                   <div class="page-title-icon shadow-sm">
-                    <i class="fa-solid fa-book m-auto"></i>
+                    <i class="fa-solid fa-location-dot m-auto"></i>
                   </div>
                   <div>
-                    <h3 class="mb-0">Panel de Contratos</h3>
-                    <span>Listado de contratos de Equipos de Tecnologicos.</span>
+                    <h3 class="mb-0">Panel de Sedes</h3>
+                    <span>Registra una nueva sede para la empresa.</span>
                   </div>
                 </div>
                 <div class="page-title-actions">
-                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearContrato"><i class="fa-solid fa-plus fa-sm text-white-50"></i> Nuevo Contrato</a>
+                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearSede"><i class="fa-solid fa-folder-plus fa-sm text-white-50 mr-2"></i>Nueva Sede</a>
                 </div>
               </div>
             </div>
             <!-- End Page title -->
 
-            <!-- Content Row -->
+            <!-- Page body -->
             <div class="row mt-4">
-              
-              <div class="col-sm-12">
-                <div class="card shadow mb-4">
+              <div class="col-md-12">
+                <div class="card shadow">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">
-                      <i class="fas fa-list mr-2"></i>
-                      Lista de Contratos
+                      <i class="fas fa-list mr-2 fa-sm"></i>
+                      Lista de Sedes
                     </h6>
                   </div>
                   <div class="card-body">
-                    <div id="tablaContratos"></div>
+                    <div id="tablaSede"></div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- Page end body -->
+           
           </div>
         </div>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+        <!-- Footer -->
         <!-- Footer -->
         <?php include('../include/footer.php'); ?>
         <!-- End of Footer -->
+        <!-- End of Footer -->
       </div>
+      <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
     </div>
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-
-
-    <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-
-    <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-
     <?php include('../include/scripts.php'); ?>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('#tablaContratos').load('../componentes/tablaContratos.php');
+        $('#tablaSede').load('../componentes/tablaSede.php');
       });
     </script>
+    
     <script type="text/javascript">
-      function verDatosContrato(idContrato){
+    
+      //------- Funciones para Sedes -------------------------
+      function leerSede(idsede){
         $.ajax({
-          url: '../../public/procesos/contratos/leerContrato.php',
+          url: '../../public/procesos/sedes/leerSede.php',
           type: 'POST',
-          data: "idcontr=" + idContrato,
+          data: "idsede=" + idsede,
           success:function(r){
             var datos= $.parseJSON(r);
-            $('#idEditarContrato').val(datos['idContrato']);
-            $('#nomEditarContrato').val(datos['nomContrato']);
-            $('#adquiEditarContrato').val(datos['adquiContrato']);
-            $('#garaEditarContrato').val(datos['garanContrato']);
-            $('#provEditarContrato').val(datos['provContrato']);
+            $('#idEditarSede').val(datos['idSede']);
+            $('#nomEditarSede').val(datos['nomSede']);
+            $('#ciudadEditarSede').val(datos['ciudadSede']);
+            $('#dirEditarSede').val(datos['direccionSede']);
           }
         })
         .done(function() {
@@ -117,46 +112,47 @@
           console.log("complete");
         });
       }
-      //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-      function eliminarContrato(idContrato){
 
+      function eliminarSede(idsede){
+        console.log("no llega modal");
         Swal.fire({
           title: 'Estas seguro?',
           text: "No podrás revertir esta acción!",
           icon: 'warning',
           showCancelButton: true,
-          confirmButtonColor: '#4e73df',
-          cancelButtonColor: '#e74a3b',
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
           confirmButtonText: 'Si, eliminar!',
           cancelButtonText: 'Cancelar'
         }).then((result) => {
+          console.log("llega modal");
           if (result.isConfirmed) {
-
             $.ajax({
-              url: '../../public/procesos/contratos/eliminarContrato.php',
+              url: '../../public/procesos/sedes/eliminarSede.php',
               type: 'POST',
-              data: "idcontr=" + idContrato,
+              data: "idsede=" + idsede,
               success:function(r){
-               if (r==1) {
-                  $('#tablaContratos').load('../componentes/tablaContratos.php');
+                if (r==1) {
+                  $('#tablaSede').load('../componentes/tablaSede.php');
                   Swal.fire(
                     'Eliminado!',
-                    'Tu archivo ha sido eliminado.',
+                    'Su archivo ha sido eliminado.',
                     'success'
-                  )
-               }else{
+                    )
+                }else{
                   Swal.fire({
                     icon: 'error',
                     title: 'Error',
                     text: 'Hubo un error!'
-                  })
-               }
+                    })
+                }
               }
-            }) 
-
+            })    
           }
         })
-    	}
+      }
+
+
     </script>
   </body>
 </html>

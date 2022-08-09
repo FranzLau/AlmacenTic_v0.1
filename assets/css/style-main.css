@@ -4,26 +4,8 @@
   font-size: .80rem!important;
 }
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-/*.badge {
-    font-size: 0.8125rem!important;
-    font-weight: 400!important;
-}*/
-.badge-outline-primary {
-    color: #4e73df!important;
-    border: 1px solid #4e73df!important;
-}
-.badge-outline-success {
-    color: #1cc88a!important;
-}
-.badge-outline-danger{
-  color: #e74a3b!important;
-}
-.badge-outline-info {
-  color: #36b9cc!important;
-}
+
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
-
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ESTILO PARA NAVS <<<<<<<<<<<<<<<<<<<<<*/
 .btn-link-edit {
@@ -107,6 +89,19 @@
 }
 
 /*---- ESTILOS PARA RADIO---*/
+.radio {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.radio-info {
+  width: 30%;
+}
+.radio-estate {
+  width: 45%;
+}
+
 .radio input[type="radio"]{
   display: none;
 }

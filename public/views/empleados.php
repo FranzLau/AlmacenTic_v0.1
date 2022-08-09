@@ -34,14 +34,6 @@
           <!-- Begin Page Content -->
           <div class="container-fluid">
 
-
-            <!-- Page Heading 
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 class="h3 mb-0 text-gray-800">Panel de Trabajadores</h1>
-              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalNuevoEmpleado"><i class="fa-solid fa-square-plus text-white-50 mr-2"></i> Nuevo Trabajador</a>
-              
-            </div>-->
-
             <!-- Page title -->
             <div class="page-title mb-4">
               <div class="page-title-wrapper d-flex align-items-center justify-content-between">
@@ -121,6 +113,7 @@
             $('#nomEditarEmpleado').val(datos['nomempphp']);
             $('#apeEditarEmpleado').val(datos['apempphp']);
             $('#cargoEditarEmpleado').val(datos['cargoempphp']);
+            $('#areaEditarEmpleado').val(datos['areaempphp']);
             $('#gerenciaEditarEmpleado').val(datos['grempphp']);
             if (datos['gpoempphp']==1) {
               $('#grupoEditarEmpleado1').prop('checked',true);

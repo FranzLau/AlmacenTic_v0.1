@@ -13,18 +13,25 @@
           <div class="col-sm-12">
             <form id="formEditarCategoria">
               <input type="text" hidden="" name="idEditarCategoria" id="idEditarCategoria">
-              <div class="form-group row mb-0">
-                <label for="nomEditarCategoria" class="col-md-3 col-form-label col-form-label-sm">Nombre:</label>
-                <div class="col-md-9">
-                  <input type="text" class="form-control form-control-sm font-weight-bold" id="nomEditarCategoria" name="nomEditarCategoria">
-                </div>
+              <div class="form-group">
+                <label for="nomEditarCategoria" class="col-form-label col-form-label-sm">Nombre:</label>
+                <input type="text" class="form-control form-control-sm font-weight-bold" id="nomEditarCategoria" name="nomEditarCategoria">
+              </div>
+              <div class="form-group">
+                <label for="descEditarCategoria" class="col-form-label col-form-label-sm">Descripcion:</label>
+                <textarea name="descEditarCategoria" id="descEditarCategoria" rows="2" class="form-control form-control-sm font-weight-bold"></textarea>
               </div>
             </form>
           </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-warning w-100" id="btnEditarCategoria"><i class="fas fa-pen mr-2"></i>Guardar Cambios</button>
+      <div class="modal-footer px-5">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
+          <i class="fa-solid fa-xmark fa-sm text-white-50 mr-2"></i>Cancelar
+        </button>
+        <button type="button" class="btn btn-warning btn-sm" id="btnEditarCategoria">
+          <i class="fa-solid fa-pen-to-square fa-sm text-white-50 mr-2"></i>Guardar Cambios
+        </button>
       </div>
     </div>
   </div>

@@ -13,11 +13,11 @@
         <th>TIPO</th>
         <th>NOMBRE</th>
         <th>SERIE</th>
-        <th class="text-center">MARCA</th>
-        <th class="text-center">STOCK</th>
-        <th class="text-center">CONTRATO</th>
-        <th class="text-center">ESTADO</th>
-        <th class="text-center">ACCION</th>
+        <th>MARCA</th>
+        <th>STOCK</th>
+        <th>CONTRATO</th>
+        <th>ESTADO</th>
+        <th>ACCION</th>
       </tr>
     </thead>
     <tfoot>
@@ -26,11 +26,11 @@
         <th>TIPO</th>
         <th>NOMBRE</th>
         <th>SERIE</th>
-        <th class="text-center">MARCA</th>
-        <th class="text-center">STOCK</th>
-        <th class="text-center">CONTRATO</th>
-        <th class="text-center">ESTADO</th>
-        <th class="text-center">ACCION</th>
+        <th>MARCA</th>
+        <th>STOCK</th>
+        <th>CONTRATO</th>
+        <th>ESTADO</th>
+        <th>ACCION</th>
       </tr>
     </tfoot>
     <tbody>
@@ -40,10 +40,22 @@
         <td><?php echo $obj->nomCategoria( $mostrarprod[1]) ?></td>
         <td><?php echo $mostrarprod[3] ?></td>
         <td><?php echo $mostrarprod[4] ?></td>
-        <td class="text-center"><?php echo $mostrarprod[6] ?></td>
-        <td class="text-center"><?php echo $mostrarprod[8] ?></td>
-        <td class="text-center"><?php echo $obj->nomContrato( $mostrarprod[2]) ?></td>
-        <td class="text-center">
+        <td><?php echo $mostrarprod[6] ?></td>
+        <td>
+          <?php 
+          if ($mostrarprod[8]=="0"){
+          ?>  
+            <span class="badge bg-danger"><?php echo $mostrarprod[8] ?></span>
+          <?php
+          }else {
+          ?>
+            <span class="badge bg-primary"><?php echo $mostrarprod[8] ?></span>
+          <?php
+            }
+          ?>
+        </td>
+        <td><?php echo $obj->nomContrato( $mostrarprod[2]) ?></td>
+        <td>
           <?php
           if ($mostrarprod[9]=="1") {
           ?>
@@ -53,10 +65,10 @@
           ?>
             <span class="badge bg-danger">No operativo</span>
           <?php
-          }
+            }
           ?>
         </td>
-        <td class="text-center">
+        <td>
           
           <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#modalEditarEquipo" onclick="verDatosEquipos('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
           <?php
