@@ -40,7 +40,7 @@
               <div class="page-title-wrapper d-flex align-items-center justify-content-between">
                 <div class="page-title-heading d-flex align-items-center">
                   <div class="page-title-icon shadow-sm">
-                    <i class="fa-solid fa-desktop m-auto"></i>
+                    <i class="fa-solid fa-computer m-auto"></i>
                   </div>
                   <div>
                     <h3 class="mb-0">Panel de Equipos</h3>

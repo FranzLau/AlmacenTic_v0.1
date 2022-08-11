@@ -31,7 +31,7 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
             
-            <i class="fa-solid fa-desktop"></i>
+            <i class="fa-solid fa-computer"></i>
             <span>Equipos</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">

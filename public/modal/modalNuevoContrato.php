@@ -29,10 +29,11 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fas fa-times mr-2 fa-sm text-white-50"></i>Cancelar</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
+          <i class="fa-solid fa-xmark fa-sm text-white-50 mr-2"></i>Cancelar
+        </button>
         <button type="button" class="btn btn-success btn-sm" id="btnAgregarContrato">
-          <i class="fas fa-save text-white-50 mr-2"></i>
-          Guardar
+          <i class="fa-solid fa-check fa-sm text-white-50 mr-2"></i>Guardar
         </button>
       </div>
     </div>

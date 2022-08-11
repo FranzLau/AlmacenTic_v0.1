@@ -29,9 +29,13 @@
           </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><i class="fas fa-times mr-2 fa-sm text-white-50"></i>Cancelar</button>
-        <button type="button" class="btn btn-warning btn-sm" id="btnEditarContrato"><i class="fas fa-pen mr-2 fa-sm text-white-50"></i>Guardar Cambios</button>
+      <div class="modal-footer px-5">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
+          <i class="fa-solid fa-xmark fa-sm text-white-50 mr-2"></i>Cancelar
+        </button>
+        <button type="button" class="btn btn-warning btn-sm" id="btnEditarContrato">
+          <i class="fa-solid fa-pen-to-square fa-sm text-white-50 mr-2"></i>Guardar Cambios
+        </button>
       </div>
     </div>
   </div>

@@ -89,7 +89,7 @@
                   <!--*************************** segundo PANEL -->
                   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-4">
                         <div class="card shadow">
                           <div class="card-header">
                             <h6 class="m-0 text-primary font-weight-bold">
@@ -97,101 +97,117 @@
                             </h6>
                           </div>
                           <div class="card-body">
-                            <div class="row">
-                              <div class="col-md-12">
-                                <form id="formNuevoMovi">
-                                  <div class="form-row">
-                                    <div class="form-group col-md-2">
-                                      <label class="col-form-label col-form-label-sm" for="fechaNuevoMov">Fecha :</label>
-                                      <input type="date" class="form-control form-control-sm" id="fechaNuevoMov" name="fechaNuevoMov">
-                                    </div>
-                                    <!--*************************** primer INPUT -->
-                                    <div class="form-group col-md-2">
-                                      <label class="col-form-label col-form-label-sm" for="tipoNuevoMov">Tipo:</label><br>
-                                      <select class="form-control form-control-sm" name="tipoNuevoMov" id="tipoNuevoMov">
-                                        <option>Elije una opción</option>
-                                        <option value="OUTPUT">Asignación</option>
-                                        <option value="INPUT">Devolución</option>
-                                        <option value="MOVE">Movimiento</option>
-                                      </select>
-                                    </div>
-                                    <!--*************************** primer INPUT -->
-                                    <div class="form-group col-md-5">
-                                      <label for="empNuevoMov" class="col-form-label col-form-label-sm">Usuario:</label>
-                                      <select class="form-control form-control-sm" id="empNuevoMov" name="empNuevoMov" style="width:100%">
-                                        <option value="">Elije uno</option>
-                                        <?php $ctg = $con->query("SELECT * FROM empleado");
-                                            while ($row = $ctg->fetch_assoc()) {
-                                              echo "<option value='".$row['id_empleado']."' ";
-                                              echo ">";
-                                              echo $row['nom_empleado'];
-                                              echo " ";
-                                              echo $row['ape_empleado'];
-                                              echo "</option>";
-                                            }
-                                        ?>
-                                      </select>
-                                    </div>
-                                    <!--*************************** primer INPUT -->
-                                    <div class="form-group col-md-3">
-                                      <label class="col-form-label col-form-label-sm" for="ubicNuevoMov">Ubicación:</label><br>
-                                      <select class="form-control form-control-sm" name="ubicNuevoMov" id="ubicNuevoMov">
-                                        <option>Elije una opción</option>
-                                        <option value="OUTPUT">Sede 28 de Julio</option>
-                                        <option value="INPUT">Sede Para</option>
-                                        <option value="INPUT">Sede Leguia</option>
-                                        <option value="INPUT">Sede Parque Industrial</option>
-                                        <option value="INPUT">Sede Almacén Viñani</option>
-                                      </select>
-                                    </div>
-                                    <!--*************************** primer INPUT -->
+                            <form id="formNuevoMovi">
+                              <div class="form-row">
+                                <div class="form-group col-md-4">
+                                  <label class="col-form-label col-form-label-sm" for="fechaNuevoMov">Fecha :</label>
+                                  <input type="date" class="form-control form-control-sm" id="fechaNuevoMov" name="fechaNuevoMov">
+                                </div>
+                                <div class="form-group col-md-8">
+                                <label class="col-form-label col-form-label-sm" for="tipoNuevoMov">Tipo:</label>
+                                <div class="radio">
+                                  <div class="radio-estate">
+                                    <input type="radio" name="tipoNuevoMov" id="tipoNuevoMov1" value="1" checked>
+                                    <label for="tipoNuevoMov1">Normal</label>
                                   </div>
-                                  <div class="form-row">
-                                    <!--*************************** primer INPUT -->
-                                    <div class="form-group col-md-3">
-                                      <label for="serieNuevoMov" class="col-form-label col-form-label-sm">Equipo:</label>
-                                      <select class="form-control form-control-sm" id="serieNuevoMov" name="serieNuevoMov" style="width:100%">
-                                        <option value="0">Elije la serie</option>
-                                      </select>
-                                    </div>
-                                    <!--*************************** primer INPUT -->
-                                    <div class="form-group col-md-3">
-                                      <label for="descNuevoMov" class="col-form-label col-form-label-sm">Descripcion:</label>
-                                      <input type="text" class="form-control form-control-sm" id="descNuevoMov" name="descNuevoMov" readonly>
-                                    </div>
-                                    <!--*************************** primer INPUT -->
-                                    <div class="form-group col-md-1">
-                                      <label for="cantNuevoMov" class="col-form-label col-form-label-sm">Cant.</label>
-                                      <input type="number" class="form-control form-control-sm" id="cantNuevoMov" name="cantNuevoMov">
-                                    </div>
-                                    <!--*************************** primer INPUT -->
-                                    <div class="form-group col-md-5">
-                                      <label for="obsNuevoMov" class="col-form-label col-form-label-sm">Observacion:</label>
-                                      <input type="text" class="form-control form-control-sm" id="obsNuevoMov" name="obsNuevoMov">
-                                    </div>
+                                  
+                                  <div class="radio-estate">
+                                    <input type="radio" name="tipoNuevoMov" id="tipoNuevoMov2" value="2">
+                                    <label for="tipoNuevoMov2">Nuevo</label>
                                   </div>
-                                </form>
+                                </div>
                               </div>
-                            </div>
+                              </div>
+                              <!--*************************** primer INPUT -->
+                              
+                              <!--*************************** primer INPUT -->
+                              <div class="form-group">
+                                <label for="empNuevoMov" class="col-form-label col-form-label-sm">Empleado:</label>
+                                <select class="form-control form-control-sm" id="empNuevoMov" name="empNuevoMov" style="width:100%">
+                                  <option value="">Elije uno</option>
+                                  <?php $ctg = $con->query("SELECT * FROM empleado");
+                                      while ($row = $ctg->fetch_assoc()) {
+                                        echo "<option value='".$row['id_empleado']."' ";
+                                        echo ">";
+                                        echo $row['nom_empleado'];
+                                        echo " ";
+                                        echo $row['ape_empleado'];
+                                        echo "</option>";
+                                      }
+                                  ?>
+                                </select>
+                              </div>
+                              <!--*************************** primer INPUT -->
+                              <div class="form-group">
+                                <label class="col-form-label col-form-label-sm" for="sedeNuevoMov">Ubicación:</label><br>
+                                <select class="form-control form-control-sm" id="sedeNuevoMov" name="sedeNuevoMov" style="width:100%">
+                                  <option value="">Elije uno</option>
+                                  <?php $ctg = $con->query("SELECT * FROM sede");
+                                      while ($row = $ctg->fetch_assoc()) {
+                                        echo "<option value='".$row['id_sede']."' ";
+                                        echo ">";
+                                        echo $row['nom_sede'];
+                                        echo "</option>";
+                                      }
+                                  ?>
+                                </select>
+                              </div>
+                              <!--*************************** primer INPUT -->
+                              <div class="form-row">
+                                <div class="form-group col-md-9">
+                                  <label for="serieNuevoMov" class="col-form-label col-form-label-sm">Equipo:</label>
+                                  <select class="form-control form-control-sm" id="serieNuevoMov" name="serieNuevoMov" style="width:100%">
+                                    <option value="0">Elije la serie</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                  <label for="cantNuevoMov" class="col-form-label col-form-label-sm">Cant.</label>
+                                  <input type="number" class="form-control form-control-sm" id="cantNuevoMov" name="cantNuevoMov">
+                                </div>
+                              </div>
+                              
+                              <!--*************************** primer INPUT -->
+                              <div class="form-group">
+                                <label for="descNuevoMov" class="col-form-label col-form-label-sm">Descripcion:</label>
+                                <input type="text" class="form-control form-control-sm" id="descNuevoMov" name="descNuevoMov" readonly>
+                              </div>
+                              <!--*************************** primer INPUT -->
+                              
+                              <!--*************************** primer INPUT -->
+                              <div class="form-group">
+                                <label for="obsNuevoMov" class="col-form-label col-form-label-sm">Observacion:</label>
+                                <input type="text" class="form-control form-control-sm" id="obsNuevoMov" name="obsNuevoMov">
+                              </div>
+                            </form>
+                            <hr>
                             <div class="row">
                               <div class="col-md-12 text-right">
-                                <button type="button" class="btn btn-sm btn-success" id="btnAgregarEquipo">
-                                  <i class="fa-solid fa-arrow-turn-down fa-sm"></i>
-                                  Agregar
-                                </button>
                                 <button type="button" class="btn btn-sm btn-danger" id="btnLimpiarTodo">
-                                  <i class="fa-solid fa-trash fa-sm"></i>
+                                  <i class="fa-regular fa-trash-can fa-sm"></i>
                                   Limpiar todo
+                                </button>  
+                                <button type="button" class="btn btn-sm btn-success" id="btnAgregarEquipo">
+                                  <i class="fa-solid fa-arrow-turn-up fa-sm"></i>
+                                  Agregar
                                 </button>
                               </div>
                             </div>
-                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card shadow">
+                          <div class="card-header">
+                            <h6 class="m-0 text-primary font-weight-bold">
+                              <i class="fa-solid fa-folder-plus mr-2"></i>Registro Movimiento
+                            </h6>
+                          </div>
+                          <div class="card-body">
                             <div class="row mt-3">
                               <div class="col-md-12">
                                 <div id="tablaMovTemp"></div>
                               </div>
                             </div>
-                            
                           </div>
                         </div>
                       </div>

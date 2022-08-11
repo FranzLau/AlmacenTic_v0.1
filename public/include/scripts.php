@@ -32,10 +32,4 @@
 <script src="../../assets/js/sedeCrearEditar.js"></script>
 
 
-<script src="../../assets/js/customers.js"></script>
-
-<script src="../../assets/js/egresojs.js"></script>
-<script src="../../assets/js/openboxjs.js"></script>
-<script src="../../assets/js/presentjs.js"></script>
-
 
