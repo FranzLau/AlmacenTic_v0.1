@@ -15,7 +15,6 @@
 					<th scope="col">Descripción</th>
 					<th scope="col" class="text-center">Marca</th>
 					<th scope="col" class="text-center">Serie</th>
-					<th scope="col">Observaciones</th>
 					<th scope="col" class="text-center"><i class="fas fa-trash"></i></th>
 					</tr>
 				</thead>
@@ -32,7 +31,6 @@
 					<td><?php echo $d[7]; ?></td>
 					<td><?php echo $obj->nameCategory($d[8]); ?></td>
 					<td><?php echo $d[4]; ?></td>
-					<td><?php echo $d[3]; ?></td>
 					<td class="text-center">
 						<button class="btn btn-danger btn-sm" onclick="RemoveArticle('<?php echo $i; ?>')">
 										<i class="fas fa-times"></i>
