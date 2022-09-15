@@ -1,6 +1,6 @@
 <!-- Modal NUEVO EMPLEADO-->
 <div class="modal fade" id="modalNuevoEmpleado" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header px-5 py-4">
         <h5 class="modal-title" id="exampleModalCenterTitle">
@@ -16,30 +16,32 @@
             <!--******************   INICIO DEL FORMULARIO   *******************-->
             <form id="formNuevoEmpleado">
               <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-3">
                   <label for="nombreEmpleado" class="col-form-label col-form-label-sm">Nombre:</label>
                   <input type="text" class="form-control form-control-sm font-weight-bold" id="nombreEmpleado" name="nombreEmpleado">
                 </div>
-                <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                <div class="form-group col-md-6">
+                <!--<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+                <div class="form-group col-md-3">
                   <label for="apellidoEmpleado" class="col-form-label col-form-label-sm">Apellidos:</label>
                   <input type="text" class="form-control form-control-sm font-weight-bold" id="apellidoEmpleado" name="apellidoEmpleado">
                 </div>
+                <!--<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>-->
+                <div class="form-group col-md-6">
+                  <label for="cargoEmpleado" class="col-form-label col-form-label-sm">Cargo:</label>
+                  <input type="text" class="form-control form-control-sm font-weight-bold" id="cargoEmpleado" name="cargoEmpleado">
+                </div>
               </div>
               <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-              <div class="form-group">
-                <label for="cargoEmpleado" class="col-form-label col-form-label-sm">Cargo:</label>
-                <input type="text" class="form-control form-control-sm font-weight-bold" id="cargoEmpleado" name="cargoEmpleado">
-              </div>
-              <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-              <div class="form-group">
-                <label for="areaEmpleado" class="col-form-label col-form-label-sm">Area:</label>
-                <input type="text" class="form-control form-control-sm font-weight-bold" id="areaEmpleado" name="areaEmpleado">
-              </div>
-              <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-              <div class="form-group">
-                <label for="gerenciaEmpleado" class="col-form-label col-form-label-sm">Gerencia:</label>
-                <input type="text" class="form-control form-control-sm font-weight-bold" id="gerenciaEmpleado" name="gerenciaEmpleado">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="areaEmpleado" class="col-form-label col-form-label-sm">Area:</label>
+                  <input type="text" class="form-control form-control-sm font-weight-bold" id="areaEmpleado" name="areaEmpleado">
+                </div>
+                <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>-->
+                <div class="form-group col-md-6">
+                  <label for="gerenciaEmpleado" class="col-form-label col-form-label-sm">Gerencia:</label>
+                  <input type="text" class="form-control form-control-sm font-weight-bold" id="gerenciaEmpleado" name="gerenciaEmpleado">
+                </div>
               </div>
               <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
               <div class="form-group">

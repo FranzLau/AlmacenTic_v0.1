@@ -1,6 +1,6 @@
 <!-- Modal EDITAR EMPLEADO-->
 <div class="modal fade" id="modalEditarEmpleado" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header px-5 py-4 bg-gradient-warning">
         <h5 class="modal-title" id="exampleModalCenterTitle">
@@ -17,20 +17,21 @@
               <input type="text" id="idEditarEmpleado" name="idEditarEmpleado" hidden>
 
               <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-3">
                   <label for="nomEditarEmpleado" class="col-form-label col-form-label-sm">Nombres:</label>
                   <input type="text" class="form-control form-control-sm font-weight-bold" id="nomEditarEmpleado" name="nomEditarEmpleado">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-3">
                   <label for="apeEditarEmpleado" class="col-form-label col-form-label-sm">Apellidos:</label>
                   <input type="text" class="form-control form-control-sm font-weight-bold" id="apeEditarEmpleado" name="apeEditarEmpleado">
                 </div>
+                <div class="form-group col-md-6">
+                  <label for="cargoEditarEmpleado" class="col-form-label col-form-label-sm">Cargo:</label>
+                  <input type="text" class="form-control form-control-sm font-weight-bold" id="cargoEditarEmpleado" name="cargoEditarEmpleado">
+                </div>
               </div>
               <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-              <div class="form-group">
-                <label for="cargoEditarEmpleado" class="col-form-label col-form-label-sm">Cargo:</label>
-                <input type="text" class="form-control form-control-sm font-weight-bold" id="cargoEditarEmpleado" name="cargoEditarEmpleado">
-              </div>
+              
               <div class="form-group">
                 <label for="areaEditarEmpleado" class="col-form-label col-form-label-sm">Area:</label>
                 <input type="text" class="form-control form-control-sm font-weight-bold" id="areaEditarEmpleado" name="areaEditarEmpleado">
