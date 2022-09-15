@@ -54,7 +54,7 @@
  </div>
  <div class="row">
    
-	 <div class="col-md-12">
+	 <div class="col-md-8">
 
 		 <h6 class="font-weight-bold">Origen:</h6>
 		 <p id="clienteResp"></p>
@@ -63,15 +63,13 @@
 		 
 
 	 </div>
-
-
- </div>
- <div class="row">
-	 <div class="col-md-12 text-right">
+	 <div class="col-md-4 text-right">
 		<button class="btn btn-primary btn-sm" onclick="createAssig()">
 			<i class="fa-solid fa-floppy-disk mr-2"></i>Guardar Movimiento
 		</button>
 	 </div>
+
+
  </div>
 
  <!-- <div class="row mt-2" >

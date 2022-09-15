@@ -24,73 +24,61 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Almacén
+        Mantenimiento
     </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMant" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Mantenimiento</span>
+        </a>
+        <div id="collapseMant" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Seccion Mantenimiento</h6>
+                <a class="collapse-item" href="sede.php"><i class="fa-solid fa-location-dot mr-2 text-gray-500"></i>Sedes</a>
+                <a class="collapse-item" href="contratos.php"><i class="fa-solid fa-file-contract mr-2 text-gray-500"></i>Contratos</a>
+                <a class="collapse-item" href="#"><i class="fa-solid fa-user-group mr-2 text-gray-500"></i>Usuarios</a>
+            </div>
+        </div>
+    </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            
-            <i class="fa-solid fa-computer"></i>
-            <span>Equipos</span>
+            <i class="fa-solid fa-warehouse"></i>
+            <span>Almacen</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Equipos Tecnologicos:</h6>
-                <a class="collapse-item" href="equipos.php">Mis Equipos</a>
-                <a class="collapse-item" href="categorias.php">Categorias</a>
-                <a class="collapse-item" href="#">Otros</a>
+                <a class="collapse-item" href="equipos.php"><i class="fa-solid fa-computer mr-2 text-gray-500"></i>Equipos</a>
+                <a class="collapse-item" href="categorias.php"><i class="fa-solid fa-boxes-stacked mr-2 text-gray-500"></i>Categorias</a>
             </div>
         </div>
     </li>
 
-    <!-- Nav Item - Pages Collapse Menu -->
+    <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
+        <a class="nav-link" href="movimientos.php">
+            <i class="fa-solid fa-dolly"></i>
             <span>Movimientos</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Movimientos</h6>
-                <a class="collapse-item" href="movimientos.php">Mis Movimiento</a>
-                <a class="collapse-item" href="#">Registrar Movimiento</a>
-            </div>
-        </div>
     </li>
-
-    
 
     <!-- Divider -->
     <hr class="sidebar-divider">
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Administracion
+        Electrosur
     </div>
-
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="empleados.php">
             <i class="fa-solid fa-id-card-clip"></i>
-            <span>Trabajadores</span>
-        </a>
-    </li>
-
-    <!-- Nav Item - Charts -->
-    <li class="nav-item">
-        <a class="nav-link" href="sede.php">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Sedes</span>
-        </a>
-    </li>
-
-    <!-- Nav Item - Charts -->
-    <li class="nav-item">
-        <a class="nav-link" href="contratos.php">
-            <i class="fa-solid fa-file-contract"></i>
-            <span>Contratos</span>
+            <span>Empleados</span>
         </a>
     </li>
 
@@ -99,15 +87,16 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Usuarios
+        Ayuda
     </div>
+
     
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
         <a class="nav-link" href="#">
-            <i class="fa-solid fa-user-group"></i>
-            <span>Mis Usuarios</span>
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Ayuda</span>
         </a>
     </li>
 
