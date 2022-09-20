@@ -56,6 +56,15 @@ create table categoria(
     primary key(id_categoria)
 );
 
+create table imagenes(
+    id_imagen int auto_increment,
+    id_categoria int not null,
+    nom_imagen varchar(),
+    ruta_imagen varchar(),
+    fecha_subida date,
+    primary key(id_imagen)
+);
+
 create table contrato(
     id_contrato int auto_increment,
     nom_contrato varchar(50),
@@ -83,4 +92,20 @@ create table movimiento(
     fecha_movimiento date,
     tipo_movimiento varchar(100),
     obs_movimiento varchar(245)
+);
+
+create table soporte (
+    id_soporte int auto_increment,
+    id_sede int,
+    id_empleado int,
+    fecha_inicio date,
+    fecha_fin date,
+    equipo_soporte varchar(50),
+    servicio_soporte varchar(50),
+    tipo_soporte varchar(50),
+    num_soporte varchar(100),
+    desc_soporte varchar(250),
+    trat_soporte varchar(250),
+    solu_soporte varchar(50),
+    primary key(id_soporte)
 );

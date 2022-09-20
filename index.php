@@ -50,13 +50,13 @@ if(isset($_SESSION['loginUser'])){
                   </div>
                   <form class="user">
                     <div class="form-group">
-                      <input id="userlg" name="userlg" type="text" class="form-control form-control-user" placeholder="Usuario" pattern="[A-Za-z0-9_-]{1,15}" required>
+                      <input id="userlg" name="userlg" type="text" class="form-control" placeholder="Usuario" pattern="[A-Za-z0-9_-]{1,15}" required>
                     </div>
                     <div class="form-group">
-                      <input type="password" id="passlg" name="passlg" class="form-control form-control-user"  placeholder="Constraseña" pattern="[A-Za-z0-9_-]{1,15}" required>
+                      <input type="password" id="passlg" name="passlg" class="form-control"  placeholder="Constraseña" pattern="[A-Za-z0-9_-]{1,15}" required>
                     </div>
                     <!--BOTON DE LOGIN-->
-                    <button type="button" id="btnlg" class="btn btn-primary btn-user btn-block w-100">
+                    <button type="button" id="btnlg" class="btn btn-primary btn-block w-100">
                       <i class="fas fa-sign-in-alt mr-2"></i>Ingresar
                     </button>
                   </form>

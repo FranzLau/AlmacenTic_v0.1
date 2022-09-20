@@ -50,7 +50,7 @@
 		</div>
 	 </div>
  </div>
- <div class="row">
+ <div class="row mt-3">
    
 	 <div class="col-md-8">
 
@@ -62,7 +62,7 @@
 
 	 </div>
 	 <div class="col-md-4 text-right">
-		<button class="btn btn-primary btn-sm" onclick="createAssig()">
+		<button class="btn btn-success btn-sm" onclick="createAssig()">
 			<i class="fa-solid fa-floppy-disk mr-2"></i>Guardar Movimiento
 		</button>
 	 </div>

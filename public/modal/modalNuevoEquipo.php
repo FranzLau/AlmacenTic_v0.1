@@ -3,7 +3,7 @@
 <div class="modal fade bd-example-modal-lg" id="modalCrearEquipo" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header px-5 py-4">
+      <div class="modal-header px-4">
         <h5 class="modal-title" id="exampleModalCenterTitle">
           Registrar Equipo
         </h5>
@@ -11,7 +11,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body px-5 my-4">
+      <div class="modal-body px-4">
         <!--***************************   INICIO DEL FORMULARIO   ***********************-->
         <form id="formNuevoEquipo" class="formRegEquipo">
           <!-- Content Row -->
@@ -24,8 +24,8 @@
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="categoriaEquipo" class="col-form-label col-form-label-sm">Categoria:</label>
-              <select class="form-control form-control-sm font-weight-bold" id="categoriaEquipo" name="categoriaEquipo" style="width:100%">
-                <option value="">Elije categoria</option>
+              <select class="custom-select custom-select-sm font-weight-bold" id="categoriaEquipo" name="categoriaEquipo" style="width:100%">
+                <option selected disabled>Elegir...</option>
                   <?php $ctg = $con->query("SELECT * FROM categoria");
                       while ($row = $ctg->fetch_assoc()) {
                         echo "<option value='".$row['id_categoria']."' ";
@@ -63,8 +63,8 @@
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="contratoEquipo" class="col-form-label col-form-label-sm">Contrato::</label>
-              <select class="form-control form-control-sm font-weight-bold" id="contratoEquipo" name="contratoEquipo" style="width:100%">
-                <option value="">Elije el contrato</option>
+              <select class="custom-select custom-select-sm font-weight-bold" id="contratoEquipo" name="contratoEquipo" style="width:100%">
+                <option selected disabled>Elegir...</option>
                 <?php $ctg = $con->query("SELECT * FROM contrato");
                     while ($row = $ctg->fetch_assoc()) {
                       echo "<option value='".$row['id_contrato']."' ";
@@ -80,25 +80,19 @@
               <input type="number" class="form-control form-control-sm font-weight-bold" id="cantidadEquipo" name="cantidadEquipo" placeholder="0">
             </div>
             <div class="form-group col-md-6 mb-0">
-              <label class="col-form-label col-form-label-sm">Estado:</label>
-              <div class="radio">
-                <div class="radio-estate">
-                  <input type="radio" name="estadoEquipo" id="operativoEquipo" value="1" checked>
-                  <label for="operativoEquipo">Operativo</label>
-                </div>
-                
-                <div class="radio-estate">
-                  <input type="radio" name="estadoEquipo" id="noOperativoEquipo" value="2">
-                  <label for="noOperativoEquipo">No operativo</label>
-                </div>
-                
-              </div>
+                <label for="estadoEquipo" class="col-form-label col-form-label-sm">Estado:</label>
+                <select class="custom-select custom-select-sm font-weight-bold" id="estadoEquipo" name="estadoEquipo" required>
+                  <option selected disabled>Elegir...</option>
+                  <option value="1">Bueno</option>
+                  <option value="2">Malo</option>
+                  <option value="3">Regular</option>
+                </select>
             </div>
           </div>
         </form>
         <!--***** FIN DEL FORMULARIO *******<<<<<<<-->
       </div>
-      <div class="modal-footer px-5">
+      <div class="modal-footer px-4">
         <button type="button" class="btn  btn-sm btn-secondary" data-dismiss="modal">
           <i class="fa-solid fa-xmark fa-sm text-white-50 mr-2"></i>Cancelar
         </button>

@@ -179,3 +179,20 @@
   font-size: .88rem;
   opacity: .6;
 }
+
+/* estilos para border top */
+.border-top-success {
+  border-top: 0.25rem solid #1cc88a;
+}
+
+.border-top-primary {
+  border-top: 0.25rem solid #4e73df;
+}
+
+.border-top-warning {
+  border-top: 0.25rem solid #f6c23e;
+}
+
+.border-top-danger {
+  border-top: 0.25rem solid #e74a3b;
+}

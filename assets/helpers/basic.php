@@ -6,13 +6,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <?php include('head.php'); ?>
+    <?php include('../include/head.php'); ?>
   </head>
   <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-      <?php include("sidebar.php"); ?>
+      <?php include("../include/sidebar.php"); ?>
 
       <!-- Content Wrapper -->
       <div id="content-wrapper" class="d-flex flex-column">
@@ -20,7 +20,7 @@
         <!-- Main Content -->
         <div id="content">
 
-          <?php include("topbar.php"); ?>
+          <?php include("../include/topbar.php"); ?>
 
           <!-- Begin Page Content -->
           <div class="container-fluid">
@@ -40,7 +40,7 @@
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
 
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-    <?php include('scripts.php'); ?>
+    <?php include('../include/scripts.php'); ?>
   </body>
 </html>
 <?php
