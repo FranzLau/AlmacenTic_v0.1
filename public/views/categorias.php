@@ -46,7 +46,7 @@
                   </div>
                 </div>
                 <div class="page-title-actions">
-                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearCategoria"><i class="fa-solid fa-plus fa-sm text-white-50"></i> Nueva Categoria</a>
+                  <a href="#" class="d-none d-sm-inline-block btn btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearCategoria"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i> Nueva Categoria</a>
                 </div>
               </div>
             </div>
@@ -55,8 +55,8 @@
             <div class="row mt-4">
               <div class="col-md-12">
                 <div class="card shadow">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">
+                  <div class="card-header py-3 bg-second-primary">
+                    <h6 class="m-0 font-weight-bold text-white">
                       <i class="fas fa-list mr-2 fa-sm"></i>
                       Lista de Categoria
                     </h6>

@@ -6,7 +6,7 @@
   $sql = $con->query("SELECT * FROM equipo");
  ?>
 <div class="table-responsive">
-  <table class="table table-hover table-sm" id="tableProduc" width="100%" cellspacing="0">
+  <table class="table table-hover table-bordered table-sm" id="tableProduc" width="100%" cellspacing="0">
     <thead>
       <tr>
         <th>CODIGO</th>
@@ -20,19 +20,6 @@
         <th>ACCION</th>
       </tr>
     </thead>
-    <tfoot>
-      <tr>
-        <th>CODIGO</th>
-        <th>TIPO</th>
-        <th>NOMBRE</th>
-        <th>SERIE</th>
-        <th>MARCA</th>
-        <th>STOCK</th>
-        <th>CONTRATO</th>
-        <th>ESTADO</th>
-        <th>ACCION</th>
-      </tr>
-    </tfoot>
     <tbody>
       <?php while($mostrarprod = $sql->fetch_row()){ ?>
       <tr>

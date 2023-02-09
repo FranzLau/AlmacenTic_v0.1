@@ -1,14 +1,14 @@
 <!-- Modal -->
-<div class="modal fade" id="modalEditarCategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal fade" id="modalEditarCategoria" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header px-5 py-4 bg-gradient-warning">
+      <div class="modal-header px-4">
         <h5 class="modal-title" id="exampleModalCenterTitle">Editar Categoria</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body px-5 my-4">
+      <div class="modal-body px-4">
         <div class="row">
           <div class="col-sm-12">
             <form id="formEditarCategoria">
@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-      <div class="modal-footer px-5">
+      <div class="modal-footer px-4">
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
           <i class="fa-solid fa-xmark fa-sm text-white-50 mr-2"></i>Cancelar
         </button>

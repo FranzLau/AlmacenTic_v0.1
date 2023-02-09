@@ -6,7 +6,7 @@
 ?>
   <!-- DataTales Example -->
   <div class="table-responsive">
-    <table class="table table-hover table-sm datatable-wide" id="tablaEmpleado" width="100%" cellspacing="0">
+    <table class="table table-hover table-bordered table-sm" id="tablaEmpleado" width="100%" cellspacing="0">
       <thead>
           <tr>
             <th>ID</th>
@@ -19,18 +19,6 @@
             <th>ACCIONES</th>
           </tr>
       </thead>
-      <tfoot>
-        <tr>
-          <th>ID</th>
-          <th>GRUPO</th>
-          <th>NOMBRES Y APELLIDO</th>
-          <th>CARGO</th>
-          <th>AREA</th>
-          <th>GERENCIA</th>
-          <th>ESTADO</th>
-          <th>ACCIONES</th>
-        </tr>
-      </tfoot>
       <tbody>
           <?php
           while($mostrar = $sql->fetch_row()){

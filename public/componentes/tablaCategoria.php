@@ -3,7 +3,7 @@
   $sql = $con->query("SELECT * FROM categoria ");
  ?>
  <div class="table-responsive">
-   <table class="table table-sm table-hover" width="100%" cellspacing="0" id="tablaCategorias">
+   <table class="table table-bordered table-hover dtr-inline no-footer" width="100%" cellspacing="0" id="tablaCategorias">
      <thead>
        <tr>
          <th>ID</th>
@@ -12,14 +12,6 @@
          <th>OPCIONES</th>
        </tr>
      </thead>
-     <tfoot>
-       <tr>
-          <th>ID</th>
-          <th>NOMBRE</th>
-          <th>DESCRIPCION</th>
-          <th>OPCIONES</th>
-       </tr>
-     </tfoot>
      <tbody>
        <?php while($vercateg = $sql->fetch_row()){ ?>
          <tr>

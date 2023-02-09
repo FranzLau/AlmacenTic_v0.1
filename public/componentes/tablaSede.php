@@ -6,7 +6,7 @@
   $sql = $con->query("SELECT * FROM sede");
  ?>
  <div class="table-responsive">
-   <table class="table table-hover table-sm" id="tableSedes" width="100%" cellspacing="0">
+   <table class="table table-hover table-bordered" id="tableSedes" width="100%" cellspacing="0">
      <thead>
        <tr>
          <th>ID</th>
@@ -16,15 +16,6 @@
          <th>OPCIONES</th>
        </tr>
      </thead>
-     <tfoot>
-       <tr>
-         <th>ID</th>
-         <th>NOMBRE</th>
-         <th>CIUDAD</th>
-         <th>DIRECCION</th>
-         <th>OPCIONES</th>
-       </tr>
-     </tfoot>
      <tbody>
        <?php while($versede = $sql->fetch_row()){ ?>
        <tr>

@@ -48,7 +48,7 @@
                   </div>
                 </div>
                 <div class="page-title-actions">
-                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearEquipo"><i class="fa-solid fa-plus fa-sm text-white-50"></i> Nuevo Equipo</a>
+                  <a href="#" class="d-none d-sm-inline-block btn btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearEquipo"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i> Nuevo Equipo</a>
                 </div>
               </div>
             </div>
@@ -60,8 +60,8 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="card shadow">
-                  <div class="card-header">
-                    <h6 class="m-0 font-weight-bold text-primary">Listado de Equipos</h6>
+                  <div class="card-header py-3 bg-second-primary">
+                    <h6 class="m-0 font-weight-bold text-white">Listado de Equipos</h6>
                   </div>
                   <div class="card-body">
                     <div id="tablaEquipos"></div>

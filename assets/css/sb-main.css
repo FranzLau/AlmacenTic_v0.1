@@ -152,9 +152,8 @@
 .modal-title {
   font-size: 1.1rem!important;
   font-weight: 700!important;
-  color: #25396f!important;
+  color: #004a93!important;
 }
-
 .modal-header {
   border-bottom: 2px solid #e3e6f0!important;
 }
@@ -168,7 +167,7 @@
   display: flex;
   padding: 0.83333rem;
   margin: 0 30px 0 0;
-  background: #4e73df;
+  background: #004a93;
   color: #ffffff;
   border-radius: 0.25rem;
   width: 50px;

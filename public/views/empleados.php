@@ -48,7 +48,7 @@
                   
                 </div>
                 <div class="page-title-actions">
-                  <a href="#" class="d-none d-sm-inline-block btn btn-success btn-sm shadow-sm" data-toggle="modal" data-target="#modalNuevoEmpleado"><i class="fa-solid fa-square-plus text-white-50 mr-2"></i> Nuevo Trabajador</a>
+                  <a href="#" class="d-none d-sm-inline-block btn btn-success shadow-sm" data-toggle="modal" data-target="#modalNuevoEmpleado"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i> Nuevo Trabajador</a>
                 </div>
               </div>
             </div>
@@ -58,8 +58,8 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="card shadow">
-                  <div class="card-header">
-                    <h6 class="m-0 font-weight-bold text-primary">Listado de Trabajadores</h6>
+                  <div class="card-header py-3 bg-second-primary">
+                    <h6 class="m-0 font-weight-bold text-white">Listado de Trabajadores</h6>
                   </div>
                   <div class="card-body">
                     <!-- ************* TARJETA CON TABLA ***************** -->
@@ -115,20 +115,8 @@
             $('#cargoEditarEmpleado').val(datos['cargoempphp']);
             $('#areaEditarEmpleado').val(datos['areaempphp']);
             $('#gerenciaEditarEmpleado').val(datos['grempphp']);
-            if (datos['gpoempphp']==1) {
-              $('#grupoEditarEmpleado1').prop('checked',true);
-            }else if(datos['gpoempphp']==2){
-              $('#grupoEditarEmpleado2').prop('checked',true);
-            }else {
-              $('#grupoEditarEmpleado3').prop('checked',true);
-            };
-            if (datos['estaempphp']==1) {
-              $('#estadoEditarEmpleado1').prop('checked',true);
-            }else {
-              $('#estadoEditarEmpleado2').prop('checked',true);
-            }
-            
-            
+            $('#grupoEditarEmpleado').val(datos['gpoempphp']);
+            $('#estadoEditarEmpleado').val(datos['estaempphp']);
           }
         })
         .done(function() {

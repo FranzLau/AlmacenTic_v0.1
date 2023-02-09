@@ -4,7 +4,7 @@
  ?>
 
 <div class="table-responsive">
-  <table class="table table-hover table-sm datatable-wide" width="100%" cellspacing="0" id="tablaContrato">
+  <table class="table table-hover table-bordered" width="100%" cellspacing="0" id="tablaContrato">
     <thead>
       <tr>
         <th>ID</th>
@@ -15,16 +15,6 @@
         <th class="text-center">OPCIONES</th>
       </tr>
     </thead>
-    <tfoot>
-      <tr>
-        <th>ID</th>
-        <th>NOMBRE</th>
-        <th>ADQUISICION</th>
-        <th>GARANTIA</th>
-        <th>PROVEEDOR</th>
-        <th class="text-center">Opciones</th>
-      </tr>
-    </tfoot>
     <tbody>
       <?php while($vergasto = $sql->fetch_row()){ ?>
         <tr>

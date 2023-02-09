@@ -44,7 +44,7 @@
                   </div>
                 </div>
                 <div class="page-title-actions">
-                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalNuevoSoporte"><i class="fa-solid fa-plus fa-sm text-white-50"></i> Nueva Atencion</a>
+                  <a href="#" class="d-none d-sm-inline-block btn btn-success shadow-sm" data-toggle="modal" data-target="#modalNuevoSoporte"><i class="fa-solid fa-circle-plus mr-2 text-white-50"></i> Nueva Atencion</a>
                 </div>
               </div>
             </div>
@@ -52,8 +52,8 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="card shadow">
-                  <div class="card-header">
-                    <h6 class="m-0 font-weight-bold text-primary">Listado de Equipos</h6>
+                  <div class="card-header bg-gradient-primary">
+                    <h6 class="m-0 font-weight-bold text-white">Listado de Equipos</h6>
                   </div>
                   <div class="card-body">
                     <div id="tablaSoporte"></div>

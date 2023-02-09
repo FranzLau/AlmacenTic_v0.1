@@ -49,7 +49,7 @@
                   </div>
                 </div>
                 <div class="page-title-actions">
-                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearContrato"><i class="fa-solid fa-plus fa-sm text-white-50"></i> Nuevo Contrato</a>
+                  <a href="#" class="d-none d-sm-inline-block btn btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearContrato"><i class="fa-solid fa-circle-plus mr-2 text-white-50"></i> Nuevo Contrato</a>
                 </div>
               </div>
             </div>
@@ -60,8 +60,8 @@
               
               <div class="col-sm-12">
                 <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">
+                  <div class="card-header py-3 bg-gradient-primary">
+                    <h6 class="m-0 font-weight-bold text-white">
                       <i class="fas fa-list mr-2"></i>
                       Lista de Contratos
                     </h6>
