@@ -18,33 +18,33 @@
               <p class="font-weight-bold">Datos Principales:</p>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="nombreEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Nombre:</label>
+                  <label for="nombreEmpleado" class="col-form-label col-form-label-sm">Nombre:</label>
                   <input type="text" class="form-control form-control-sm" id="nombreEmpleado" name="nombreEmpleado">
                 </div>
                 <!--<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>-->
                 <div class="form-group col-md-6">
-                  <label for="apellidoEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Apellidos:</label>
+                  <label for="apellidoEmpleado" class="col-form-label col-form-label-sm">Apellidos:</label>
                   <input type="text" class="form-control form-control-sm" id="apellidoEmpleado" name="apellidoEmpleado">
                 </div>
               </div>
               <div class="form-group">
-                <label for="cargoEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Cargo:</label>
+                <label for="cargoEmpleado" class="col-form-label col-form-label-sm">Cargo:</label>
                 <input type="text" class="form-control form-control-sm" id="cargoEmpleado" name="cargoEmpleado">
               </div>
               <hr>
               <!--<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>-->
               <p class="font-weight-bold">Datos de Area:</p>
               <div class="form-group">
-                <label for="areaEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Area:</label>
+                <label for="areaEmpleado" class="col-form-label col-form-label-sm">Area:</label>
                 <input type="text" class="form-control form-control-sm" id="areaEmpleado" name="areaEmpleado">
               </div>
               <div class="form-group">
-                <label for="gerenciaEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Gerencia:</label>
+                <label for="gerenciaEmpleado" class="col-form-label col-form-label-sm">Gerencia:</label>
                 <input type="text" class="form-control form-control-sm" id="gerenciaEmpleado" name="gerenciaEmpleado">
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="grupoEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Grupo:</label>
+                  <label for="grupoEmpleado" class="col-form-label col-form-label-sm">Grupo:</label>
                   <select class="custom-select custom-select-sm" id="grupoEmpleado" name="grupoEmpleado">
                     <option selected disabled>Elegir...</option>
                     <option value="1">Contratado</option>
@@ -54,7 +54,7 @@
                 </div>
                 <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
                 <div class="form-group col-md-6">
-                  <label for="estadoEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Estado:</label>
+                  <label for="estadoEmpleado" class="col-form-label col-form-label-sm">Estado:</label>
                   <select class="custom-select custom-select-sm" id="estadoEmpleado" name="estadoEmpleado">
                     <option selected disabled>Elegir...</option>
                     <option value="1">Activo</option>

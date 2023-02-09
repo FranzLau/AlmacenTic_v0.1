@@ -39,7 +39,7 @@
             <div class="page-title mb-4">
               <div class="page-title-wrapper d-flex align-items-center justify-content-between">
                 <div class="page-title-heading d-flex align-items-center">
-                  <div class="page-title-icon shadow-sm">
+                  <div class="page-title-icon bg-gradient-primary shadow-sm">
                     <i class="fa-solid fa-computer m-auto"></i>
                   </div>
                   <div>
@@ -60,8 +60,8 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="card shadow">
-                  <div class="card-header py-3 bg-second-primary">
-                    <h6 class="m-0 font-weight-bold text-white">Listado de Equipos</h6>
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Listado de Equipos</h6>
                   </div>
                   <div class="card-body">
                     <div id="tablaEquipos"></div>

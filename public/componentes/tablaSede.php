@@ -6,7 +6,7 @@
   $sql = $con->query("SELECT * FROM sede");
  ?>
  <div class="table-responsive">
-   <table class="table table-hover table-bordered" id="tableSedes" width="100%" cellspacing="0">
+   <table class="table table-hover table-bordered table-sm" id="tableSedes" width="100%" cellspacing="0">
      <thead>
        <tr>
          <th>ID</th>

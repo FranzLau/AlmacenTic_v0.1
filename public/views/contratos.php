@@ -40,7 +40,7 @@
             <div class="page-title mb-4">
               <div class="page-title-wrapper d-flex align-items-center justify-content-between">
                 <div class="page-title-heading d-flex align-items-center">
-                  <div class="page-title-icon shadow-sm">
+                  <div class="page-title-icon bg-gradient-primary shadow-sm">
                     <i class="fa-solid fa-book m-auto"></i>
                   </div>
                   <div>
@@ -60,8 +60,8 @@
               
               <div class="col-sm-12">
                 <div class="card shadow mb-4">
-                  <div class="card-header py-3 bg-gradient-primary">
-                    <h6 class="m-0 font-weight-bold text-white">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">
                       <i class="fas fa-list mr-2"></i>
                       Lista de Contratos
                     </h6>

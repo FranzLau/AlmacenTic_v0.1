@@ -4,7 +4,7 @@
  ?>
 
 <div class="table-responsive">
-  <table class="table table-hover table-bordered" width="100%" cellspacing="0" id="tablaContrato">
+  <table class="table table-hover table-bordered table-sm" width="100%" cellspacing="0" id="tablaContrato">
     <thead>
       <tr>
         <th>ID</th>

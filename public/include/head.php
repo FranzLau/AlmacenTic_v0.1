@@ -26,5 +26,5 @@
 <link rel="stylesheet" href="../../assets/css/st-all.css">
 
 <!-- Custom styles for this template-->
-<link href="../../assets/css/sb-admin-2.css" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/css/sb-main.css">
+<link href="../../assets/css/sb-admin-1.css" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/sb-admin-main.css">
