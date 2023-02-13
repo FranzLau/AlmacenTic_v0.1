@@ -27,4 +27,4 @@
 
 <!-- Custom styles for this template-->
 <link href="../../assets/css/sb-admin-1.css" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/css/sb-admin-main.css">
+<link rel="stylesheet" href="../../assets/css/sb-admin-0.css">

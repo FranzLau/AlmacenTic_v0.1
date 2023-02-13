@@ -39,7 +39,7 @@
             <div class="page-title mb-4">
               <div class="page-title-wrapper d-flex align-items-center justify-content-between">
                 <div class="page-title-heading d-flex align-items-center">
-                  <div class="page-title-icon bg-gradient-primary shadow-sm">
+                  <div class="page-title-icon shadow-sm">
                     <i class="fa-solid fa-computer m-auto"></i>
                   </div>
                   <div>

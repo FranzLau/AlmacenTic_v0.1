@@ -12,381 +12,183 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
+      <?php include("../include/sidebar.php"); ?>
+
       <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column vh-100">
+      <div id="content-wrapper" class="d-flex flex-column">
 
         <!-- Main Content -->
         <div id="content">
 
-          <?php include("../include/navbar.php"); ?>
+          <?php include("../include/topbar.php"); ?>
 
           <!-- Begin Page Content -->
-          <div class="container">
+          <div class="container-fluid">
 
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Movimientos</li>
-                <li class="breadcrumb-item"><a href="#">Asignación</a></li>
-              </ol>
-            </nav>
+            <!-- Page Heading -->
 
-            <div class="row">
-              <div class="col-md-12">
-                <ul class="nav nav-pills nav-pills-primary" id="pills-tab" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active" id="pills-list-tab" data-toggle="pill" href="#pills-list" role="tab" aria-controls="pills-list" aria-selected="true"><i class="fas fa-list mr-2 fa-sm"></i>Listado de Asignaciones</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="pills-formAsig-tab" data-toggle="pill" href="#pills-formAsig" role="tab" aria-controls="pills-formAsig" aria-selected="false"><i class="far fa-file mr-2 fa-sm"></i>Agregar Asignacion</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="row mt-3">
-              <div class="col-sm-12">
-
-                <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                <div class="tab-content" id="pills-tabContent">
-
-                  <!-- primer PANEL -->
-
-                  <div class="tab-pane fade show active" id="pills-list" role="tabpanel" aria-labelledby="pills-list-tab">
-                    <div class="card shadow-mb-4">
-                      <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-desktop mr-2"></i>Lista de Asignaciones</h6>
-                      </div>
-                      <div class="card-body">
-                        <div id="tablaAsignas"></div>
-                      </div>
-                    </div>
-
+            <!-- Page title -->
+            <div class="page-title mb-4">
+              <div class="page-title-wrapper d-flex align-items-center justify-content-between">
+                <div class="page-title-heading d-flex align-items-center">
+                  <div class="page-title-icon shadow-sm">
+                    <i class="fa-solid fa-dolly m-auto"></i>
                   </div>
-
-                  <!-- FINAL primer PANEL -->
-
-                  <!-- segundo PANEL -->
-
-                  <div class="tab-pane fade" id="pills-formAsig" role="tabpanel" aria-labelledby="pills-formAsig-tab">
-
-                    <div class="card shadow">
-                      <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-desktop mr-2"></i>Registro de Asignación</h6>
-                      </div>
-                      <div class="card-body">
-
-                        <!-- inicio de FORMULARIO -->
-
-                        <form id="formNewAsignament">
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <div class="card">
-                                <div class="card-body">
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                  <div class="form-group row">
-                                    <label for="newAsigFecha" class="col-form-label col-form-label-sm col-sm-2">Fecha:</label>
-                                    <div class="col-sm-5">
-                                      <input type="date" class="form-control form-control-sm" name="newAsigFecha" id="newAsigFecha">
-                                    </div>
-                                  </div>
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                  <div class="form-group row">
-                                    <label for="newAsigEmp" class="col-form-label col-form-label-sm col-sm-2">Usuario:</label>
-                                    <div class="col-sm-10">
-                                      <select class="form-control form-control-sm" id="newAsigEmp" name="newAsigEmp" style="width:100%">
-                                        <option >Elije cliente</option>
-            														<?php $prod = $con->query("SELECT * FROM empleado");
-            															while ($row = $prod->fetch_assoc()) {
-            																echo "<option value='".$row['id_emp']."' ";
-            																echo ">";
-            																echo $row['nom_emp'];
-            																echo " ";
-            																echo $row['ape_emp'];
-            																echo "</option>";
-            															}
-            														?>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                  <div class="form-group row">
-                                    <label for="newAsigSerie" class="col-form-label col-form-label-sm col-sm-2">Serie :</label>
-                                    <div class="col-sm-5">
-                                      <select class="form-control form-control-sm" id="newAsigSerie" name="newAsigSerie" style="width:100%">
-                                        <option value="">Elije producto</option>
-                                        <?php $prod = $con->query("SELECT * FROM equipo WHERE cantidad_equipo <> 0 ");
-                                            while ($row = $prod->fetch_assoc()) {
-                                              echo "<option value='".$row['id_equipo']."' ";
-                                              echo ">";
-                                              echo $row['serie_equipo'];
-                                              echo "</option>";
-                                            }
-                                        ?>
-                                      </select>
-                                    </div>
-                                    <label for="newAsigCant" class="col-form-label col-form-label-sm col-sm-2">Und.</label>
-                                    <div class="col-sm-3">
-                                      <input type="number" class="form-control form-control-sm" id="newAsigCant" name="newAsigCant">
-                                    </div>
-                                  </div>
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                  <div class="form-group row">
-                                    <label for="newAsigCateg" class="col-form-label col-form-label-sm col-sm-2">Tipo:</label>
-                                    <div class="col-sm-4">
-                                      <select class="form-control form-control-sm" id="newAsigCateg" name="newAsigCateg" style="width:100%" disabled>
-                                        <option value="">Pertenece a...</option>
-                                        <?php $ctg = $con->query("SELECT * FROM categoria");
-                                            while ($row = $ctg->fetch_assoc()) {
-                                              echo "<option value='".$row['id_categoria']."' ";
-                                              echo ">";
-                                              echo $row['nom_categoria'];
-                                              echo "</option>";
-                                            }
-                                        ?>
-                                      </select>
-                                    </div>
-                                    <label for="newAsigMarca" class="col-form-label col-form-label-sm col-sm-2">Marca:</label>
-                                    <div class="col-sm-4">
-                                      <input type="text" class="form-control form-control-sm" id="newAsigMarca" name="newAsigMarca" readonly>
-                                    </div>
-                                  </div>
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                  <div class="form-group row mb-0">
-                                    <label for="newAsigContrat" class="col-form-label col-form-label-sm col-sm-2">Cto :</label>
-                                    <div class="col-sm-10">
-                                      <select class="form-control form-control-sm" id="newAsigContrat" name="newAsigContrat" style="width:100%" disabled>
-                                        <option value="">Pertenece a...</option>
-                                        
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                  <!-- <div class="form-group row mb-0">
-
-                                  </div> -->
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="card">
-                                <div class="card-body">
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-
-                                  <div class="form-group row">
-                                    <label for="newAsigGerencia" class="col-form-label col-form-label-sm col-sm-3">Gerencia:</label>
-                                    <div class="col-sm-9">
-                                      <select class="form-control form-control-sm" id="newAsigGerencia" name="newAsigGerencia" style="width:100%">
-                                        <option value="">Elije la gerencia</option>
-                                        
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                  <div class="form-group row">
-                                    <label for="newAsigArea" class="col-form-label col-form-label-sm col-sm-3">Area:</label>
-                                    <div class="col-sm-9">
-                                      <select class="form-control form-control-sm" id="newAsigArea" name="newAsigArea" style="width:100%">
-                                        <option value="">Elije ubicacion</option>
-                                       
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                  <div class="form-group row">
-                                    <label for="newAsigElsu" class="col-form-label col-form-label-sm col-sm-3">ELSU</label>
-                                    <div class="col-sm-5">
-                                      <input type="text" class="form-control form-control-sm" id="newAsigElsu" name="newAsigElsu" placeholder="Ej: ELS0100 , Anexo">
-                                    </div>
-                                  </div>
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                  <div class="form-group row">
-                                    <label for="newAsigIP" class="col-form-label col-form-label-sm col-sm-3">IP</label>
-                                    <div class="col-sm-9">
-                                      <input type="text" class="form-control form-control-sm" id="newAsigIP" name="newAsigIP">
-                                    </div>
-                                  </div>
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                  <div class="form-group row mb-0">
-                                    <label for="newAsigMAC" class="col-form-label col-form-label-sm col-sm-3">MAC</label>
-                                    <div class="col-sm-9">
-                                      <input type="text" class="form-control form-control-sm" id="newAsigMAC" name="newAsigMAC">
-                                    </div>
-                                  </div>
-                                  <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                        </form>
-
-                        <!-- final de FORMULARIO -->
-
-                        <!-- 2da fila BOTONES  -->
-
-                        <div class="row mt-3">
-
-                          <div class="col-sm-12 text-center">
-
-                            <button type="button" class="btn btn-sm btn-danger" id="btncleanAsig">
-                              <i class="fas fa-broom mr-2 fa-sm"></i>Limpiar
-                            </button>
-                            <button type="button" class="btn btn-sm btn-info" id="btnaddAsig">
-                              <i class="fas fa-plus mr-2 fa-sm"></i>Agregar
-                            </button>
-
-                          </div>
-
-                        </div>
-
-                        <!-- 3ra fila BOTONES  -->
-
-                        <div class="row mt-3">
-                          <div class="col-sm-12">
-                            <div id="TablaAsignasTempLoad"></div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
+                  <div>
+                    <h3 class="mb-0">Panel de Asignacion</h3>
+                    <span>Asignacion de equipos</span>
                   </div>
-
-                  <!-- FINAL segundo PANEL -->
-
+                  
                 </div>
-                <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< fin content-->
-
+                <div class="page-title-actions">
+                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
+                    <i class="fa-solid fa-plus fa-sm text-white-50"></i>
+                    Nuevo Movimiento
+                  </a>
+                </div>
               </div>
             </div>
+
 
             <!-- Content Row -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="card shadow border-top-warning">
+                      
+                      <div class="card-body">
+                        <form id="formNuevoMovi">
+                          <div class="form-row">
+                            <div class="form-group col-md-4">
+                              <label class="col-form-label col-form-label-sm" for="fechaNuevoMov">Fecha :</label>
+                              <input type="date" class="form-control form-control-sm font-weight-bold" id="fechaNuevoMov" name="fechaNuevoMov">
+                            </div>
+                            
+                          </div>
+                          <hr>
+                          <div class="form-row">
+                            <div class="form-group col-md-4">
+                              <label class="col-form-label col-form-label-sm" for="tipoNuevoMov">Tipo:</label>
+                              <select class="form-control form-control-sm font-weight-bold">
+                                <option>Small select</option>
+                                <option>Asignacion de Equipo</option>
+                                <option>Devolucion de Equipo</option>
+                              </select>
+                            </div>
+                            <!--*************************** primer INPUT -->
+                            <div class="form-group col-md-8">
+                              <label for="empNuevoMov" class="col-form-label col-form-label-sm">Empleado:</label>
+                              <select class="form-control form-control-sm font-weight-bold" id="empNuevoMov" name="empNuevoMov" style="width:100%">
+                                <option value="">Elije uno</option>
+                                <?php $ctg = $con->query("SELECT * FROM empleado");
+                                    while ($row = $ctg->fetch_assoc()) {
+                                      echo "<option value='".$row['id_empleado']."' ";
+                                      echo ">";
+                                      echo $row['nom_empleado'];
+                                      echo " ";
+                                      echo $row['ape_empleado'];
+                                      echo "</option>";
+                                    }
+                                ?>
+                              </select>
+                            </div>
+                          </div>
+                          <hr>
+                          <!--*************************** primer INPUT -->
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="serieNuevoMov" class="col-form-label col-form-label-sm">Serie:</label>
+                              <select class="form-control form-control-sm font-weight-bold" id="serieNuevoMov" name="serieNuevoMov" style="width:100%">
+                                <option value="0">Elije la serie</option>
+                              </select>
+                            </div>
+                            <!--*************************** primer INPUT -->
+                            <div class="form-group col-md-2">
+                              <label for="cantNuevoMov" class="col-form-label col-form-label-sm">Cant.</label>
+                              <input type="number" class="form-control form-control-sm font-weight-bold" id="cantNuevoMov" name="cantNuevoMov">
+                            </div>
+                            <!--*************************** primer INPUT -->
+                            <div class="form-group col-md-4">
+                              <label class="col-form-label col-form-label-sm" for="sedeNuevoMov">Sede:</label><br>
+                              <select class="form-control form-control-sm font-weight-bold" id="sedeNuevoMov" name="sedeNuevoMov" style="width:100%">
+                                <option value="">Elije uno</option>
+                                <?php $ctg = $con->query("SELECT * FROM sede");
+                                    while ($row = $ctg->fetch_assoc()) {
+                                      echo "<option value='".$row['id_sede']."' ";
+                                      echo ">";
+                                      echo $row['nom_sede'];
+                                      echo "</option>";
+                                    }
+                                ?>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="descNuevoMov" class="col-form-label col-form-label-sm">Descripcion:</label>
+                              <input type="text" class="form-control form-control-sm font-weight-bold" id="descNuevoMov" name="descNuevoMov" readonly>
+                            </div>
+                            <!--*************************** primer INPUT -->
+                            <div class="form-group col-md-3">
+                              <label for="descNuevoMov" class="col-form-label col-form-label-sm">Marca:</label>
+                              <input type="text" class="form-control form-control-sm font-weight-bold" id="descNuevoMov" name="descNuevoMov" readonly>
+                            </div>
+                            <!--*************************** primer INPUT -->
+                            <div class="form-group col-md-3">
+                              <label for="descNuevoMov" class="col-form-label col-form-label-sm">Modelo:</label>
+                              <input type="text" class="form-control form-control-sm font-weight-bold" id="descNuevoMov" name="descNuevoMov" readonly>
+                            </div>
+                          </div>
+                          <!--*************************** primer INPUT -->
+                          <div class="form-group">
+                            <label for="obsNuevoMov" class="col-form-label col-form-label-sm">Observacion:</label>
+                            <input type="text" class="form-control form-control-sm font-weight-bold" id="obsNuevoMov" name="obsNuevoMov">
+                          </div>
+                        </form>
+                        <hr>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <button type="button" class="btn btn-sm btn-danger" id="btnLimpiarTodo">
+                              <i class="fa-regular fa-trash-can fa-sm"></i>
+                              Limpiar todo
+                            </button>  
+                            <button type="button" class="btn btn-sm btn-primary" id="btnAgregarEquipo">
+                              <i class="fa-solid fa-arrow-turn-up fa-sm"></i>
+                              Agregar
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card shadow border-top-success">
+                      <div class="card-body">
+                        <div id="tablaMovTemp"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+
+
 
           </div>
         </div>
-        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-        <!-- Footer -->
-        <?php include('../include/footer.php'); ?>
-        <!-- End of Footer -->
         <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
       </div>
       <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
     </div>
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
     <?php include('../include/scripts.php'); ?>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('#tablaAsignas').load('../componentes/tablaAsignar.php');
-        //$('#TableAsigTempLoad').load("../componentes/tableAssignmentTemp.php");
+        $('#tablaMovimientos').load('../componentes/tablaDevolver.php');
       });
-    </script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#newAsigEmp').change(function() {
-      			$.ajax({
-      				url: '../procesos/empleado/readEmp.php',
-      				type: 'POST',
-      				data: "idemp=" + $('#newAsigEmp').val(),
-      				success:function(r){
-                var datos = $.parseJSON(r);
-
-                $('#newAsigGerencia').val(datos['grempphp']);
-      				}
-      			})
-  				});
-
-          // para datos del Equipos
-          $('#newAsigSerie').change(function() {
-        			$.ajax({
-        				url: '../../public/procesos/producto/readProducto.php',
-        				type: 'POST',
-        				data: "idprod=" + $('#newAsigSerie').val(),
-        				success:function(r){
-                  var datos = $.parseJSON(r);
-
-                  $('#newAsigMarca').val(datos['ProdMarca']);
-                  $('#newAsigModel').val(datos['ProdModel']);
-                  $('#newAsigCateg').val(datos['ProdCtg']);
-                  $('#newAsigContrat').val(datos['ProdPst']);
-        				}
-        			})
-    				});
-
-            // ---- Agregar equipo al Cesto --------
-            $('#btnaddAsig').click(function() {
-        			// vacios = validarFrmVacio('frmVentasProducto');
-    					// if(vacios > 0){
-    					// 	alertify.error("Debe llenar todos los campos!");
-    					// 	return false;
-    					// }
-    					datos = $('#formNewAsignament').serialize();
-    					$.ajax({
-    						url: '../procesos/assignment/createAsigTemp.php',
-    						type: 'POST',
-    						data: datos,
-    						success:function(r){
-    							if (r==2) {
-    								alertify.error('Ingrese un valor mayor');
-    							}else if(r==1){
-    								alertify.error('Ingrese un valor menor');
-    							}else{
-    								$('#TableAsigTempLoad').load("../componentes/tableAssignmentTemp.php");
-    							}
-    						}
-    					})
-    				});
-
-            // --- Limpiar cesto de Equiupos -----------------------------
-            $('#btncleanAsig').click(function() {
-    		    	$.ajax({
-    		    		url: '../procesos/assignment/deleteAsigTemp.php',
-    		    		success:function(r){
-    		    			$('#TableAsigTempLoad').load("../componentes/tableAssignmentTemp.php");
-    		    		}
-    		    	})
-    		    });
-
-      });
-    </script>
-    <script type="text/javascript">
-      function RemoveArticle(index){
-        $.ajax({
-          url: '../procesos/assignment/deleteArticleTemp.php',
-          type: 'POST',
-          data: "ind=" + index,
-          success:function(r){
-            $('#TableAsigTempLoad').load("../componentes/tableAssignmentTemp.php");
-            alertify.success("Se quito el Equipo");
-          }
-        })
-      }
-      function createAssig(){
-        $.ajax({
-    			url: '../procesos/assignment/createAsig.php',
-    			success:function(r){
-    				if (r > 0) {
-    					$('#TableAsigTempLoad').load("../componentes/tableAssignmentTemp.php");
-    					$('#formNewAsignament')[0].reset();
-							$('#tableAsig').load('../componentes/tableAssignment.php');
-    					alertify.alert("Se Asigno el Equipo");
-    				}else if(r == 0){
-    					alertify.alert("No hay equipos seleccionados");
-    				}else{
-    					alertify.error("No se pudo Asignar equipo");
-    				}
-    			}
-    		})
-      }
     </script>
   </body>
 </html>

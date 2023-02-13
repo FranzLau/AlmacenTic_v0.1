@@ -36,7 +36,7 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Equipos Tecnologicos:</h6>
-                <a class="collapse-item" href="equipos.php"><i class="fa-solid fa-computer mr-2 text-gray-500"></i>Equipos</a>
+                <a class="collapse-item" href="equipos.php"><i class="fa-solid fa-desktop mr-2 text-gray-500"></i>Equipos</a>
                 <a class="collapse-item" href="categorias.php"><i class="fa-solid fa-boxes-stacked mr-2 text-gray-500"></i>Categorias</a>
             </div>
         </div>
@@ -51,8 +51,9 @@
         <div id="collapseMoves" class="collapse" aria-labelledby="headingMoves" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Opciones</h6>
-                <a class="collapse-item" href="movimientos.php"><i class="fa-solid fa-list mr-2 text-gray-500"></i>Movimientos</a>
-                <a class="collapse-item" href="movimientosAdd.php"><i class="fa-solid fa-folder-plus mr-2 text-gray-500"></i>Registrar</a>
+                <a class="collapse-item" href="asignacion.php"><i class="fa-solid fa-people-carry-box mr-2 text-gray-500"></i>Asignacion</a>
+                <a class="collapse-item" href="#"><i class="fa-solid fa-cart-flatbed mr-2 text-gray-500"></i>Devolucion</a>
+                <a class="collapse-item" href="#"><i class="fa-solid fa-truck-ramp-box mr-2 text-gray-500"></i>Baja</a>
             </div>
         </div>
     </li>
