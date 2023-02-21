@@ -56,11 +56,11 @@ create table categoria(
     primary key(id_categoria)
 );
 
-create table imagenes(
+create table imagen(
     id_imagen int auto_increment,
     id_categoria int not null,
-    nom_imagen varchar(),
-    ruta_imagen varchar(),
+    nom_imagen varchar(100),
+    ruta_imagen varchar(200),
     fecha_subida date,
     primary key(id_imagen)
 );
