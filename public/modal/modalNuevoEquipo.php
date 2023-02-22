@@ -105,10 +105,7 @@
               </select>
             </div>
           </div>
-          <div class="form-group custom-file">
-            <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-            <label class="custom-file-label col-form-label-sm" for="customFileLang">Seleccionar Archivo</label>
-          </div>
+          
         </form>
         <!--***** FIN DEL FORMULARIO *******<<<<<<<-->
       </div>

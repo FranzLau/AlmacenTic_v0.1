@@ -1,8 +1,8 @@
 <!-- Modal NUEVO EMPLEADO-->
 <div class="modal fade" id="modalNuevoEmpleado" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header px-4">
+      <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenterTitle">
           Nuevo Empleado
         </h5>
@@ -10,12 +10,14 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body px-4">
-        <div class="row">
-          <div class="col-sm-12">
-            <!--******************   INICIO DEL FORMULARIO   *******************-->
-            <form id="formNuevoEmpleado">
+      <div class="modal-body">
+        <!--******************   INICIO DEL FORMULARIO   *******************-->
+        <form id="formNuevoEmpleado">
+          <div class="row">
+            <div class="col-md-4 pt-2">
               <p class="font-weight-bold">Datos Principales:</p>
+            </div>
+            <div class="col-md-8">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="nombreEmpleado" class="col-form-label col-form-label-sm">Nombre:</label>
@@ -31,9 +33,15 @@
                 <label for="cargoEmpleado" class="col-form-label col-form-label-sm">Cargo:</label>
                 <input type="text" class="form-control form-control-sm" id="cargoEmpleado" name="cargoEmpleado">
               </div>
-              <hr>
-              <!--<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>-->
-              <p class="font-weight-bold">Datos de Area:</p>
+            </div>
+          </div>
+          <hr>
+          <!--<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>-->
+          <div class="row">
+            <div class="col-md-4 pt-2">
+              <p class="font-weight-bold">Datos de Empresa:</p>
+            </div>
+            <div class="col-md-8">
               <div class="form-group">
                 <label for="areaEmpleado" class="col-form-label col-form-label-sm">Area:</label>
                 <input type="text" class="form-control form-control-sm" id="areaEmpleado" name="areaEmpleado">
@@ -62,13 +70,12 @@
                   </select>
                 </div>
               </div>
-            </form>
-            <!--*****************************   FIN DEL FORMULARIO   *************************-->
-          </div>
-        </div>
+            </div>
+          </div>              
+        </form>
+        <!--*****************************   FIN DEL FORMULARIO   *************************-->
       </div>
-      <div class="modal-footer px-4">
-
+      <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
           <i class="fa-solid fa-xmark fa-sm text-white-50 mr-2"></i>Cancelar
         </button>

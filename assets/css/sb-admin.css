@@ -6,7 +6,12 @@
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
+.btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ESTILO PARA NAVS <<<<<<<<<<<<<<<<<<<<<*/
 .btn-link-edit {
   transition: 0.3s;
@@ -19,7 +24,7 @@
 .btn-link-delete {
   transition: 0.3s;
   opacity: 0.8;
-  color: #e74a3b!important;
+  color:#e74a3b!important;
 }
 .btn-link-delete:hover{
   opacity: 1;
@@ -67,12 +72,12 @@
   box-shadow: 0 0 0 3px rgb(0 123 255 / 50%);
 }
 
-.btn-xs {
+/*.btn-xs {
   padding: .25rem .4rem;
   font-size: .875rem;
   line-height: .5;
   border-radius: .2rem;
-}
+}*/
 
 /*---- ESTILOS PARA select 2---*/
 .select2-container--default .select2-selection--single {
