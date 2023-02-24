@@ -38,12 +38,16 @@ create table equipo(
     id_categoria int not null,
     id_contrato int not null,
     nom_equipo varchar(200),
+    tcod_equipo varchar(10),
+    cod_equipo varchar(20),
+    inv_equipo varchar(20),
     serie_equipo varchar(100),
-    codigo_equipo varchar(50),
     marca_equipo varchar(100),
     modelo_equipo varchar(100),
-    cantidad_equipo int(100),
+    cantidad_equipo int,
     estado_equipo int,
+    condicion_equipo int,
+    zona_equipo varchar(100),
     fecha_captura date,
     primary key(id_equipo)
 );

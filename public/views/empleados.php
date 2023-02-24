@@ -21,7 +21,7 @@
       <?php include("../include/sidebar.php"); ?>
       <!-- End of Sidebar -->
 
-      <!-- Content Wrapper -->
+      <!-- Content Wrappssdr -->
       <div id="content-wrapper" class="d-flex flex-column">
 
         <!-- Main Content -->

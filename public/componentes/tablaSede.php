@@ -6,7 +6,7 @@
   $sql = $con->query("SELECT * FROM sede");
  ?>
  <div class="table-responsive">
-   <table class="table table-hover table-bordered table-sm" id="tableSedes" width="100%" cellspacing="0">
+   <table class="table table-bordered" id="tableSedes" width="100%" cellspacing="0">
      <thead>
        <tr>
          <th>ID</th>
@@ -24,8 +24,8 @@
          <td><?php echo $versede[3] ?></td>
          <td><?php echo $versede[2] ?></td>
          <td>
-            <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#modalEditarSede" onclick="leerSede('<?php echo $versede[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
-            <a href="#" class="btn-link-delete" title="Eliminar" onclick="eliminarSede('<?php echo $versede[0] ?>')"><i class="fas fa-trash-alt"></i></a>
+            <a href="#" class="btn btn-xs btn-warning mr-3" title="Editar" data-toggle="modal" data-target="#modalEditarSede" onclick="leerSede('<?php echo $versede[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
+            <a href="#" class="btn btn-xs btn-danger" title="Eliminar" onclick="eliminarSede('<?php echo $versede[0] ?>')"><i class="fas fa-trash-alt"></i></a>
          </td>
        </tr>
        <?php } ?>

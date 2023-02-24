@@ -15,8 +15,8 @@
             <th>CARGO</th>
             <th>AREA</th>
             <th>GERENCIA</th>
-            <th>ESTADO</th>
-            <th>ACCIONES</th>
+            <th class="text-center">ESTADO</th>
+            <th class="text-center">ACCIONES</th>
           </tr>
       </thead>
       <tbody>
@@ -29,15 +29,15 @@
                 <?php
                 if ($mostrar[6]=="1") {
                 ?>
-                  <span class="badge bg-primary"><i class="fas fa-bolt mr-2"></i>Electrosur</span>
+                  <span class="badge badge-primary"><i class="fas fa-bolt mr-2"></i>Electrosur</span>
                 <?php
                 }else if ($mostrar[6]=="2") {
                 ?>
-                  <span class="badge bg-info text-dark"><i class="fas fa-user mr-2"></i>Practicante</span>
+                  <span class="badge badge-info"><i class="fas fa-user mr-2"></i>Practicante</span>
                 <?php
                 } else {
                 ?>
-                  <span class="badge bg-warning text-dark"><i class="fa-solid fa-user-ninja mr-2"></i>Tercero</span>
+                  <span class="badge badge-warning"><i class="fa-solid fa-user-ninja mr-2"></i>Tercero</span>
                 <?php
                 }
                 ?>
@@ -46,24 +46,24 @@
               <td><?php echo $mostrar[3] ?></td>
               <td><?php echo $mostrar[4] ?></td>
               <td><?php echo $mostrar[5] ?></td>
-              <td>
+              <td class="text-center">
                 <?php
                 if ($mostrar[7]=="1") {
                 ?>
-                  <span class="badge bg-success"><i class="fas fa-user mr-2"></i>Activo</span>
+                  <span class="badge badge-success"><i class="fas fa-user mr-2"></i>Activo</span>
                 <?php
                 }else {
                 ?>
-                  <span class="badge bg-danger"><i class="fas fa-user-slash mr-2"></i>Inactivo</span>
+                  <span class="badge badge-danger"><i class="fas fa-user-slash mr-2"></i>Inactivo</span>
                 <?php
                 }
                 ?>
               </td>
 
-              <td>
+              <td class="text-center">
                 
-                <a href="#" class="mr-3 btn-link-edit" title="Editar" data-toggle="modal" data-target="#modalEditarEmpleado" onclick="verDatosEmpleado('<?php echo $mostrar[0] ?>')"><i class="fas fa-pen"></i></a>
-                <a href="#" class="btn-link-delete" title="Eliminar" onclick="borrarEmpleado('<?php echo $mostrar[0] ?>')"><i class="fas fa-trash-alt"></i></a>
+                <a href="#" class="mr-3 btn btn-xs btn-warning" title="Editar" data-toggle="modal" data-target="#modalEditarEmpleado" onclick="verDatosEmpleado('<?php echo $mostrar[0] ?>')"><i class="fas fa-pen"></i></a>
+                <a href="#" class="btn btn-xs btn-danger" title="Eliminar" onclick="borrarEmpleado('<?php echo $mostrar[0] ?>')"><i class="fas fa-trash-alt"></i></a>
 
               </td>
           </tr>
