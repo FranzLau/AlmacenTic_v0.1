@@ -7,7 +7,7 @@
   <!-- DataTales Example -->
   <div class="table-responsive">
     <table class="table table-hover table-bordered table-sm" id="tablaEmpleado" width="100%" cellspacing="0">
-      <thead>
+      <thead class="thead-dark">
           <tr>
             <th>ID</th>
             <th>GRUPO</th>
@@ -19,12 +19,12 @@
             <th class="text-center">ACCIONES</th>
           </tr>
       </thead>
-      <tbody>
+      <tbody class="bg-white">
           <?php
           while($mostrar = $sql->fetch_row()){
           ?>
           <tr>
-              <td><?php echo $mostrar[0] ?></td>
+              <td class="text-center"><?php echo $mostrar[0] ?></td>
               <td>
                 <?php
                 if ($mostrar[6]=="1") {
@@ -62,8 +62,8 @@
 
               <td class="text-center">
                 
-                <a href="#" class="mr-3 btn btn-xs btn-warning" title="Editar" data-toggle="modal" data-target="#modalEditarEmpleado" onclick="verDatosEmpleado('<?php echo $mostrar[0] ?>')"><i class="fas fa-pen"></i></a>
-                <a href="#" class="btn btn-xs btn-danger" title="Eliminar" onclick="borrarEmpleado('<?php echo $mostrar[0] ?>')"><i class="fas fa-trash-alt"></i></a>
+                <a href="#" class="mr-3 btn-link-edit" title="Editar" data-toggle="modal" data-target="#modalEditarEmpleado" onclick="verDatosEmpleado('<?php echo $mostrar[0] ?>')"><i class="fas fa-pen"></i></a>
+                <a href="#" class="btn-link-delete" title="Eliminar" onclick="borrarEmpleado('<?php echo $mostrar[0] ?>')"><i class="fas fa-trash-alt"></i></a>
 
               </td>
           </tr>
