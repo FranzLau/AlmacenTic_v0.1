@@ -5,7 +5,7 @@
 
 <div class="table-responsive">
   <table class="table table-hover table-bordered table-sm" width="100%" cellspacing="0" id="tablaContrato">
-    <thead>
+    <thead class="thead-dark">
       <tr>
         <th>ID</th>
         <th>NOMBRE</th>
@@ -15,7 +15,7 @@
         <th class="text-center">OPCIONES</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="bg-white">
       <?php while($vergasto = $sql->fetch_row()){ ?>
         <tr>
           <td><?php echo $vergasto[0] ?></td>

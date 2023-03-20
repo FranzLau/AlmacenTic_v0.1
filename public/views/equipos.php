@@ -34,42 +34,24 @@
           <!-- Begin Page Content -->
           <div class="container-fluid">
 
-          
             <!-- Page title -->
-            <div class="page-title mb-4">
-              <div class="page-title-wrapper d-flex align-items-center justify-content-between">
-                <div class="page-title-heading d-flex align-items-center">
-                  <div class="page-title-icon shadow-sm">
-                    <i class="fa-solid fa-computer m-auto"></i>
-                  </div>
-                  <div>
-                    <h3 class="mb-0">Panel de Equipos</h3>
-                    <span>Listado de equipos tecnologicos.</span>
-                  </div>
-                </div>
-                <div class="page-title-actions">
-                  <a href="#" class="d-none d-sm-inline-block btn btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearEquipo"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i> Nuevo Equipo</a>
-                </div>
-              </div>
+            <div class="page-title mb-3">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#"><i class="fa-solid fa-house"></i></a></li>
+                  <li class="breadcrumb-item"><a href="#">Library</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+              </nav>
+              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearEquipo"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i>Nuevo Equipo</a>
             </div>
             <!-- End Page title -->
             
-
-            
-
             <div class="row">
               <div class="col-sm-12">
-                <div class="card shadow">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Listado de Equipos</h6>
-                  </div>
-                  <div class="card-body">
-                    <div id="tablaEquipos"></div>
-                  </div>
-                </div>
+                <div id="tablaEquipos"></div>
               </div>
             </div>
-           
           </div>
         </div>
         <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->

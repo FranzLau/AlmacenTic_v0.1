@@ -6,6 +6,7 @@
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .badge {
   border-radius: 0.25rem!important;
+  color: #ffffff!important;
 }
 .badge-warning {
   color: #212529!important;
@@ -58,8 +59,8 @@
 .nav-pills .nav-item{
   margin-left: 1rem!important;
 }
- /*--boton para cerra modal--///////////////////////////////*/
- .btn-outline-primary {
+/*--boton para cerra modal--///////////////////////////////*/
+.btn-outline-primary {
   color: #4e73df;
   background-color: transparent;
   background-image: none;

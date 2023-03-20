@@ -38,38 +38,21 @@
 
             <!-- Page title -->
             <div class="page-title mb-4">
-              <div class="page-title-wrapper d-flex align-items-center justify-content-between">
-                <div class="page-title-heading d-flex align-items-center">
-                  <div class="page-title-icon shadow-sm">
-                    <i class="fa-solid fa-book m-auto"></i>
-                  </div>
-                  <div>
-                    <h3 class="mb-0">Panel de Contratos</h3>
-                    <span>Listado de contratos de Equipos de Tecnologicos.</span>
-                  </div>
-                </div>
-                <div class="page-title-actions">
-                  <a href="#" class="d-none d-sm-inline-block btn btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearContrato"><i class="fa-solid fa-circle-plus mr-2 text-white-50"></i> Nuevo Contrato</a>
-                </div>
-              </div>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#"><i class="fa-solid fa-house"></i></a></li>
+                  <li class="breadcrumb-item"><a href="#">Library</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+              </nav>
+              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearContrato"><i class="fa-solid fa-circle-plus mr-2 text-white-50"></i> Nuevo Contrato</a>
             </div>
             <!-- End Page title -->
 
             <!-- Content Row -->
             <div class="row mt-4">
-              
               <div class="col-sm-12">
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      <i class="fas fa-list mr-2"></i>
-                      Lista de Contratos
-                    </h6>
-                  </div>
-                  <div class="card-body">
-                    <div id="tablaContratos"></div>
-                  </div>
-                </div>
+                <div id="tablaContratos"></div>
               </div>
             </div>
           </div>
