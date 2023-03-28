@@ -30,13 +30,13 @@
         <td><?php echo $mostrarprod[6] ?></td>
         <td>
           <?php 
-          if ($mostrarprod[8]=="0"){
+          if ($mostrarprod[10]=="0"){
           ?>  
-            <span class="badge bg-danger"><?php echo $mostrarprod[8] ?></span>
+            <span class="badge bg-danger"><?php echo $mostrarprod[10] ?></span>
           <?php
           }else {
           ?>
-            <span class="badge bg-primary"><?php echo $mostrarprod[8] ?></span>
+            <span class="badge bg-primary"><?php echo $mostrarprod[10] ?></span>
           <?php
             }
           ?>
@@ -44,15 +44,23 @@
         <td><?php echo $obj->nomContrato( $mostrarprod[2]) ?></td>
         <td>
           <?php
-          if ($mostrarprod[9]=="1") {
+          switch ($mostrarprod[11]) {
+            case 1:
           ?>
-            <span class="badge bg-success">Operativo</span>
+              <span class="badge bg-success">Bueno</span>
           <?php
-          }else {
+              break;
+            case 2:
           ?>
-            <span class="badge bg-danger">No operativo</span>
+              <span class="badge bg-danger">Malo</span>
           <?php
-            }
+              break;
+            case 3:
+          ?>
+              <span class="badge bg-warning">Regular</span>
+          <?php
+              break;
+          }
           ?>
         </td>
         <td>

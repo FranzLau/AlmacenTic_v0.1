@@ -47,7 +47,6 @@ create table equipo(
     cantidad_equipo int,
     estado_equipo int,
     condicion_equipo int,
-    zona_equipo varchar(100),
     fecha_captura date,
     primary key(id_equipo)
 );

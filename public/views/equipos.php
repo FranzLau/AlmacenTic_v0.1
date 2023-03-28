@@ -43,7 +43,7 @@
                   <li class="breadcrumb-item active" aria-current="page">Data</li>
                 </ol>
               </nav>
-              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearEquipo"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i>Nuevo Equipo</a>
+              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearEquipo"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i>Agregar Equipo</a>
             </div>
             <!-- End Page title -->
             
@@ -84,20 +84,23 @@
           success:function(r){
             var datos= $.parseJSON(r);
             $('#idEditarEquipo').val(datos['idEquipo']);
-            $('#categEditarEquipo').val(datos['idCategoria']);
+
             $('#contratoEditarEquipo').val(datos['idContrato']);
+            $('#tcodEditarEquipo').val(datos['tcodEquipo']);
+            $('#codEditarEquipo').val(datos['codEquipo']);
+            $('#invEditarEquipo').val(datos['invEquipo']);
+
             $('#descEditarEquipo').val(datos['nomEquipo']);
+            $('#categEditarEquipo').val(datos['idCategoria']);
+            
             $('#serieEditarEquipo').val(datos['serieEquipo']);
-            $('#codigoEditarEquipo').val(datos['codEquipo']);
             $('#marcaEditarEquipo').val(datos['marcaEquipo']);
             $('#modeloEditarEquipo').val(datos['modeloEquipo']);
+
             $('#cantEditarEquipo').val(datos['cantEquipo']);
+            $('#condiEditarEquipo').val(datos['condiEquipo']);
+            $('#estEditarEquipo').val(datos['estadoEquipo']);
             
-            if (datos['estadoEquipo']==1) {
-              $('#opeEditarEquipo').prop('checked',true);
-            }else {
-              $('#noOpeEditarEquipo').prop('checked',true);
-            }
           }
         })
         .done(function(r) {

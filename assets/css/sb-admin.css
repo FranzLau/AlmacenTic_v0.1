@@ -199,3 +199,13 @@
 .border-top-danger {
   border-top: 0.25rem solid #e74a3b;
 }
+/* estilos para breadcrumb */
+
+.breadcrumb {
+  padding: 8px 15px!important;
+  border-radius: 3px!important;
+}
+
+.breadcrumb li a{
+  color: #5a5c69!important;
+}

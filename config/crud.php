@@ -73,13 +73,16 @@ class crud
                         'idCategoria'=>$dataEquipo[1],
                         'idContrato'=>$dataEquipo[2],
                         'nomEquipo'=>$dataEquipo[3],
-                        'serieEquipo'=>$dataEquipo[4],
+                        'tcodEquipo'=>$dataEquipo[4],
                         'codEquipo'=>$dataEquipo[5],
-                        'marcaEquipo'=>$dataEquipo[6],
-                        'modeloEquipo'=>$dataEquipo[7],
-                        'cantEquipo'=>$dataEquipo[8],
-                        'estadoEquipo'=>$dataEquipo[9],
-                        'fechaCaptura'=>$dataEquipo[10]);
+                        'invEquipo'=>$dataEquipo[6],
+                        'serieEquipo'=>$dataEquipo[7],
+                        'marcaEquipo'=>$dataEquipo[8],
+                        'modeloEquipo'=>$dataEquipo[9],
+                        'cantEquipo'=>$dataEquipo[10],
+                        'estadoEquipo'=>$dataEquipo[11],
+                        'condiEquipo'=>$dataEquipo[12],
+                        'fechaCaptura'=>$dataEquipo[13]);
     return $datos;
     }
 
