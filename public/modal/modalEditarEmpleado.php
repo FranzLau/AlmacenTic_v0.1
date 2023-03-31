@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">
+        <h5 class="modal-title text-primary">
           Editar Empleado
         </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -20,17 +20,17 @@
             <div class="col-md-8">
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="nomEditarEmpleado" class="col-form-label col-form-label-sm">Nombres:</label>
-                  <input type="text" class="form-control form-control-sm font-weight-bold" id="nomEditarEmpleado" name="nomEditarEmpleado">
+                  <label for="nomEditarEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Nombres:</label>
+                  <input type="text" class="form-control form-control-sm" id="nomEditarEmpleado" name="nomEditarEmpleado">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="apeEditarEmpleado" class="col-form-label col-form-label-sm">Apellidos:</label>
-                  <input type="text" class="form-control form-control-sm font-weight-bold" id="apeEditarEmpleado" name="apeEditarEmpleado">
+                  <label for="apeEditarEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Apellidos:</label>
+                  <input type="text" class="form-control form-control-sm" id="apeEditarEmpleado" name="apeEditarEmpleado">
                 </div>
               </div>
               <div class="form-group">
-                <label for="cargoEditarEmpleado" class="col-form-label col-form-label-sm">Cargo:</label>
-                <input type="text" class="form-control form-control-sm font-weight-bold" id="cargoEditarEmpleado" name="cargoEditarEmpleado">
+                <label for="cargoEditarEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Cargo:</label>
+                <input type="text" class="form-control form-control-sm" id="cargoEditarEmpleado" name="cargoEditarEmpleado">
               </div>
             </div>
           </div>
@@ -41,17 +41,17 @@
             </div>
             <div class="col-md-8">
               <div class="form-group">
-                <label for="areaEditarEmpleado" class="col-form-label col-form-label-sm">Area:</label>
-                <input type="text" class="form-control form-control-sm font-weight-bold" id="areaEditarEmpleado" name="areaEditarEmpleado">
+                <label for="areaEditarEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Area:</label>
+                <input type="text" class="form-control form-control-sm" id="areaEditarEmpleado" name="areaEditarEmpleado">
               </div>
               <div class="form-group">
-                <label for="gerenciaEditarEmpleado" class="col-form-label col-form-label-sm">Gerencia:</label>
-                <input type="text" class="form-control form-control-sm font-weight-bold" id="gerenciaEditarEmpleado" name="gerenciaEditarEmpleado">
+                <label for="gerenciaEditarEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Gerencia:</label>
+                <input type="text" class="form-control form-control-sm" id="gerenciaEditarEmpleado" name="gerenciaEditarEmpleado">
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="grupoEmpleado" class="col-form-label col-form-label-sm">Grupo:</label>
-                  <select class="custom-select custom-select-sm font-weight-bold" name="grupoEditarEmpleado" id="grupoEditarEmpleado">
+                  <label for="grupoEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Grupo:</label>
+                  <select class="custom-select custom-select-sm" name="grupoEditarEmpleado" id="grupoEditarEmpleado">
                     <option selected disabled>Elegir...</option>
                     <option value="1">Contratado</option>
                     <option value="2">Practicante</option>
@@ -60,8 +60,8 @@
                 </div>
                 
                 <div class="form-group col-md-6">
-                  <label for="estadoEmpleado" class="col-form-label col-form-label-sm">Estado:</label>
-                  <select class="custom-select custom-select-sm font-weight-bold" name="estadoEditarEmpleado" id="estadoEditarEmpleado">
+                  <label for="estadoEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Estado:</label>
+                  <select class="custom-select custom-select-sm" name="estadoEditarEmpleado" id="estadoEditarEmpleado">
                     <option selected disabled>Elegir...</option>
                     <option value="1">Activo</option>
                     <option value="2">No Activo</option>
@@ -77,7 +77,7 @@
           <i class="fa-solid fa-xmark fa-sm text-white-50 mr-2"></i>Cancelar
         </button>
         <button type="button" class="btn btn-warning btn-sm" id="btnEditarEmpleado">
-          <i class="fa-solid fa-pen-to-square fa-sm text-white-50 mr-2"></i>Guardar Cambios
+          <i class="fa-sharp fa-solid fa-floppy-disk fa-sm text-white-50 mr-2"></i>Guardar Cambios
         </button>
       </div>
     </div>

@@ -16,17 +16,17 @@
         <th>MARCA</th>
         <th>STOCK</th>
         <th>CONTRATO</th>
-        <th>ESTADO</th>
-        <th>ACCION</th>
+        <th class="text-center">CONDICION</th>
+        <th class="text-center">ACCION</th>
       </tr>
     </thead>
     <tbody class="bg-white">
       <?php while($mostrarprod = $sql->fetch_row()){ ?>
       <tr>
-        <td><?php echo $mostrarprod[5] ?></td>
+        <td><?php echo $mostrarprod[4] ?> <?php echo $mostrarprod[5] ?></td>
         <td><?php echo $obj->nomCategoria( $mostrarprod[1]) ?></td>
         <td><?php echo $mostrarprod[3] ?></td>
-        <td><?php echo $mostrarprod[4] ?></td>
+        <td><?php echo $mostrarprod[7] ?></td>
         <td><?php echo $mostrarprod[6] ?></td>
         <td>
           <?php 
@@ -42,34 +42,38 @@
           ?>
         </td>
         <td><?php echo $obj->nomContrato( $mostrarprod[2]) ?></td>
-        <td>
+        <td class="text-center">
           <?php
-          switch ($mostrarprod[11]) {
-            case 1:
-          ?>
-              <span class="badge bg-success">Bueno</span>
-          <?php
-              break;
-            case 2:
-          ?>
-              <span class="badge bg-danger">Malo</span>
-          <?php
-              break;
-            case 3:
-          ?>
-              <span class="badge bg-warning">Regular</span>
-          <?php
-              break;
-          }
+            switch ($mostrarprod[12]) {
+              case "1":
+                echo '<span class="badge bg-success">Bueno</span>';
+                break;
+              case "2":
+                echo '<span class="badge bg-danger">Malo</span>';
+                break;
+              case "3":
+                echo '<span class="badge bg-warning">Regular</span>';
+                break;
+            }
           ?>
         </td>
-        <td>
+        <td class="text-center">
+          <a href="#" class="btn-link-view mr-3" title="Ver Detalles" data-toggle="modal" data-target="#modalViewEquipo">
+            <i class="fa-sharp fa-solid fa-eye"></i>
+          </a>
           
-          <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#modalEditarEquipo" onclick="verDatosEquipos('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
+          <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#modalEditarEquipo" onclick="verDatosEquipos('<?php echo $mostrarprod[0] ?>')">
+            <i class="fas fa-pencil-alt"></i>
+          </a>
+
           <?php
             if ($_SESSION['loginUser']['id_rol'] == 1):
           ?>
-          <a href="#" class="btn-link-delete" title="Eliminar" onclick="eliminarEquipo('<?php echo $mostrarprod[0] ?>')"><i class="fas fa-trash-alt"></i></a>
+          
+          <a href="#" class="btn-link-delete" title="Eliminar" onclick="eliminarEquipo('<?php echo $mostrarprod[0] ?>')">
+            <i class="fas fa-trash-alt"></i>
+          </a>
+          
           <?php endif; ?>
         </td>
        </tr>

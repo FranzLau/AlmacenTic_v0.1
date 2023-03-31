@@ -3,7 +3,9 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header px-4">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Nueva Categoria</h5>
+        <h5 class="modal-title text-primary" id="exampleModalCenterTitle">
+          Registra Categoria
+        </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -24,8 +26,8 @@
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
           <i class="fa-solid fa-xmark fa-sm text-white-50 mr-2"></i>Cancelar
         </button>
-        <button type="button" class="btn btn-sm btn-success" id="btnCrearCategoria">
-          <i class="fa-solid fa-check fa-sm text-white-50 mr-2"></i>Guardar
+        <button type="button" class="btn btn-sm btn-primary" id="btnCrearCategoria">
+          <i class="fa-sharp fa-solid fa-floppy-disk fa-sm text-white-50 mr-2"></i>Guardar
         </button>
       </div>
     </div>

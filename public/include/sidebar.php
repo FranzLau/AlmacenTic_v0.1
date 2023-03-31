@@ -42,35 +42,11 @@
         </div>
     </li>
 
-    <!-- Nav Item - Movimientos -->
+    <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMoves" aria-expanded="true" aria-controls="collapseMoves">
+        <a class="nav-link" href="movimientos.php">
             <i class="fa-solid fa-dolly"></i>
             <span>Movimientos</span>
-        </a>
-        <div id="collapseMoves" class="collapse" aria-labelledby="headingMoves" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Opciones</h6>
-                <a class="collapse-item" href="asignacion.php"><i class="fa-solid fa-people-carry-box mr-2 text-gray-500"></i>Asignacion</a>
-                <a class="collapse-item" href="#"><i class="fa-solid fa-cart-flatbed mr-2 text-gray-500"></i>Devolucion</a>
-                <a class="collapse-item" href="#"><i class="fa-solid fa-truck-ramp-box mr-2 text-gray-500"></i>Baja</a>
-            </div>
-        </div>
-    </li>
-
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="empleados.php">
-            <i class="fa-solid fa-id-card-clip"></i>
-            <span>Empleados</span>
-        </a>
-    </li>
-
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="soporte.php">
-            <i class="fa-solid fa-phone"></i>
-            <span>Soporte</span>
         </a>
     </li>
 
@@ -81,6 +57,14 @@
     <div class="sidebar-heading">
         Mantenimiento
     </div>
+
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="empleados.php">
+            <i class="fa-solid fa-id-card-clip"></i>
+            <span>Empleados</span>
+        </a>
+    </li>
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
@@ -108,7 +92,13 @@
         Ayuda
     </div>
 
-    
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="soporte.php">
+            <i class="fa-solid fa-phone"></i>
+            <span>Soporte</span>
+        </a>
+    </li>
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">

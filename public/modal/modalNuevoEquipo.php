@@ -2,7 +2,7 @@
 <div class="modal fade bd-example-modal-lg" id="modalCrearEquipo" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header px-4">
+      <div class="modal-header">
         <h5 class="modal-title text-primary" id="exampleModalCenterTitle">
           Registrar Equipo
         </h5>
@@ -10,7 +10,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body px-4">
+      <div class="modal-body">
         <!--***************************   INICIO DEL FORMULARIO   ***********************-->
         <form id="formNuevoEquipo" class="formRegEquipo">
           <div class="row">
@@ -122,12 +122,12 @@
         </form>
         <!--***** FIN DEL FORMULARIO *******<<<<<<<-->
       </div>
-      <div class="modal-footer px-4">
+      <div class="modal-footer">
         <button type="button" class="btn  btn-sm btn-secondary" data-dismiss="modal">
           <i class="fa-solid fa-xmark fa-sm text-white-50 mr-2"></i>Cancelar
         </button>
-        <button type="button" class="btn btn-sm btn-success" id="btnGuardarEquipo">
-          <i class="fa-solid fa-check fa-sm text-white-50 mr-2"></i>Guardar
+        <button type="button" class="btn btn-sm btn-primary" id="btnGuardarEquipo">
+          <i class="fa-sharp fa-solid fa-floppy-disk fa-sm text-white-50 mr-2"></i>Guardar
         </button>
       </div>
     </div>

@@ -3,8 +3,8 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">
-          Nuevo Empleado
+        <h5 class="modal-title text-primary" id="exampleModalCenterTitle">
+          Registra Empleado
         </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -79,8 +79,8 @@
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
           <i class="fa-solid fa-xmark fa-sm text-white-50 mr-2"></i>Cancelar
         </button>
-        <button type="button" class="btn btn-success btn-sm" id="btnGuardarEmpleado">
-          <i class="fa-solid fa-check fa-sm text-white-50 mr-2"></i>Guardar
+        <button type="button" class="btn btn-primary btn-sm" id="btnGuardarEmpleado">
+          <i class="fa-sharp fa-solid fa-floppy-disk fa-sm text-white-50 mr-2"></i>Guardar
         </button>
       </div>
     </div>

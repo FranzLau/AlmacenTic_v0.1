@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">
+        <h5 class="modal-title text-primary" id="exampleModalCenterTitle">
           Editar Equipo
         </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -132,7 +132,7 @@
           <i class="fa-solid fa-xmark fa-sm text-white-50 mr-2"></i>Cancelar
         </button>
         <button type="button" class="btn btn-warning btn-sm" id="btnEditarEquipo">
-          <i class="fa-solid fa-pen-to-square fa-sm text-white-50 mr-2"></i>Guardar Cambios
+          <i class="fa-sharp fa-solid fa-floppy-disk fa-sm text-white-50 mr-2"></i>Guardar Cambios
         </button>
       </div>
     </div>
