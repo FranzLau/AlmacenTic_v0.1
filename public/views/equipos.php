@@ -12,7 +12,7 @@
 
     <?php include('../modal/modalNuevoEquipo.php'); ?>
     <?php include('../modal/modalEditarEquipo.php'); ?>
-    <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+    
     <!-- Page Wrapper -->
     <div id="wrapper">
 

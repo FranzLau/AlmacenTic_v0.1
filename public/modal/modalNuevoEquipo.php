@@ -39,6 +39,7 @@
                   <label for="tcodEquipo" class="col-form-label col-form-label-sm">tipo:</label>
                   <select class="custom-select custom-select-sm" id="tcodEquipo" name="tcodEquipo" required>
                     <option selected disabled>Elegir...</option>
+                    <option value="S/C">Sin codigo</option>
                     <option value="AF">AF</option>
                     <option value="NC">NC</option>
                   </select>
@@ -112,8 +113,9 @@
                   <label for="estadoEquipo" class="col-form-label col-form-label-sm">Estado:</label>
                   <select class="custom-select custom-select-sm" id="estadoEquipo" name="estadoEquipo" required>
                     <option selected disabled>Elegir...</option>
-                    <option value="1">Vigente</option>
-                    <option value="2">Baja</option>
+                    <option value="1">Asignado</option>
+                    <option value="2">No Asignado</option>
+                    <option value="3">Baja</option>
                   </select>
                 </div>
               </div>

@@ -15,8 +15,9 @@ class crud
                         'cargoempphp'=>$ver[3],
                         'areaempphp'=>$ver[4],
                         'grempphp'=>$ver[5],
-                        'gpoempphp'=>$ver[6],
-                        'estaempphp'=>$ver[7]);
+                        'emailempphp'=>$ver[6],
+                        'telempphp'=>$ver[7],
+                        'estaempphp'=>$ver[8]);
         return $datos;
 	}
     public function eliminarEmpleado($idemp){

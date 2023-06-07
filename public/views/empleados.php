@@ -101,7 +101,8 @@
             $('#cargoEditarEmpleado').val(datos['cargoempphp']);
             $('#areaEditarEmpleado').val(datos['areaempphp']);
             $('#gerenciaEditarEmpleado').val(datos['grempphp']);
-            $('#grupoEditarEmpleado').val(datos['gpoempphp']);
+            $('#correoEditarEmpleado').val(datos['emailempphp']);
+            $('#telEditarEmpleado').val(datos['telempphp']);
             $('#estadoEditarEmpleado').val(datos['estaempphp']);
           }
         })

@@ -7,7 +7,8 @@
 	$cargoEmpUpdate = $_POST['cargoEditarEmpleado'];
 	$areaEmpUpdate = $_POST['areaEditarEmpleado'];
 	$grEmpUpdate = $_POST['gerenciaEditarEmpleado'];
-	$gpoEmpUpdate = $_POST['grupoEditarEmpleado'];
+	$correoEmpUpdate = $_POST['correoEditarEmpleado'];
+	$telEmpUpdate = $_POST['telEditarEmpleado'];
 	$estaEmpUpdate = $_POST['estadoEditarEmpleado'];
 	
 
@@ -16,7 +17,8 @@
                     						cargo_empleado='$cargoEmpUpdate',
 											area_empleado='$areaEmpUpdate',
 											gerencia_empleado='$grEmpUpdate',
-											grupo_empleado='$gpoEmpUpdate',
+											email_empleado='$correoEmpUpdate',
+											telefono_empleado='$telEmpUpdate',
 											estado_empleado='$estaEmpUpdate'
 									WHERE id_empleado= '$idEmpUpdate' ");
 	if ($upd) {

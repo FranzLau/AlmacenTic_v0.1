@@ -10,11 +10,13 @@
       <thead class="thead-dark">
           <tr>
             <th>ID</th>
-            <th>GRUPO</th>
+            <th>LOGO</th>
             <th>NOMBRES y APELLIDO</th>
             <th>CARGO</th>
             <th>AREA</th>
             <th>GERENCIA</th>
+            <th>CORREO</th>
+            <th>TELEFONO</th>
             <th class="text-center">ESTADO</th>
             <th class="text-center">ACCIONES</th>
           </tr>
@@ -25,30 +27,16 @@
           ?>
           <tr>
               <td class="text-center"><?php echo $mostrar[0] ?></td>
-              <td>
-                <?php
-                if ($mostrar[6]=="1") {
-                ?>
-                  <span class="badge badge-primary"><i class="fas fa-bolt mr-2"></i>Electrosur</span>
-                <?php
-                }else if ($mostrar[6]=="2") {
-                ?>
-                  <span class="badge badge-info"><i class="fas fa-user mr-2"></i>Practicante</span>
-                <?php
-                } else {
-                ?>
-                  <span class="badge badge-warning"><i class="fa-solid fa-user-ninja mr-2"></i>Tercero</span>
-                <?php
-                }
-                ?>
-              </td>
+              <td> <span class="badge badge-primary"><i class="fas fa-bolt mr-2"></i>Electrosur</span> </td>
               <td><?php echo $mostrar[1] ?> <?php echo $mostrar[2] ?></td>
               <td><?php echo $mostrar[3] ?></td>
               <td><?php echo $mostrar[4] ?></td>
               <td><?php echo $mostrar[5] ?></td>
+              <td><?php echo $mostrar[6] ?></td>
+              <td><?php echo $mostrar[7] ?></td>
               <td class="text-center">
                 <?php
-                if ($mostrar[7]=="1") {
+                if ($mostrar[8]=="1") {
                 ?>
                   <span class="badge badge-success"><i class="fas fa-user mr-2"></i>Activo</span>
                 <?php

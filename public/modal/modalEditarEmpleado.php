@@ -49,24 +49,22 @@
                 <input type="text" class="form-control form-control-sm" id="gerenciaEditarEmpleado" name="gerenciaEditarEmpleado">
               </div>
               <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="grupoEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Grupo:</label>
-                  <select class="custom-select custom-select-sm" name="grupoEditarEmpleado" id="grupoEditarEmpleado">
-                    <option selected disabled>Elegir...</option>
-                    <option value="1">Contratado</option>
-                    <option value="2">Practicante</option>
-                    <option value="3">Tercero</option>
-                  </select>
+                <div class="form-group col-md-8">
+                  <label for="correoEditarEmpleado" class="col-form-label col-form-label-sm">Correo:</label>
+                  <input type="text" class="form-control form-control-sm" id="correoEditarEmpleado" name="correoEditarEmpleado">
                 </div>
-                
-                <div class="form-group col-md-6">
-                  <label for="estadoEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Estado:</label>
-                  <select class="custom-select custom-select-sm" name="estadoEditarEmpleado" id="estadoEditarEmpleado">
-                    <option selected disabled>Elegir...</option>
-                    <option value="1">Activo</option>
-                    <option value="2">No Activo</option>
-                  </select>
+                <div class="form-group col-md-4">
+                  <label for="telEditarEmpleado" class="col-form-label col-form-label-sm">Telefono:</label>
+                  <input type="text" class="form-control form-control-sm" id="telEditarEmpleado" name="telEditarEmpleado">
                 </div>
+              </div>
+              <div class="form-group">
+                <label for="estadoEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Estado:</label>
+                <select class="custom-select custom-select-sm" name="estadoEditarEmpleado" id="estadoEditarEmpleado">
+                  <option selected disabled>Elegir...</option>
+                  <option value="1">Activo</option>
+                  <option value="2">No Activo</option>
+                </select>
               </div>
             </div>
           </div>

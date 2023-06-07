@@ -20,7 +20,7 @@
             <div class="col-md-8">
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="nombreEmpleado" class="col-form-label col-form-label-sm">Nombre:</label>
+                  <label for="nombreEmpleado" class="col-form-label col-form-label-sm">Nombres:</label>
                   <input type="text" class="form-control form-control-sm" id="nombreEmpleado" name="nombreEmpleado">
                 </div>
                 <!--<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>-->
@@ -51,24 +51,23 @@
                 <input type="text" class="form-control form-control-sm" id="gerenciaEmpleado" name="gerenciaEmpleado">
               </div>
               <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="grupoEmpleado" class="col-form-label col-form-label-sm">Grupo:</label>
-                  <select class="custom-select custom-select-sm" id="grupoEmpleado" name="grupoEmpleado">
-                    <option selected disabled>Elegir...</option>
-                    <option value="1">Contratado</option>
-                    <option value="2">Practicante</option>
-                    <option value="3">Tercero</option>
-                  </select>
+                <div class="form-group col-md-8">
+                  <label for="correoEmpleado" class="col-form-label col-form-label-sm">Correo:</label>
+                  <input type="text" class="form-control form-control-sm" id="correoEmpleado" name="correoEmpleado">
                 </div>
                 <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-                <div class="form-group col-md-6">
-                  <label for="estadoEmpleado" class="col-form-label col-form-label-sm">Estado:</label>
-                  <select class="custom-select custom-select-sm" id="estadoEmpleado" name="estadoEmpleado">
-                    <option selected disabled>Elegir...</option>
-                    <option value="1">Activo</option>
-                    <option value="2">No Activo</option>
-                  </select>
+                <div class="form-group col-md-4">
+                  <label for="telEmpleado" class="col-form-label col-form-label-sm">Telefono:</label>
+                  <input type="text" class="form-control form-control-sm" id="telEmpleado" name="telEmpleado">
                 </div>
+              </div>
+              <div class="form-group">
+                <label for="estadoEmpleado" class="col-form-label col-form-label-sm">Estado:</label>
+                <select class="custom-select custom-select-sm" id="estadoEmpleado" name="estadoEmpleado">
+                  <option selected disabled>Elegir...</option>
+                  <option value="1">Activo</option>
+                  <option value="2">No Activo</option>
+                </select>
               </div>
             </div>
           </div>              
