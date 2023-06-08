@@ -9,23 +9,45 @@
         </button>
       </div>
       <div class="modal-body">
-        <form id="formEditarContrato">
-          <input type="text" hidden="" name="idEditarContrato" id="idEditarContrato">
-          <div class="form-group">
-            <label for="nomEditarContrato" class="col-form-label col-form-label-sm font-weight-bold">Nombre:</label>
-            <input type="text" class="form-control form-control-sm" id="nomEditarContrato" name="nomEditarContrato">
+        <form id="formEdContrato">
+          <input type="text" hidden="" name="idEdContrato" id="idEdContrato">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <label for="nomEdContrato" class="col-form-label col-form-label-sm font-weight-bold">Nombre:</label>
+              <input type="text" class="form-control form-control-sm" id="nomEdContrato" name="nomEdContrato">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="fechEdContrato" class="col-form-label col-form-label-sm font-weight-bold">Fecha:</label>
+              <input type="date" class="form-control form-control-sm" id="fechEdContrato" name="fechEdContrato">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="pedEdContrato" class="col-form-label col-form-label-sm font-weight-bold">Pedido de Compra:</label>
+              <input type="text" class="form-control form-control-sm" id="pedEdContrato" name="pedEdContrato">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="numEdContrato" class="col-form-label col-form-label-sm font-weight-bold">Numero de Contrato:</label>
+              <input type="text" class="form-control form-control-sm" id="numEdContrato" name="numEdContrato">
+            </div>
           </div>
           <div class="form-group">
-            <label for="adquiEditarContrato" class="col-form-label col-form-label-sm font-weight-bold">Adquisicion:</label>
-            <input type="date" class="form-control form-control-sm" id="adquiEditarContrato" name="adquiEditarContrato">
+            <label for="provEdContrato" class="col-form-label col-form-label-sm font-weight-bold">Proveedor:</label>
+            <input type="text" class="form-control form-control-sm" id="provEdContrato" name="provEdContrato">
           </div>
-          <div class="form-group">
-            <label for="garaEditarContrato" class="col-form-label col-form-label-sm font-weight-bold">Garantia:</label>
-            <input type="text" class="form-control form-control-sm" id="garaEditarContrato" name="garaEditarContrato">
-          </div>
-          <div class="form-group">
-            <label for="provEditarContrato" class="col-form-label col-form-label-sm font-weight-bold">Proveedor:</label>
-            <input type="text" class="form-control form-control-sm" id="provEditarContrato" name="provEditarContrato">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="garEdContrato" class="col-form-label col-form-label-sm font-weight-bold">Garantia:</label>
+              <input type="text" class="form-control form-control-sm" id="garEdContrato" name="garEdContrato">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="tipEdContrato" class="col-form-label col-form-label-sm font-weight-bold">Tipo:</label>
+              <select class="custom-select custom-select-sm" id="tipEdContrato" name="tipEdContrato">
+                <option selected disabled>Elegir...</option>
+                <option value="1">Arrendamiento</option>
+                <option value="2">Propio</option>
+              </select>
+            </div>
           </div>
         </form>
       </div>

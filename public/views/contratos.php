@@ -83,11 +83,14 @@
           data: "idcontr=" + idContrato,
           success:function(r){
             var datos= $.parseJSON(r);
-            $('#idEditarContrato').val(datos['idContrato']);
-            $('#nomEditarContrato').val(datos['nomContrato']);
-            $('#adquiEditarContrato').val(datos['adquiContrato']);
-            $('#garaEditarContrato').val(datos['garanContrato']);
-            $('#provEditarContrato').val(datos['provContrato']);
+            $('#idEdContrato').val(datos['idContrato']);
+            $('#nomEdContrato').val(datos['nomContrato']);
+            $('#pedEdContrato').val(datos['numPedido']);
+            $('#numEdContrato').val(datos['numContrato']);
+            $('#fechEdContrato').val(datos['fechaContrato']);
+            $('#garEdContrato').val(datos['garanContrato']);
+            $('#provEdContrato').val(datos['provContrato']);
+            $('#tipEdContrato').val(datos['tipoContrato']);
           }
         })
         .done(function() {

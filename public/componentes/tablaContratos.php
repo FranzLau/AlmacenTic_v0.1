@@ -9,9 +9,11 @@
       <tr>
         <th>ID</th>
         <th>NOMBRE</th>
-        <th>ADQUISICION</th>
+        <th>PEDIDO</th>
+        <th>FECHA</th>
         <th>GARANTIA</th>
         <th>PROVEEDOR</th>
+        <th>TIPO</th>
         <th class="text-center">OPCIONES</th>
       </tr>
     </thead>
@@ -23,6 +25,8 @@
           <td><?php echo $vergasto[2] ?></td>
           <td><?php echo $vergasto[3] ?></td>
           <td><?php echo $vergasto[4] ?></td>
+          <td><?php echo $vergasto[5] ?></td>
+          <td><?php echo $vergasto[6] ?></td>
           <td class="text-center">
             <a href="#" class="mr-3 btn-link-edit" title="Editar" data-toggle="modal" data-target="#modalEditarContrato" onclick="verDatosContrato('<?php echo $vergasto[0] ?>')">
               <i class="fas fa-pen"></i>

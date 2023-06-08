@@ -1,7 +1,7 @@
 create database almacentic_db;
 CREATE SCHEMA `almacentic_db` DEFAULT CHARACTER SET utf8 ;
 
-use db_almacentic;
+use almacentic_db;
 
 create table rol(
     id_rol int auto_increment,
@@ -68,7 +68,19 @@ create table sede(
     primary key(id_sede)
 );
 
+create table contrato(
+    id_contrato int auto_increment,
+    nom_contrato varchar(50),
+    num_pedido varchar(100),
+    num_contrato varchar(100),
+    fecha_contrato date,
+    garantia_contrato varchar(100),
+    prov_contrato varchar(100),
+    tipo_contrato int,
+    primary key(id_contrato)
+);
 
+/*-----------------------------------------------------------------*/
 
 create table imagen(
     id_imagen int auto_increment,
@@ -77,16 +89,6 @@ create table imagen(
     ruta_imagen varchar(200),
     fecha_subida date,
     primary key(id_imagen)
-);
-
-create table contrato(
-    id_contrato int auto_increment,
-    nom_contrato varchar(50),
-    adquiere_contrato date,
-    garantia_contrato varchar(100),
-    proveedor_contrato varchar(100),
-    fecha_captura date,
-    primary key(id_contrato)
 );
 
 create table movimiento(

@@ -59,7 +59,7 @@ jQuery(document).ready(function() {
   });
   //---------------------------UPDATE AREA-----------------------------
   $('#btnEditarContrato').click(function() {
-		var datos=$('#formEditarContrato').serialize();
+		var datos=$('#formEdContrato').serialize();
 		$.ajax({
 			url: '../../public/procesos/contratos/actualizarContrato.php',
 			type: 'POST',

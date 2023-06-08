@@ -52,9 +52,12 @@ class crud
         $dataContrato = $sql->fetch_row();
         $datos = array('idContrato' => $dataContrato[0],
                         'nomContrato'=>$dataContrato[1],
-                        'adquiContrato'=>$dataContrato[2],
-                        'garanContrato'=>$dataContrato[3],
-                        'provContrato'=>$dataContrato[4]);
+                        'numPedido'=>$dataContrato[2],
+                        'numContrato'=>$dataContrato[3],
+                        'fechaContrato'=>$dataContrato[4],
+                        'garanContrato'=>$dataContrato[5],
+                        'provContrato'=>$dataContrato[6],
+                        'tipoContrato'=>$dataContrato[7]);
     return $datos;
     }
 

@@ -42,9 +42,9 @@
                     <li class="breadcrumb-item active" aria-current="page">Movimientos</li>
                   </ol>
                 </nav>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i>Asignacion de Equipo</a>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i>Devolucion de Equipo</a>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i>Baja del Equipo</a>
+                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i class="fa-solid fa-turn-up text-white-50 mr-2"></i>Asignacion de Equipo</a>
+                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i class="fa-solid fa-turn-down text-white-50 mr-2"></i>Devolucion de Equipo</a>
+                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fa-solid fa-truck-ramp-box text-white-50 mr-2"></i>Baja del Equipo</a>
               </div>
               <!-- End Page title -->
 

@@ -2,18 +2,22 @@
 	session_start();
 	require '../../../config/conexion.php';
 
-	$nomContrato = $_POST['descripcionContrato'];
-	$AdquiContrato = $_POST['adquisicionContrato'];
-	$garaContrato = $_POST['garantiaContrato'];
-	$provContrato = $_POST['proveedorContrato'];
-	$fechaCaptura = date('Y-m-d');
+	$nomContrato = $_POST['nomContrato'];
+	$numPedido = $_POST['pedContrato'];
+	$numContrato = $_POST['numContrato'];
+	$fechaContrato = $_POST['fechaContrato'];
+	$garContrato = $_POST['garContrato'];
+	$provContrato = $_POST['provContrato'];
+	$tipoContrato = $_POST['tipoContrato'];
+	
+	//$fechaCaptura = date('Y-m-d');
 
-	$query = $con->query("SELECT nom_contrato FROM contrato WHERE nom_contrato LIKE '". $nomContrato ."' ");
+	$query = $con->query("SELECT num_pedido FROM contrato WHERE num_pedido LIKE '". $numPedido ."' ");
 	$categ = $query->num_rows;
 	if ($categ === 1) {
 		echo 0;
 	}else{
-		$res = $con->query("INSERT INTO contrato (nom_contrato,adquiere_contrato,garantia_contrato,proveedor_contrato,fecha_captura) VALUES ('$nomContrato','$AdquiContrato','$garaContrato','$provContrato','$fechaCaptura')");
+		$res = $con->query("INSERT INTO contrato (nom_contrato,num_pedido,num_contrato,fecha_contrato,garantia_contrato,prov_contrato,tipo_contrato) VALUES ('$nomContrato','$numPedido','$numContrato','$fechaContrato','$garContrato','$provContrato','$tipoContrato')");
 		if ($res) {
 			echo json_encode(array('error' => false));
 		}else{
