@@ -28,10 +28,10 @@
           <tr>
               <td class="text-center"><?php echo $mostrar[0] ?></td>
               <td> <span class="badge badge-primary"><i class="fas fa-bolt mr-2"></i>Electrosur</span> </td>
-              <td><?php echo $mostrar[1] ?> <?php echo $mostrar[2] ?></td>
-              <td><?php echo $mostrar[3] ?></td>
-              <td><?php echo $mostrar[4] ?></td>
-              <td><?php echo $mostrar[5] ?></td>
+              <td><?php echo $mostrar[4] ?> <?php echo $mostrar[5] ?></td>
+              <td><?php echo $obj->nomCargo( $mostrar[1]) ?></td>
+              <td><?php echo $obj->nomArea( $mostrar[2]) ?></td>
+              <td><?php echo $obj->nomGerencia( $mostrar[3]) ?></td>
               <td><?php echo $mostrar[6] ?></td>
               <td><?php echo $mostrar[7] ?></td>
               <td class="text-center">

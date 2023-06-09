@@ -2,25 +2,28 @@
 	require '../../../config/conexion.php';
 
 	$idEmpUpdate = $_POST['idEditarEmpleado'];
-	$nomEmpUpdate = $_POST['nomEditarEmpleado'];
-	$apeEmpUpdate = $_POST['apeEditarEmpleado'];
+
 	$cargoEmpUpdate = $_POST['cargoEditarEmpleado'];
 	$areaEmpUpdate = $_POST['areaEditarEmpleado'];
 	$grEmpUpdate = $_POST['gerenciaEditarEmpleado'];
+
+	$nomEmpUpdate = $_POST['nomEditarEmpleado'];
+	$apeEmpUpdate = $_POST['apeEditarEmpleado'];
+	
 	$correoEmpUpdate = $_POST['correoEditarEmpleado'];
 	$telEmpUpdate = $_POST['telEditarEmpleado'];
 	$estaEmpUpdate = $_POST['estadoEditarEmpleado'];
 	
 
-	$upd = $con->query("UPDATE empleado SET nom_empleado='$nomEmpUpdate',
-                    						ape_empleado='$apeEmpUpdate',
-                    						cargo_empleado='$cargoEmpUpdate',
-											area_empleado='$areaEmpUpdate',
-											gerencia_empleado='$grEmpUpdate',
-											email_empleado='$correoEmpUpdate',
-											telefono_empleado='$telEmpUpdate',
-											estado_empleado='$estaEmpUpdate'
-									WHERE id_empleado= '$idEmpUpdate' ");
+	$upd = $con->query("UPDATE empleado SET id_cargo='$cargoEmpUpdate',
+											id_area='$areaEmpUpdate',
+											id_gerencia='$grEmpUpdate',
+											nom_emp='$nomEmpUpdate',
+                    						ape_emp='$apeEmpUpdate',
+											email_emp='$correoEmpUpdate',
+											telefono_emp='$telEmpUpdate',
+											estado_emp='$estaEmpUpdate'
+									WHERE id_emp = '$idEmpUpdate' ");
 	if ($upd) {
 			echo json_encode(array('error' => false));
 		}else{

@@ -7,14 +7,14 @@ class crud
     //------------------------------CRUD PARA EMPLEADO---------------------
     public function leerDatosEmpleado($idemp){
         require 'conexion.php';
-        $sql = $con->query("SELECT * FROM empleado WHERE id_empleado = '$idemp' ");
+        $sql = $con->query("SELECT * FROM empleado WHERE id_emp = '$idemp' ");
         $ver = $sql->fetch_row();
         $datos = array('idempphp'=>$ver[0],
-                        'nomempphp'=>$ver[1],
-                        'apempphp'=>$ver[2],
-                        'cargoempphp'=>$ver[3],
-                        'areaempphp'=>$ver[4],
-                        'grempphp'=>$ver[5],
+                        'cargoempphp'=>$ver[1],
+                        'areaempphp'=>$ver[2],
+                        'grempphp'=>$ver[3],
+                        'nomempphp'=>$ver[4],
+                        'apempphp'=>$ver[5],
                         'emailempphp'=>$ver[6],
                         'telempphp'=>$ver[7],
                         'estaempphp'=>$ver[8]);
@@ -22,7 +22,7 @@ class crud
 	}
     public function eliminarEmpleado($idemp){
 		require 'conexion.php';
-		$sql = $con->query("DELETE FROM empleado WHERE id_empleado = '$idemp' ");
+		$sql = $con->query("DELETE FROM empleado WHERE id_emp = '$idemp' ");
 		return $sql;
 	}
 
@@ -110,6 +110,51 @@ class crud
     public function eliminarDatosSede($idsede){
         require 'conexion.php';
         $sql = $con->query("DELETE FROM sede WHERE id_sede = '$idsede' ");
+        return $sql;
+    }
+
+    //------------------------ PARA CARGOS CONTROL ------------------------------
+    public function leerDatosCargo($idcarg){
+        require 'conexion.php';
+        $sql = $con->query("SELECT * FROM cargo WHERE id_cargo = '$idcarg' ");
+        $dataCargo = $sql->fetch_row();
+        $datos = array('idCargo' => $dataCargo[0],
+                        'nomCargo'=>$dataCargo[1]);
+        return $datos;
+    }
+    public function eliminarDatoCargo($idcarg){
+        require 'conexion.php';
+        $sql = $con->query("DELETE FROM cargo WHERE id_cargo = '$idcarg' ");
+        return $sql;
+    }
+
+    //------------------------ PARA AREA CONTROL ------------------------------
+    public function leerDatosArea($idarea){
+        require 'conexion.php';
+        $sql = $con->query("SELECT * FROM area WHERE id_area = '$idarea' ");
+        $dataArea = $sql->fetch_row();
+        $datos = array('idArea' => $dataArea[0],
+                        'nomArea'=>$dataArea[1]);
+        return $datos;
+    }
+    public function eliminarDatoArea($idarea){
+        require 'conexion.php';
+        $sql = $con->query("DELETE FROM area WHERE id_area = '$idarea' ");
+        return $sql;
+    }
+
+    //------------------------ PARA GERENCIA CONTROL ------------------------------
+    public function leerDatosGeren($idgeren){
+        require 'conexion.php';
+        $sql = $con->query("SELECT * FROM gerencia WHERE id_gerencia = '$idgeren' ");
+        $dataGeren = $sql->fetch_row();
+        $datos = array('idGeren' => $dataGeren[0],
+                        'nomGeren'=>$dataGeren[1]);
+        return $datos;
+    }
+    public function eliminarDatoGeren($idgeren){
+        require 'conexion.php';
+        $sql = $con->query("DELETE FROM gerencia WHERE id_gerencia = '$idgeren' ");
         return $sql;
     }
 

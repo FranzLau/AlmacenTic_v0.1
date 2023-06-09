@@ -29,27 +29,6 @@
                   <input type="text" class="form-control form-control-sm" id="apellidoEmpleado" name="apellidoEmpleado">
                 </div>
               </div>
-              <div class="form-group">
-                <label for="cargoEmpleado" class="col-form-label col-form-label-sm">Cargo:</label>
-                <input type="text" class="form-control form-control-sm" id="cargoEmpleado" name="cargoEmpleado">
-              </div>
-            </div>
-          </div>
-          <hr>
-          <!--<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>-->
-          <div class="row">
-            <div class="col-md-4 pt-2">
-              <p class="font-weight-bold">Datos de Empresa:</p>
-            </div>
-            <div class="col-md-8">
-              <div class="form-group">
-                <label for="areaEmpleado" class="col-form-label col-form-label-sm">Area:</label>
-                <input type="text" class="form-control form-control-sm" id="areaEmpleado" name="areaEmpleado">
-              </div>
-              <div class="form-group">
-                <label for="gerenciaEmpleado" class="col-form-label col-form-label-sm">Gerencia:</label>
-                <input type="text" class="form-control form-control-sm" id="gerenciaEmpleado" name="gerenciaEmpleado">
-              </div>
               <div class="form-row">
                 <div class="form-group col-md-8">
                   <label for="correoEmpleado" class="col-form-label col-form-label-sm">Correo:</label>
@@ -61,6 +40,59 @@
                   <input type="text" class="form-control form-control-sm" id="telEmpleado" name="telEmpleado">
                 </div>
               </div>
+              
+            </div>
+          </div>
+          <hr>
+          <!--<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>-->
+          <div class="row">
+            <div class="col-md-4 pt-2">
+              <p class="font-weight-bold">Datos de Empresa:</p>
+            </div>
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="cargoEmpleado" class="col-form-label col-form-label-sm">Cargo:</label>
+                <select class="custom-select custom-select-sm" id="cargoEmpleado" name="cargoEmpleado" style="width:100%">
+                    <option selected disabled>Elegir...</option>
+                    <?php $ctg = $con->query("SELECT * FROM cargo");
+                        while ($row = $ctg->fetch_assoc()) {
+                          echo "<option value='".$row['id_cargo']."' ";
+                          echo ">";
+                          echo $row['nom_cargo'];
+                          echo "</option>";
+                        }
+                    ?>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="areaEmpleado" class="col-form-label col-form-label-sm">Area:</label>
+                <select class="custom-select custom-select-sm" id="areaEmpleado" name="areaEmpleado" style="width:100%">
+                    <option selected disabled>Elegir...</option>
+                    <?php $ctg = $con->query("SELECT * FROM area");
+                        while ($row = $ctg->fetch_assoc()) {
+                          echo "<option value='".$row['id_area']."' ";
+                          echo ">";
+                          echo $row['nom_area'];
+                          echo "</option>";
+                        }
+                    ?>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="gerenciaEmpleado" class="col-form-label col-form-label-sm">Gerencia:</label>
+                <select class="custom-select custom-select-sm" id="gerenciaEmpleado" name="gerenciaEmpleado" style="width:100%">
+                    <option selected disabled>Elegir...</option>
+                    <?php $ctg = $con->query("SELECT * FROM gerencia");
+                        while ($row = $ctg->fetch_assoc()) {
+                          echo "<option value='".$row['id_gerencia']."' ";
+                          echo ">";
+                          echo $row['nom_gerencia'];
+                          echo "</option>";
+                        }
+                    ?>
+                  </select>
+              </div>
+              
               <div class="form-group">
                 <label for="estadoEmpleado" class="col-form-label col-form-label-sm">Estado:</label>
                 <select class="custom-select custom-select-sm" id="estadoEmpleado" name="estadoEmpleado">

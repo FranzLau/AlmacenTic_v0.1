@@ -22,16 +22,16 @@ create table usuario(
 );
 
 create table empleado(
-    id_empleado int auto_increment,
-    nom_empleado varchar(200),
-    ape_empleado varchar(200),
-    cargo_empleado varchar(245),
-    area_empleado varchar(245),
-    gerencia_empleado varchar(245),
-    email_empleado varchar(200),
-    telefono_empleado varchar(20),
-    estado_empleado int,
-    primary key(id_empleado)
+    id_emp int auto_increment,
+    id_cargo int not null,
+    id_area int not null,
+    id_gerencia int not null,
+    nom_emp varchar(200),
+    ape_emp varchar(200),
+    email_emp varchar(200),
+    telefono_emp varchar(20),
+    estado_emp int,
+    primary key(id_emp)
 );
 
 create table equipo(
@@ -78,6 +78,24 @@ create table contrato(
     prov_contrato varchar(100),
     tipo_contrato int,
     primary key(id_contrato)
+);
+
+create table cargo(
+    id_cargo int auto_increment,
+    nom_cargo varchar(200),
+    primary key(id_cargo)
+);
+
+create table area(
+    id_area int auto_increment,
+    nom_area varchar(200),
+    primary key(id_area)
+);
+
+create table gerencia(
+    id_gerencia int auto_increment,
+    nom_gerencia varchar(200),
+    primary key(id_gerencia)
 );
 
 /*-----------------------------------------------------------------*/

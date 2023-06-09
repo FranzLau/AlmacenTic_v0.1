@@ -30,6 +30,8 @@
 <script src="../../assets/js/contratoCrearEditar.js"></script>
 <script src="../../assets/js/equipoCrearEditar.js"></script>
 <script src="../../assets/js/sedeCrearEditar.js"></script>
-
+<script src="../../assets/js/cargoCrearEditar.js"></script>
+<script src="../../assets/js/areaCrearEditar.js"></script>
+<script src="../../assets/js/gerenciaCrearEditar.js"></script>
 
 

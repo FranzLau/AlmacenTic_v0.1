@@ -28,26 +28,6 @@
                   <input type="text" class="form-control form-control-sm" id="apeEditarEmpleado" name="apeEditarEmpleado">
                 </div>
               </div>
-              <div class="form-group">
-                <label for="cargoEditarEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Cargo:</label>
-                <input type="text" class="form-control form-control-sm" id="cargoEditarEmpleado" name="cargoEditarEmpleado">
-              </div>
-            </div>
-          </div>
-          <hr><!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-          <div class="row">
-            <div class="col-md-4">
-              <p class="font-weight-bold">Datos de Empresa:</p>
-            </div>
-            <div class="col-md-8">
-              <div class="form-group">
-                <label for="areaEditarEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Area:</label>
-                <input type="text" class="form-control form-control-sm" id="areaEditarEmpleado" name="areaEditarEmpleado">
-              </div>
-              <div class="form-group">
-                <label for="gerenciaEditarEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Gerencia:</label>
-                <input type="text" class="form-control form-control-sm" id="gerenciaEditarEmpleado" name="gerenciaEditarEmpleado">
-              </div>
               <div class="form-row">
                 <div class="form-group col-md-8">
                   <label for="correoEditarEmpleado" class="col-form-label col-form-label-sm">Correo:</label>
@@ -58,6 +38,58 @@
                   <input type="text" class="form-control form-control-sm" id="telEditarEmpleado" name="telEditarEmpleado">
                 </div>
               </div>
+              
+            </div>
+          </div>
+          <hr><!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+          <div class="row">
+            <div class="col-md-4">
+              <p class="font-weight-bold">Datos de Empresa:</p>
+            </div>
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="cargoEditarEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Cargo:</label>
+                <select class="custom-select custom-select-sm" id="cargoEditarEmpleado" name="cargoEditarEmpleado" style="width:100%">
+                    <option selected disabled>Elegir...</option>
+                    <?php $ctg = $con->query("SELECT * FROM cargo");
+                        while ($row = $ctg->fetch_assoc()) {
+                          echo "<option value='".$row['id_cargo']."' ";
+                          echo ">";
+                          echo $row['nom_cargo'];
+                          echo "</option>";
+                        }
+                    ?>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="areaEditarEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Area:</label>
+                <select class="custom-select custom-select-sm" id="areaEditarEmpleado" name="areaEditarEmpleado" style="width:100%">
+                    <option selected disabled>Elegir...</option>
+                    <?php $ctg = $con->query("SELECT * FROM area");
+                        while ($row = $ctg->fetch_assoc()) {
+                          echo "<option value='".$row['id_area']."' ";
+                          echo ">";
+                          echo $row['nom_area'];
+                          echo "</option>";
+                        }
+                    ?>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="gerenciaEditarEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Gerencia:</label>
+                <select class="custom-select custom-select-sm" id="gerenciaEditarEmpleado" name="gerenciaEditarEmpleado" style="width:100%">
+                    <option selected disabled>Elegir...</option>
+                    <?php $ctg = $con->query("SELECT * FROM gerencia");
+                        while ($row = $ctg->fetch_assoc()) {
+                          echo "<option value='".$row['id_gerencia']."' ";
+                          echo ">";
+                          echo $row['nom_gerencia'];
+                          echo "</option>";
+                        }
+                    ?>
+                  </select>
+              </div>
+              
               <div class="form-group">
                 <label for="estadoEmpleado" class="col-form-label col-form-label-sm font-weight-bold">Estado:</label>
                 <select class="custom-select custom-select-sm" name="estadoEditarEmpleado" id="estadoEditarEmpleado">

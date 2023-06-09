@@ -45,20 +45,37 @@
 }
 /* ------------ estilos para el nav  ----------*/
 
-.nav-pills .nav-link {
-  color: #1cc88a!important;
-  padding: .25rem .5rem!important;
-  font-size: .875rem!important;
-  border: 1px solid #1cc88a!important;
-  border-radius: 0.2rem!important;
-}
 .nav-pills .nav-link.active {
-  background: #1cc88a!important; 
+  background: none!important;
+  border-bottom: 3px solid #e74a3b!important;
+  border-radius: 0!important;
+}
+
+.nav-pills .nav-link {
+  color: #e74a3b!important;
+  font-weight: 700!important;
+  padding: 0.25rem 0.5rem!important;
+  margin-right: 15px!important;
+}
+/*
+.nav-pills .nav-link.active {
+  background-color: #1cc88a!important;
+  border-color: #1cc88a!important;
   color: #ffffff!important;
 }
-.nav-pills .nav-item{
-  margin-left: 1rem!important;
+
+
+.nav-pills .nav-link {
+  border: 1px solid #1cc88a!important;
+  color: #1cc88a!important;
+  font-size: .875rem!important;
+  font-weight: 400!important;
+  padding: 0.25rem 0.5rem!important;
+  margin-right: 10px!important;
+  box-shadow: 0 .125rem .25rem 0 rgba(58,59,69,.2)!important;
 }
+*/
+
 /*--boton para cerra modal--///////////////////////////////*/
 .btn-outline-primary {
   color: #4e73df;
