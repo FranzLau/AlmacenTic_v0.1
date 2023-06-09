@@ -39,8 +39,8 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#"><i class="fa-solid fa-house"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Library</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Data</li>
+                  <li class="breadcrumb-item"><a href="#">Categorias</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Equipos</li>
                 </ol>
               </nav>
               <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearEquipo"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i>Agregar Equipo</a>

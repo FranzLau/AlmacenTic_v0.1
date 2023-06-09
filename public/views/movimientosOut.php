@@ -31,24 +31,13 @@
             
             <!-- Page title -->
             <div class="page-title mb-4">
-              <div class="page-title-wrapper d-flex align-items-center justify-content-between">
-                <div class="page-title-heading d-flex align-items-center">
-                  <div class="page-title-icon shadow-sm">
-                    <i class="fa-solid fa-folder-plus m-auto"></i>
-                  </div>
-                  <div>
-                    <h3 class="mb-0">Registro de Movimientos</h3>
-                    <span>Registre todo movimiento de equipo.</span>
-                  </div>
-                  
-                </div>
-                <div class="page-title-actions">
-                  <a href="movimientos.php" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
-                    <i class="fa-solid fa-user-xmark text-white-50"></i>
-                    Volver y Cancelar
-                  </a>
-                </div>
-              </div>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.php"><i class="fa-solid fa-house"></i></a></li>
+                  <li class="breadcrumb-item"><a href="movimientos.php">Movimientos</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Asignacion</li>
+                </ol>
+              </nav>
             </div>
             <!-- End Page title -->
 
@@ -57,7 +46,7 @@
               <div class="col-sm-12">
                 <div class="row">
                   <div class="col-md-5">
-                    <div class="card shadow border-top-warning">
+                    <div class="card shadow border-top-success">
                       
                       <div class="card-body">
                         <form id="formNuevoMovi">

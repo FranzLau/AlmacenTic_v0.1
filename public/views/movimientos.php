@@ -42,7 +42,7 @@
                     <li class="breadcrumb-item active" aria-current="page">Movimientos</li>
                   </ol>
                 </nav>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i class="fa-solid fa-turn-up text-white-50 mr-2"></i>Asignacion de Equipo</a>
+                <a href="movimientosOut.php" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i class="fa-solid fa-turn-up text-white-50 mr-2"></i>Asignacion de Equipo</a>
                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i class="fa-solid fa-turn-down text-white-50 mr-2"></i>Devolucion de Equipo</a>
                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fa-solid fa-truck-ramp-box text-white-50 mr-2"></i>Baja del Equipo</a>
               </div>
@@ -50,7 +50,7 @@
 
               <div class="row mt-4">
                 <div class="col-md-12">
-                  <div id="tabla"></div>
+                  <div id="tableMoves"></div>
                 </div>
                 
               </div>
@@ -69,7 +69,7 @@
       <?php include('../include/scripts.php'); ?>
       <script type="text/javascript">
         $(document).ready(function() {
-          $('#tablaCategoria').load('../componentes/tablaCategoria.php');
+          $('#tableMoves').load('../componentes/tablaMovimientos.php');
         });
       </script>
       <script type="text/javascript">
