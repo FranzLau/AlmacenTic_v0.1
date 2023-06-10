@@ -16,7 +16,6 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-
       <!-- Sidebar -->
       <?php include("../include/sidebar.php"); ?>
       <!-- End of Sidebar -->
@@ -38,12 +37,12 @@
             <div class="page-title mb-3">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#"><i class="fa-solid fa-house"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Categorias</a></li>
+                  <li class="breadcrumb-item"><a href="index.php"><i class="fa-solid fa-house"></i></a></li>
                   <li class="breadcrumb-item active" aria-current="page">Equipos</li>
                 </ol>
               </nav>
               <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearEquipo"><i class="fa-solid fa-circle-plus text-white-50 mr-2"></i>Agregar Equipo</a>
+              <a href="categorias.php" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i class="fa-solid fa-gear text-white-50 mr-2"></i>Config. Categorias</a>
             </div>
             <!-- End Page title -->
             

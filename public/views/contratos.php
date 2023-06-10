@@ -40,12 +40,11 @@
             <div class="page-title mb-4">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#"><i class="fa-solid fa-house"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Library</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Data</li>
+                  <li class="breadcrumb-item"><a href="index.php"><i class="fa-solid fa-house"></i></a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Contratos</li>
                 </ol>
               </nav>
-              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearContrato"><i class="fa-solid fa-circle-plus mr-2 text-white-50"></i> Nuevo Contrato</a>
+              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" data-toggle="modal" data-target="#modalCrearContrato"><i class="fa-solid fa-circle-plus mr-2 text-white-50"></i>Agregar Contrato</a>
             </div>
             <!-- End Page title -->
 

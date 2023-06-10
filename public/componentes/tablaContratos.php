@@ -10,6 +10,7 @@
         <th>ID</th>
         <th>NOMBRE</th>
         <th>PEDIDO</th>
+        <th>NUMERO</th>
         <th>FECHA</th>
         <th>GARANTIA</th>
         <th>PROVEEDOR</th>
@@ -18,20 +19,34 @@
       </tr>
     </thead>
     <tbody class="bg-white">
-      <?php while($vergasto = $sql->fetch_row()){ ?>
+      <?php while($rowContrato = $sql->fetch_row()){ ?>
         <tr>
-          <td><?php echo $vergasto[0] ?></td>
-          <td><?php echo $vergasto[1] ?></td>
-          <td><?php echo $vergasto[2] ?></td>
-          <td><?php echo $vergasto[3] ?></td>
-          <td><?php echo $vergasto[4] ?></td>
-          <td><?php echo $vergasto[5] ?></td>
-          <td><?php echo $vergasto[6] ?></td>
+          <td><?php echo $rowContrato[0] ?></td>
+          <td><?php echo $rowContrato[1] ?></td>
+          <td><?php echo $rowContrato[2] ?></td>
+          <td><?php echo $rowContrato[3] ?></td>
+          <td><?php echo $rowContrato[4] ?></td>
+          <td><?php echo $rowContrato[5] ?></td>
+          <td><?php echo $rowContrato[6] ?></td>
+          
+          <td>
+            <?php 
+              switch ($rowContrato[7]){
+                case "1":
+                  echo '<span class="badge bg-warning">Arrendamiento</span>';
+                  break;
+                case "2":
+                  echo '<span class="badge bg-primary">Propio</span>';
+                  break;  
+              }
+            ?>
+          </td>
+
           <td class="text-center">
-            <a href="#" class="mr-3 btn-link-edit" title="Editar" data-toggle="modal" data-target="#modalEditarContrato" onclick="verDatosContrato('<?php echo $vergasto[0] ?>')">
+            <a href="#" class="mr-3 btn-link-edit" title="Editar" data-toggle="modal" data-target="#modalEditarContrato" onclick="verDatosContrato('<?php echo $rowContrato[0] ?>')">
               <i class="fas fa-pen"></i>
             </a>
-            <a href="#" class="btn-link-delete" title="Eliminar" onclick="eliminarContrato('<?php echo $vergasto[0] ?>')">
+            <a href="#" class="btn-link-delete" title="Eliminar" onclick="eliminarContrato('<?php echo $rowContrato[0] ?>')">
               <i class="fas fa-trash-alt"></i>
             </a>
           </td>

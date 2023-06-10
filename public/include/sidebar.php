@@ -3,9 +3,9 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon">
-            <i class="fa-solid fa-laptop-file"></i>
+            <i class="fa-solid fa-computer"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SISDCED <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">SISDCED <sup>1</sup></div>
     </a>
 
     <!-- Divider -->
@@ -24,10 +24,31 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Opciones
+        ALMACEN TIC
     </div>
 
+    <!-- Nav Item - Tables -->    
+    <li class="nav-item">
+        <a class="nav-link" href="equipos.php">
+            <i class="fa-solid fa-desktop mr-2"></i>
+            <span>Equipos</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="movimientos.php">
+            <i class="fa-solid fa-dolly"></i>
+            <span>Movimientos</span>
+        </a>
+    </li>
+
+
     <!-- Nav Item - Utilities Collapse Menu -->
+    <!-- 
+    <div class="sidebar-heading">
+        Almacen TIC
+    </div>
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fa-solid fa-warehouse"></i>
@@ -41,14 +62,8 @@
             </div>
         </div>
     </li>
+    -->
 
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="movimientos.php">
-            <i class="fa-solid fa-dolly"></i>
-            <span>Movimientos</span>
-        </a>
-    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">
@@ -58,6 +73,14 @@
         Mantenimiento
     </div>
 
+    <!-- Nav Item - Dipositivos -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Mis Dispositivos</span>
+        </a>
+    </li>
+
     <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="empleados.php">
@@ -66,51 +89,64 @@
         </a>
     </li>
 
-    <!-- Nav Item - Pages Collapse Menu -->
+    <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMant" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Mantenimiento</span>
+        <a class="nav-link" href="contratos.php">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>Contratos</span>
         </a>
-        <div id="collapseMant" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Opciones</h6>
-                <a class="collapse-item" href="sede.php"><i class="fa-solid fa-location-dot mr-2 text-gray-500"></i>Sedes</a>
-                <a class="collapse-item" href="contratos.php"><i class="fa-solid fa-file-contract mr-2 text-gray-500"></i>Contratos</a>
-                <a class="collapse-item" href="#"><i class="fa-solid fa-user-group mr-2 text-gray-500"></i>Usuarios</a>
-            </div>
-        </div>
+    </li>
+
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="sede.php">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Sedes</span>
+        </a>
     </li>
 
     
+
 
     <!-- Divider -->
     <hr class="sidebar-divider">
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Ayuda
+        Administracion
     </div>
 
-    <!-- Nav Item - Tables -->
+    <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="soporte.php">
-            <i class="fa-solid fa-phone"></i>
-            <span>Soporte</span>
+        <a class="nav-link" href="#">
+            <i class="fa-solid fa-users"></i>
+            <span>Usuarios</span>
         </a>
     </li>
 
-    <!-- Nav Item - Charts -->
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Soporte
+    </div>
+    
+    <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="#">
             <i class="fa-solid fa-circle-question"></i>
             <span>Ayuda</span>
         </a>
     </li>
+    
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
     <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
     
 </ul>

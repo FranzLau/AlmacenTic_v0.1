@@ -31,6 +31,7 @@
 <script>
   $(document).ready(function() {
     $('#tableAreas').DataTable({
+      "iDisplayLength": 15,
       "language": {
         "lengthMenu": "Mostrar _MENU_ registros por página",
         "zeroRecords": "Nada encontrado, lo siento!",

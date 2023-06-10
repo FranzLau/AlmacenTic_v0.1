@@ -2,7 +2,7 @@
     require '../../config/conexion.php';
     require '../../config/data.php';
     $obj = new data();
-    $sql = $con->query("SELECT * FROM empleado ");
+    $sqlemp = $con->query("SELECT * FROM empleado ORDER BY id_emp DESC");
 ?>
   <!-- DataTales Example -->
   <div class="table-responsive">
@@ -23,7 +23,7 @@
       </thead>
       <tbody class="bg-white">
           <?php
-          while($mostrar = $sql->fetch_row()){
+          while($mostrar = $sqlemp->fetch_row()){
           ?>
           <tr>
               <td class="text-center"><?php echo $mostrar[0] ?></td>

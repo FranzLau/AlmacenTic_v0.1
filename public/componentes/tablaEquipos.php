@@ -17,6 +17,7 @@
         <th>STOCK</th>
         <th>CONTRATO</th>
         <th class="text-center">CONDICION</th>
+        <th class="text-center">ESTADO</th>
         <th class="text-center">ACCION</th>
       </tr>
     </thead>
@@ -27,7 +28,7 @@
         <td><?php echo $obj->nomCategoria( $mostrarprod[1]) ?></td>
         <td><?php echo $mostrarprod[3] ?></td>
         <td><?php echo $mostrarprod[7] ?></td>
-        <td><?php echo $mostrarprod[6] ?></td>
+        <td><?php echo $mostrarprod[8] ?></td>
         <td>
           <?php 
           if ($mostrarprod[10]=="0"){
@@ -53,6 +54,21 @@
                 break;
               case "3":
                 echo '<span class="badge bg-warning">Regular</span>';
+                break;
+            }
+          ?>
+        </td>
+        <td class="text-center">
+          <?php
+            switch ($mostrarprod[11]) {
+              case "1":
+                echo '<span class="badge bg-warning">ASIGNADO</span>';
+                break;
+              case "2":
+                echo '<span class="badge bg-success">DISPONIBLE</span>';
+                break;
+              case "3":
+                echo '<span class="badge bg-danger">BAJA</span>';
                 break;
             }
           ?>
