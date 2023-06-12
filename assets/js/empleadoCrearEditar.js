@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
 				text: 'Debes llenar los campos!'
 			  })
 
-		  return false;
+		  	return false;
 		}
 		var datos=$('#formNuevoEmpleado').serialize();
 

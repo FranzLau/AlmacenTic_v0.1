@@ -39,6 +39,13 @@ class data
 		return $result[0];
 	}
 
+	public function nomSede($idsede){
+		require 'conexion.php';
+		$sql = $con->query("SELECT nom_sede FROM sede WHERE id_sede = '$idsede' ");
+		$result = $sql->fetch_row();
+		return $result[0];
+	}
+
 }
 
 ?>

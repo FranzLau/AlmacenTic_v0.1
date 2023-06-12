@@ -46,14 +46,14 @@
         <td class="text-center">
           <?php
             switch ($mostrarprod[12]) {
-              case "1":
-                echo '<span class="badge bg-success">Bueno</span>';
+              case "B":
+                echo '<span class="badge bg-success">BUENO</span>';
                 break;
-              case "2":
-                echo '<span class="badge bg-danger">Malo</span>';
+              case "M":
+                echo '<span class="badge bg-danger">MALO</span>';
                 break;
-              case "3":
-                echo '<span class="badge bg-warning">Regular</span>';
+              case "R":
+                echo '<span class="badge bg-warning">REGULAR</span>';
                 break;
             }
           ?>
@@ -61,13 +61,13 @@
         <td class="text-center">
           <?php
             switch ($mostrarprod[11]) {
-              case "1":
-                echo '<span class="badge bg-warning">ASIGNADO</span>';
-                break;
-              case "2":
+              case "D":
                 echo '<span class="badge bg-success">DISPONIBLE</span>';
                 break;
-              case "3":
+              case "ND":
+                echo '<span class="badge bg-warning">NO DISPONIBLE</span>';
+                break;
+              case "BAJA":
                 echo '<span class="badge bg-danger">BAJA</span>';
                 break;
             }

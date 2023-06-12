@@ -84,7 +84,29 @@
     <?php include('../include/scripts.php'); ?>
     <script type="text/javascript">
       $(document).ready(function() {
+
         $('#tablaEmpleados').load('../componentes/tablaEmpleados.php');
+        $('#cargoEmpleado').select2({
+          //width: 'resolve'
+          dropdownParent: $('#modalNuevoEmpleado .modal-body')
+        });
+        $('#areaEmpleado').select2({
+          dropdownParent: $('#modalNuevoEmpleado .modal-body')
+        });
+        $('#gerenciaEmpleado').select2({
+          dropdownParent: $('#modalNuevoEmpleado .modal-body')
+        });
+
+        $('#cargoEditarEmpleado').select2({
+          width: 'resolve'
+        });
+        $('#areaEditarEmpleado').select2({
+          width: 'resolve'
+        });
+        $('#gerenciaEditarEmpleado').select2({
+          width: 'resolve'
+        });
+
       });
     </script>
     <script>

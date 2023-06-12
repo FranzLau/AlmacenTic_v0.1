@@ -12,9 +12,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-      <!-- Sidebar -->
       <?php include("../include/sidebar.php"); ?>
-      <!-- End of Sidebar -->
 
       <!-- Content Wrapper -->
       <div id="content-wrapper" class="d-flex flex-column">
@@ -22,31 +20,42 @@
         <!-- Main Content -->
         <div id="content">
 
-          <!-- Topbar -->  
           <?php include("../include/topbar.php"); ?>
-          <!-- End Topbar -->
 
           <!-- Begin Page Content -->
           <div class="container-fluid">
-            
+
+            <!-- Page Heading -->
+
             <!-- Page title -->
             <div class="page-title mb-4">
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.php"><i class="fa-solid fa-house"></i></a></li>
-                  <li class="breadcrumb-item"><a href="movimientos.php">Movimientos</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Asignacion</li>
-                </ol>
-              </nav>
+              <div class="page-title-wrapper d-flex align-items-center justify-content-between">
+                <div class="page-title-heading d-flex align-items-center">
+                  <div class="page-title-icon shadow-sm">
+                    <i class="fa-solid fa-dolly m-auto"></i>
+                  </div>
+                  <div>
+                    <h3 class="mb-0">Panel de Asignacion</h3>
+                    <span>Asignacion de equipos</span>
+                  </div>
+                  
+                </div>
+                <div class="page-title-actions">
+                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
+                    <i class="fa-solid fa-plus fa-sm text-white-50"></i>
+                    Nuevo Movimiento
+                  </a>
+                </div>
+              </div>
             </div>
-            <!-- End Page title -->
+
 
             <!-- Content Row -->
             <div class="row">
               <div class="col-sm-12">
                 <div class="row">
                   <div class="col-md-5">
-                    <div class="card shadow border-top-success">
+                    <div class="card shadow border-top-warning">
                       
                       <div class="card-body">
                         <form id="formNuevoMovi">
@@ -161,83 +170,24 @@
                     </div>
                   </div>
                 </div> 
-
               </div>
             </div>
 
+
+
           </div>
-        </div><!--<<<<<<<<<<<<<<<<< FIN DE CONTENIDO <<<<<<<<<<<<<<<<<-->
-
-        <!-- Footer -->
-        <?php include('../include/footer.php'); ?>
-        <!-- End of Footer -->
-
-      </div>  <!--<<<<<<<<<<<<<< FIN DE CONTENT WRAPPER <<<<<<<<<<<<<<<-->
-
-    </div><!--<<<<<<<<<<<<<<<<<<< FIN DE WRAPPER   <<<<<<<<<<<<<<<<<<<<<-->
+        </div>
+        <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+      </div>
+      <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+    </div>
+    <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
 
     <!--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
     <?php include('../include/scripts.php'); ?>
     <script type="text/javascript">
       $(document).ready(function() {
         $('#tablaMovimientos').load('../componentes/tablaDevolver.php');
-        $('#tablaMovTemp').load("../componentes/tablaMovTemp.php");
-      });
-    </script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-        // para tipo de Movimientos
-        $('#tipoNuevoMov').change(function() {
-          $.ajax({
-            url: '../../public/procesos/movimientos/tipoMovimiento.php',
-            type: 'POST',
-            data: "idtmov=" + $('#tipoNuevoMov').val(),
-            success:function(r){
-              $('#serieNuevoMov').html(r);
-            }
-          })
-        });
-
-        // para datos del Equipos
-        $('#equiNewMove').change(function() {
-          $.ajax({
-            url: '../../public/procesos/producto/readProducto.php',
-            type: 'POST',
-            data: "idprod=" + $('#equiNewMove').val(),
-            success:function(r){
-              var datos = $.parseJSON(r);
-
-              $('#marcNewMove').val(datos['ProdMarca']);
-              $('#catgNewMove').val(datos['ProdCtg']);
-            }
-          })
-        });
-
-          // agregar equipo Movimiento Temp
-          $('#btnaddMov').click(function() {
-            vacios = validarFrmVacio('formNewMove');
-            if(vacios > 0){
-            	alertify.error("Debe llenar todos los campos!");
-            	return false;
-            }
-            datos = $('#formNewMove').serialize();
-            $.ajax({
-              url: '../procesos/move/createMoveTemp.php',
-              type: 'POST',
-              data: datos,
-              success:function(r){
-                if (r==2) {
-                  alertify.error('Ingrese un valor mayor');
-                }else if(r==1){
-                  alertify.error('Ingrese un valor menor');
-                }else{
-                  $('#TableAsigTempLoad').load("../componentes/tableAssignmentTemp.php");
-                }
-              }
-            })
-          });
-
       });
     </script>
   </body>

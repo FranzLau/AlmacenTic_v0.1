@@ -107,18 +107,18 @@
                   <label for="condiEditarEquipo" class="col-form-label col-form-label-sm font-weight-bold">Condicion:</label>
                   <select class="custom-select custom-select-sm" id="condiEditarEquipo" name="condiEditarEquipo" required>
                     <option selected disabled>Elegir...</option>
-                    <option value="1">Bueno</option>
-                    <option value="2">Malo</option>
-                    <option value="3">Regular</option>
+                    <option value="B">Bueno</option>
+                    <option value="M">Malo</option>
+                    <option value="R">Regular</option>
                   </select>
                 </div>
                 <div class="form-group col-md-4">
                   <label for="estEditarEquipo" class="col-form-label col-form-label-sm font-weight-bold">Estado:</label>
                   <select class="custom-select custom-select-sm" id="estEditarEquipo" name="estEditarEquipo" required>
                     <option selected disabled>Elegir...</option>
-                    <option value="1">Asignado</option>
-                    <option value="2">No Asignado</option>
-                    <option value="3">Baja</option>
+                    <option value="D">Disponible</option>
+                    <option value="ND">No Disponible</option>
+                    <option value="BAJA">Baja</option>
                   </select>
                 </div>
               </div>

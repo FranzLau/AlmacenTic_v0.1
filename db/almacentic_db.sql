@@ -46,8 +46,8 @@ create table equipo(
     marca_equipo varchar(100),
     modelo_equipo varchar(100),
     cantidad_equipo int,
-    estado_equipo int,
-    condicion_equipo int,
+    estado_equipo varchar(10),
+    condicion_equipo varchar(10),
     fecha_captura date,
     primary key(id_equipo)
 );
