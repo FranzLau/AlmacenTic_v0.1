@@ -15,8 +15,6 @@
 
   $descFormAsig=$_POST['descNewAsig'];//descripcion
   $marcaFormAsig=$_POST['marcaNewAsig'];//marca
-  $tcodFormAsig=$_POST['afNewAsig'];//Af-Nc
-  $codFormAsig=$_POST['codNewAsig'];//codigo
 	
 
   // Obtenemos el nombre del Destino --------------

@@ -105,18 +105,19 @@ create table movimiento(
     id_sede int,
     fecha_mov date,
     tipo_mov varchar(50),
-    obs_movimiento varchar(245),
+    detalles_mov varchar(245),
     grupo_mov varchar(100),
     primary key(id_mov)
 );
 
 create table detalleMovimiento(
-    correlativo_dmov int not null,
+    id_dmov int auto_increment,
     id_mov int,
     id_equipo int,
     cantidad_equipo int,
     bandera_dmov varchar(100),
-    sticker_dmov varchar(100)
+    sticker_dmov varchar(100),
+    primary key(id_dmov)
 )
 
 /*-----------------------------------------------------------------*/

@@ -309,8 +309,7 @@
     				if (r > 0) {
               $('#tablaMovTemp').load("../componentes/tablaAsignacionTemp.php");
     					$('#formNewAsig')[0].reset();
-              
-    					//alertify.alert("Se Asigno el Equipo");
+    					
               Swal.fire({
                 icon: 'success',
                 title: 'Se asigno con éxito',
@@ -319,20 +318,23 @@
               }).then(function() {
                 window.location = "/movimientos.php";
               })
+              
     				}else if(r == 0){
-    					//alertify.alert("No hay equipos seleccionados");
+    					
               Swal.fire({
                 icon: 'warning',
                 title: 'Advertencia',
-                text: 'No hay equipos seleccionados'
-              });
+                text: 'No agrego equipos'
+              })
+
     				}else{
-    					//alertify.error("No se pudo Asignar equipo");
+    					
               Swal.fire({
                 icon: 'error',
                 title: 'Error',
                 text: 'No se pudo Asignar equipo'
               })
+
     				}
     			}
     		})

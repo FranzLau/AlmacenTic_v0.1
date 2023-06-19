@@ -227,54 +227,54 @@ class crud
 		for ($i=0; $i < count($datos) ; $i++) {
 			$d=explode("||", $datos[$i]);
 			$inserta1 = $con->query("INSERT INTO asignacion (id_asig,
-                														    fecha_asig,
-                														    cantidad_asig,
-                														    responsable_asig,
-                                                elsu_asig,
-                                                ip_asig,
-                                                mac_asig,
-                														    id_equipo,
-                														    id_emp,
-                                                id_gerencia,
-                                                id_area)
-              								VALUES ('$idAssig',
+                											fecha_asig,
+                											cantidad_asig,
+                											responsable_asig,
+                                                			elsu_asig,
+                                                			ip_asig,
+                                                			mac_asig,
+                											id_equipo,
+                											id_emp,
+                                                			id_gerencia,
+                                                			id_area)
+              									VALUES ('$idAssig',
                   										'$d[0]',
                   										'$d[8]',
                   										'$d[1]',
                   										'$d[13]',
-                                      '$d[14]',
-                                      '$d[15]',
+                                      					'$d[14]',
+                                      					'$d[15]',
                   										'$d[3]',
-                                      '$empAssig',
-                                      '$d[11]',
+                                      					'$empAssig',
+                                      					'$d[11]',
                   										'$d[12]') ");
-        if ($inserta1 == true) {
-          $inserta2 = $con->query("INSERT INTO asignacion_temp (id_asig,
-                    														    fecha_asig,
-                    														    cantidad_asig,
-                    														    responsable_asig,
-                                                    elsu_asig,
-                                                    ip_asig,
-                                                    mac_asig,
-                    														    id_equipo,
-                    														    id_emp,
-                                                    id_gerencia,
-                                                    id_area)
+        	if ($inserta1 == true) {
+          		$inserta2 = $con->query("INSERT INTO asignacion_temp (id_asig,
+                    									fecha_asig,
+                    									cantidad_asig,
+                    									responsable_asig,
+                                                    	elsu_asig,
+                                                    	ip_asig,
+                                                    	mac_asig,
+                    									id_equipo,
+                    									id_emp,
+                                                    	id_gerencia,
+                                                    	id_area)
                   								VALUES ('$idAssig',
                       										'$d[0]',
                       										'$d[8]',
                       										'$d[1]',
                       										'$d[13]',
-                                          '$d[14]',
-                                          '$d[15]',
+                                          					'$d[14]',
+                                          					'$d[15]',
                       										'$d[3]',
-                                          '$empAssig',
-                                          '$d[11]',
+                                          					'$empAssig',
+                                          					'$d[11]',
                       										'$d[12]') ");
-        }
+        	}
 			$r = $r + $inserta1;
 			self::updateStock($d[3],$d[8]);
-      //self::updateValorAssig($d[2]);
+      		//self::updateValorAssig($d[2]);
 		}
 		return $r;
 	}
