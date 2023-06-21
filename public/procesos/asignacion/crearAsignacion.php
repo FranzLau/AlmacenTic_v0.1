@@ -1,15 +1,15 @@
 <?php
     session_start();
     require '../../../config/conexion.php';
-	require '../../../config/crud.php';
+	require '../../../config/clases.php';
 
-    $obj = new crud();
+    $obj = new move();
 
-    if(count($_SESSION['AsigEquipoTemp']) == 0){
+    if(count($_SESSION['tablaEquipoTemp']) == 0){
         echo 0;
     }else {
-        $result=$obj->crearAsignacion();
-        unset($_SESSION['AsigEquipoTemp']);
+        $result=$obj->asignarEquipos();
+        unset($_SESSION['tablaEquipoTemp']);
         echo $result;
     }
 ?>

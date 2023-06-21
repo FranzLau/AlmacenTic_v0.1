@@ -30,7 +30,7 @@
           <div class="container-fluid">
             
             <!-- Page title -->
-            <div class="page-title mb-4">
+            <div class="page-title mb-3">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="index.php"><i class="fa-solid fa-house"></i></a></li>
@@ -43,151 +43,138 @@
 
             <!-- Content Row -->
             <div class="row">
-              <div class="col-sm-12">
-
+              <div class="col-md-12">
                 <div class="card shadow border-left-success">
-                
+                            
                   <div class="card-body">
-                    <!-- Formulario Asignacion -->
-                    <form id="formNewAsig">
-                      <!--*************************** row 1 *********************************-->
-                      <div class="form-row">
-                        <div class="form-group col-md-2">
-                          <label class="col-form-label col-form-label-sm font-weight-bold" for="fechaNewAsig">Fecha :</label>
-                          <input type="date" class="form-control form-control-sm text-center" id="fechaNewAsig" name="fechaNewAsig" value="<?php echo date("Y-m-d");?>" readonly>
-                        </div>
-                      </div>
-                      <!--*************************** End row 1 *********************************-->
-
-                      <!--*************************** row 1.5 *********************************-->
-                      <div class="form-row">
-                        <!--*************************** Imputs *********************************-->
-                        <div class="form-group col-md-3">
-                          <label for="empNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Destino:</label>
-                          <select class="form-control form-control-sm" id="empNewAsig" name="empNewAsig" style="width:100%">
-                            <option value="">Elije uno</option>
-                            <?php $ctg = $con->query("SELECT * FROM empleado");
-                                while ($row = $ctg->fetch_assoc()) {
-                                  echo "<option value='".$row['id_emp']."' ";
-                                  echo ">";
-                                  echo $row['nom_emp'];
-                                  echo " ";
-                                  echo $row['ape_emp'];
-                                  echo "</option>";
-                                }
-                            ?>
-                          </select>
-                        </div>
-                        <!--*************************** Imputs *********************************-->
-                        <div class="form-group col-md-2">
-                          <label class="col-form-label col-form-label-sm font-weight-bold" for="sedeNewAsig">Sede:</label><br>
-                          <select class="form-control form-control-sm" id="sedeNewAsig" name="sedeNewAsig" style="width:100%">
-                            <option value="">Elije uno</option>
-                            <?php $ctg = $con->query("SELECT * FROM sede");
-                                while ($row = $ctg->fetch_assoc()) {
-                                  echo "<option value='".$row['id_sede']."' ";
-                                  echo ">";
-                                  echo $row['nom_sede'];
-                                  echo "</option>";
-                                }
-                            ?>
-                          </select>
-                        </div>
-                        <!--*************************** Imputs *********************************-->
-                        <div class="form-group col-md-2">
-                          <label for="opeNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Operador:</label>
-                          <select class="custom-select custom-select-sm" id="opeNewAsig" name="opeNewAsig" required>
-                            <option selected disabled>Elegir...</option>
-                            <option value="ELS">Trabajador</option>
-                            <option value="P-ELS">Practicante</option>
-                            <option value="T-ELS">Tercero</option>
-                          </select>
-                        </div>
-                        <!--*************************** Imputs *********************************-->
-                        <div class="form-group col-md-5">
-                          <label for="detNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Detalles:</label>
-                          <input type="text" class="form-control form-control-sm" id="detNewAsig" name="detNewAsig">
-                        </div>
-                      </div>
-                      <!--*************************** end row 1.5 *********************************-->
-
-                      <!--*************************** row 2 *********************************-->
-                      <div class="form-row">
-                        <!--*************************** Imputs *********************************-->
-                        <div class="form-group col-md-2">
-                          <label for="serieNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Serie:</label>
-                          <select class="form-control form-control-sm" id="serieNewAsig" name="serieNewAsig" style="width:100%">
-                            <option value="">Elije uno</option>
-                            <?php $ctg = $con->query("SELECT * FROM equipo WHERE cantidad_equipo != '0' AND condicion_equipo = 'B' ");
-                                while ($row = $ctg->fetch_assoc()) {
-                                  echo "<option value='".$row['id_equipo']."' ";
-                                  echo ">";
-                                  echo $row['serie_equipo'];
-                                  echo "</option>";
-                                }
-                            ?>
-                          </select>
-                        </div>
-                        <!--*************************** Imputs *********************************-->
-                        <div class="form-group col-md-1">
-                          <label for="cantNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Cant.</label>
-                          <input type="number" class="form-control form-control-sm" id="cantNewAsig" name="cantNewAsig">
-                        </div>
-                        <!--*************************** Imputs *********************************-->
-                        <div class="form-group col-md-2">
-                          <label for="labelNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Hostname:</label>
-                          <input type="text" class="form-control form-control-sm" id="labelNewAsig" name="labelNewAsig">
-                        </div>
-                        <!--*************************** Imputs *********************************-->
-                        <div class="form-group col-md-3">
-                          <label for="descNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Descripcion:</label>
-                          <input type="text" class="form-control form-control-sm" id="descNewAsig" name="descNewAsig" readonly>
-                        </div>
-                        <!--*************************** Imputs *********************************-->
-                        <div class="form-group col-md-2">
-                          <label for="marcaNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Marca:</label>
-                          <input type="text" class="form-control form-control-sm" id="marcaNewAsig" name="marcaNewAsig" readonly>
-                        </div>
-                        <!--*************************** Imputs *********************************-->
-                        <div class="form-group col-md-2">
-                          <label for="afNewAsig" class="col-form-label col-form-label-sm font-weight-bold">AF/NC:</label>
-                          <input type="text" class="form-control form-control-sm" id="afNewAsig" name="afNewAsig" readonly>
-                        </div>
-                        <!--*************************** Imputs *******************************
-                        <div class="form-group col-md-1">
-                          <label for="categNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Categoria:</label>
-                          <input type="text" class="form-control form-control-sm" id="categNewAsig" name="categNewAsig" readonly>
-                        </div>
-                        *-->
-
-                      </div>
-                      <!--************************** End row 2 *********************************-->
-
-                      <!--*************************** row 3 *********************************-->
-                     
-                      <!--*************************** End row 3 *********************************-->
-                    </form>
-                    <!-- End Formulario Asignacion -->
-                    <hr class="mt-0">
-                    <!--*************************** row buttons *********************************-->
                     <div class="row">
-                      <div class="col-md-12 text-center">
-                        <button type="button" class="btn btn-sm btn-danger" id="btnCleanEquiposTemp">
-                          <i class="fa-regular fa-trash-can fa-sm"></i>
-                          Limpiar todo
-                        </button>  
-                        <button type="button" class="btn btn-sm btn-primary" id="btnAddEquipoTemp">
-                          <i class="fa-solid fa-arrow-turn-down fa-sm"></i>
-                          Agregar
-                        </button>
+                      <div class="col-md-4">
+                        <h6 class="font-weight-bold text-primary">REGISTRO DE ASIGNACION DE EQUIPO</h6>
+                        <hr>
+                        <form id="formNewAsig">
+                          <!--*************************** Imputs *********************************-->
+                          <div class="form-group">
+                            <label for="empNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Destino:</label>
+                            <select class="form-control form-control-sm" id="empNewAsig" name="empNewAsig" style="width:100%">
+                              <option value="">Elije uno</option>
+                              <?php $ctg = $con->query("SELECT * FROM empleado");
+                                  while ($row = $ctg->fetch_assoc()) {
+                                    echo "<option value='".$row['id_emp']."' ";
+                                    echo ">";
+                                    echo $row['nom_emp'];
+                                    echo " ";
+                                    echo $row['ape_emp'];
+                                    echo "</option>";
+                                  }
+                              ?>
+                            </select>
+                          </div>
+                          <!--*************************** row 1 *********************************-->
+                          <div class="form-row">
+                            <!--*************************** Imputs *********************************-->
+                            <div class="form-group col-md-6">
+                              <label class="col-form-label col-form-label-sm font-weight-bold" for="sedeNewAsig">Sede:</label><br>
+                              <select class="form-control form-control-sm" id="sedeNewAsig" name="sedeNewAsig" style="width:100%">
+                                <option value="">Elije uno</option>
+                                <?php $ctg = $con->query("SELECT * FROM sede");
+                                    while ($row = $ctg->fetch_assoc()) {
+                                      echo "<option value='".$row['id_sede']."' ";
+                                      echo ">";
+                                      echo $row['nom_sede'];
+                                      echo "</option>";
+                                    }
+                                ?>
+                              </select>
+                            </div>
+                            <!--*************************** Imputs *********************************-->
+                            <div class="form-group col-md-6">
+                              <label for="opeNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Operador:</label>
+                              <select class="custom-select custom-select-sm" id="opeNewAsig" name="opeNewAsig" required>
+                                <option selected disabled>Elegir...</option>
+                                <option value="ELS">Trabajador</option>
+                                <option value="P-ELS">Practicante</option>
+                                <option value="T-ELS">Tercero</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!--*************************** Imputs *********************************-->
+                          <div class="form-group">
+                            <label for="detNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Detalles:</label>
+                            <input type="text" class="form-control form-control-sm" id="detNewAsig" name="detNewAsig">
+                          </div>
+                          <!--*************************** row *********************************-->
+                          <div class="form-row">
+                            <!--*************************** Imputs *********************************-->
+                            <div class="form-group col-md-9">
+                              <label for="serieNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Serie:</label>
+                              <select class="form-control form-control-sm" id="serieNewAsig" name="serieNewAsig" style="width:100%">
+                                <option value="">Elije uno</option>
+                                <?php $ctg = $con->query("SELECT * FROM equipo WHERE cantidad_equipo != '0' AND condicion_equipo = 'B' ");
+                                    while ($row = $ctg->fetch_assoc()) {
+                                      echo "<option value='".$row['id_equipo']."' ";
+                                      echo ">";
+                                      echo $row['serie_equipo'];
+                                      echo "</option>";
+                                    }
+                                ?>
+                              </select>
+                            </div>
+                            <!--*************************** Imputs *********************************-->
+                            <div class="form-group col-md-3">
+                              <label for="cantNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Cant.</label>
+                              <input type="number" class="form-control form-control-sm" id="cantNewAsig" name="cantNewAsig">
+                            </div>
+                          </div>
+                          <!--*************************** row *********************************-->
+                          
+                          <div class="form-group">
+                            <label for="descNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Descripcion:</label>
+                            <input type="text" class="form-control form-control-sm" id="descNewAsig" readonly>
+                          </div>
+                          <!--*************************** Imputs *********************************-->
+                          <div class="form-row">
+                            <!--*************************** Imputs *********************************-->
+                            <div class="form-group col-md-6">
+                              <label for="marcaNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Marca:</label>
+                              <input type="text" class="form-control form-control-sm" id="marcaNewAsig" readonly>
+                            </div>
+                            <!--*************************** Imputs *********************************-->
+                            <div class="form-group col-md-6">
+                              <label for="afNewAsig" class="col-form-label col-form-label-sm font-weight-bold">AF/NC:</label>
+                              <input type="text" class="form-control form-control-sm" id="afNewAsig" readonly>
+                            </div>
+                          </div>
+                          <!--*************************** Imputs *********************************-->
+                          <div class="form-group">
+                            <label for="labelNewAsig" class="col-form-label col-form-label-sm font-weight-bold">Hostname:</label>
+                            <input type="text" class="form-control form-control-sm" id="labelNewAsig" name="labelNewAsig">
+                          </div>
+                        </form>
+                        <hr class="mt-0">
+                        <!--*************************** row buttons *********************************-->
+                        <div class="row">
+                          <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-sm btn-danger" id="btnCleanEquiposTemp">
+                              <i class="fa-regular fa-trash-can fa-sm"></i>
+                              Limpiar todo
+                            </button>  
+                            <button type="button" class="btn btn-sm btn-primary" id="btnAddEquipoTemp">
+                              <i class="fa-solid fa-arrow-turn-down fa-sm"></i>
+                              Agregar
+                            </button>
+                          </div>
+                        </div>
+                        <!--*************************** end row buttons *********************************-->
                       </div>
-                    </div>
-                    <!--*************************** end row buttons *********************************-->
-                    <div class="row mt-3">
-                      <div class="col-md-12">
+                      <!--<<<<<<<<<<<<<<<<< end col <<<<<<<<<<<<<<<<<-->
+                      <div class="col-md-8">
+                        <h6 class="font-weight-bold text-primary">COMPONENTES:</h6>
+                        <hr>
                         <div id="tablaMovTemp"></div>
                       </div>
+                      <!--<<<<<<<<<<<<<<<<< end col <<<<<<<<<<<<<<<<<-->
                     </div>
+                    <!--<<<<<<<<<<<<<<<<< end row card <<<<<<<<<<<<<<<<<-->
                   </div>
                 </div>
 
@@ -280,7 +267,7 @@
         // --- Limpiar cesto de Equiupos -----------------------------
         $('#btnCleanEquiposTemp').click(function() {
           $.ajax({
-            url: '../procesos/asignacion/eliminarEquipoTempAll.php',
+            url: '../procesos/asignacion/eliminarTablaTemp.php',
             success:function(r){
               $('#tablaMovTemp').load("../componentes/tablaAsignacionTemp.php");
             }
@@ -297,12 +284,18 @@
           data: "ind=" + index,
           success:function(r){
             $('#tablaMovTemp').load("../componentes/tablaAsignacionTemp.php");
-            //alertify.success("Se quito el Equipo");
+
+            Swal.fire({
+              icon: 'success',
+              title: 'Se quito un equipo',
+              showConfirmButton: false,
+              timer: 1500
+            })
           }
         })
       }
       //scrip para guardar asignacion
-      function generarAsignacion(){
+      function crearAsignacion(){
         $.ajax({
     			url: '../procesos/asignacion/crearAsignacion.php',
     			success:function(r){
@@ -316,7 +309,7 @@
                 showConfirmButton: false,
                 timer: 1500
               }).then(function() {
-                window.location = "/movimientos.php";
+                window.location = "/soporte_els/public/views/movimientos.php";
               })
               
     				}else if(r == 0){

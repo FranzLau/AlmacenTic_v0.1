@@ -10,9 +10,6 @@
     </head>
     <body id="page-top">
 
-      <?php //include('../modal/#'); ?>
-      <?php //include('../modal/#'); ?>
-
       <!-- Page Wrapper -->
       <div id="wrapper">
 
@@ -70,31 +67,6 @@
         $(document).ready(function() {
           $('#tableMoves').load('../componentes/tablaMovimientos.php');
         });
-      </script>
-      <script type="text/javascript">
-        function leerCategoria(idcateg){
-          $.ajax({
-            url: '../../public/procesos/categorias/leerCategoria.php',
-            type: 'POST',
-
-            data: "idcateg=" + idcateg,
-            success:function(r){
-              var datos= $.parseJSON(r);
-              $('#idEditarCategoria').val(datos['idCategoria']);
-              $('#nomEditarCategoria').val(datos['nomCategoria']);
-              $('#descEditarCategoria').val(datos['descCategoria']);
-            }
-          })
-          .done(function(r) {
-            console.log(r);
-          })
-          .fail(function() {
-            console.log("error");
-          })
-          .always(function() {
-            console.log("complete");
-          });
-        }
       </script>
     </body>
   </html>

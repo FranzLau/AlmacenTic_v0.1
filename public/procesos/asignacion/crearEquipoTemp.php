@@ -2,8 +2,6 @@
 	session_start();
 	require '../../../config/conexion.php';
 
-	$fechaMoviAsig=$_POST['fechaNewAsig'];//FECHA
-
 	$idnDesMoviAsig=$_POST['empNewAsig'];//ID_Destino
 	$sedeMoviAsig=$_POST['sedeNewAsig'];//Sede
   $operMoviAsig=$_POST['opeNewAsig'];//Operador
@@ -12,9 +10,6 @@
 	$ideqMoviAsig=$_POST['serieNewAsig'];//ID_equipo
   $cantMoviAsig=$_POST['cantNewAsig'];//cantidad
   $hostMoviAsig=$_POST['labelNewAsig'];//hostname
-
-  $descFormAsig=$_POST['descNewAsig'];//descripcion
-  $marcaFormAsig=$_POST['marcaNewAsig'];//marca
 	
 
   // Obtenemos el nombre del Destino --------------
@@ -39,8 +34,7 @@
 
 
   // Guardar datos en la variable articulo
-	$asignacion = $fechaMoviAsig."||".
-                $idnDesMoviAsig."||".
+	$asignacion = $idnDesMoviAsig."||".
                 $nomDestAsig."||".
                 $sedeMoviAsig."||".
                 $operMoviAsig."||".
@@ -59,7 +53,7 @@
     echo 2;
   }else {
     if ($cantMoviAsig <= $cantidEquipoEq) {
-      $_SESSION['AsigEquipoTemp'][]=$asignacion;
+      $_SESSION['tablaEquipoTemp'][]=$asignacion;
     }else {
       echo 1;
     }

@@ -15,7 +15,6 @@
         <th>RESPONSABLE</th>
         <th>OPERADOR</th>
         <th>SEDE</th>
-        <th>OBSERVACION</th>
         <th>OPCIONES</th>
       </tr>
     </thead>
@@ -23,12 +22,11 @@
       <?php while($verMoves = $sql->fetch_row()){ ?>
       <tr>
         <td><?php echo $verMoves[0] ?></td>
-        <td><?php echo $verMoves[4] ?></td>
-        <td><?php echo $verMoves[5] ?></td>
-        <td><?php echo $verMoves[2] ?></td>
-        <td><?php echo $verMoves[7] ?></td>
-        <td><?php echo $verMoves[3] ?></td>
         <td><?php echo $verMoves[6] ?></td>
+        <td><?php echo $verMoves[7] ?></td>
+        <td><?php echo $verMoves[2] ?></td>
+        <td><?php echo $verMoves[10] ?></td>
+        <td><?php echo $verMoves[3] ?></td>
         <td>
             <a href="#" class="btn-link-edit mr-3" title="Editar" data-toggle="modal" data-target="#modalEdMoves" onclick="leerMoves('<?php echo $verMoves[0] ?>')"><i class="fas fa-pencil-alt"></i></a>
             <a href="#" class="btn-link-delete" title="Eliminar" onclick="eliminarMoves('<?php echo $verMoves[0] ?>')"><i class="fas fa-trash-alt"></i></a>

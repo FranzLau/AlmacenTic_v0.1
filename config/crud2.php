@@ -290,6 +290,82 @@ class crud
 		}
 
   //------------------------ PARA VENTAS CRUD ------------------------------
+  public function crearAsignacion(){
+		require 'conexion.php';
+
+		$fecha = date('Y-m-d');
+		$datos = $_SESSION['tablaEquipoTemp'];
+		$iduser = $_SESSION['loginUser']['id_usuario'];
+		$tmov = 'SALIDA';
+		$r=0;
+
+		for ($i=0; $i<count($datos); $i++){
+			$d=explode("||", $datos[$i]);
+
+			$inserta1 = $con->query("INSERT INTO movimiento (   id_usuario,
+															id_emp,
+															id_sede,
+															fecha_mov,
+															tipo_mov,
+															detalles_mov,
+															grupo_mov) 
+												VALUES ('$iduser',
+														'$d[1]',
+														'$d[3]',
+														'$fecha',
+														'$tmov',
+														'$d[5]',
+														'$d[4]')");
+			if ($inserta1 == true) {
+				$ultimo_idmovi=mysqli_insert_id($con);
+				$bandera='YES';
+				$inserta2 = $con->query("INSERT INTO detallemovimiento (id_mov,
+																	id_equipo,
+																	cantidad_equipo,
+																	bandera_dmov,
+																	sticker_dmov) 
+															VALUES ('$ultimo_idmovi',
+																	'$d[6]',
+																	'$d[8]',
+																	'$bandera',
+																	'$d[9]')");
+			};
+			$r = $r + $inserta1;
+			self::actualizarStock($d[6],$d[8]);
+			self::actualizarEstado($d[6]);
+		}
+	}
+
+	for ($i=0; $i<count($datos); $i++){
+		$d=explode("||", $datos[$i]);
+
+		$sqli = $con->query("INSERT INTO movimiento (id_mov,
+													id_usuario,
+													id_sede,
+													id_equipo,
+													cantidad_equipo,
+													fecha_mov,
+													tipo_mov,
+													bandera_mov,
+													detalles_mov,
+													grupo_mov) 
+												VALUES ('$idmov',
+														'$iduser',
+														'$d[2]',
+														'$d[5]',
+														'$d[7]',
+														'$fecha',
+														'$tipomov',
+														'$bandera',
+														'$d[4]',
+														'$d[3]')");
+		
+		$r = $r + $sqli;
+		self::actualizarStock($d[5],$d[7]);
+		self::actualizarEstado($d[5]);
+		
+	}
+
 
 
 

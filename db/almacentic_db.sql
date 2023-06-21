@@ -98,7 +98,26 @@ create table gerencia(
     primary key(id_gerencia)
 );
 
-create table movimiento(
+
+create table movimiento (
+    id_mov int not null,
+    id_usuario int,
+    id_emp int,
+    id_sede int,
+    id_equipo int,
+    cantidad_equipo int,
+    fecha_mov date,
+    tipo_mov varchar(50),
+    bandera_mov varchar(100),
+    detalles_mov varchar(245),
+    grupo_mov varchar(100),
+    etiqueta_mov varchar(100)
+);
+
+/*-----------------------------------------------------------------*/
+
+
+create table movimiento1(
     id_mov int auto_increment,
     id_usuario int,
     id_emp int,
@@ -110,17 +129,15 @@ create table movimiento(
     primary key(id_mov)
 );
 
-create table detalleMovimiento(
+create table detalleMovimiento1(
     id_dmov int auto_increment,
     id_mov int,
     id_equipo int,
     cantidad_equipo int,
     bandera_dmov varchar(100),
-    sticker_dmov varchar(100),
+    etiqueta_dmov varchar(100),
     primary key(id_dmov)
-)
-
-/*-----------------------------------------------------------------*/
+);
 
 create table imagen(
     id_imagen int auto_increment,
