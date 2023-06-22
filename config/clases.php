@@ -81,6 +81,10 @@ class move
         $newEstadoEq = "ND";
         $sql = $con->query("UPDATE equipo SET estado_equipo='$newEstadoEq' WHERE id_equipo='$ideq' ");
     }
+
+   
+
+
 }
 
 ?>

@@ -2,7 +2,7 @@
     require '../../config/conexion.php';
     require '../../config/data.php';
     $obj = new data();
-    $sqlemp = $con->query("SELECT * FROM empleado ORDER BY id_emp DESC");
+    $sqlemp = $con->query("SELECT * FROM empleado");
 ?>
   <!-- DataTales Example -->
   <div class="table-responsive">
@@ -62,8 +62,9 @@
     </table>
   </div>
   <script>
-       $(document).ready(function() {
+    $(document).ready(function() {
          $('#tablaEmpleado').DataTable({
+            order: [[0, 'desc']],
            "language": {
              "lengthMenu": "Mostrar _MENU_ registros por página",
              "zeroRecords": "Nada encontrado, lo siento!",
@@ -79,5 +80,5 @@
              }
            }
          });
-       });
+    });
   </script>

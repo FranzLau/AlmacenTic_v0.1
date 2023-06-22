@@ -46,6 +46,13 @@ class data
 		return $result[0];
 	}
 
+	public function nomEmp($idemp){
+		require 'conexion.php';
+		$sql = $con->query("SELECT nom_emp,ape_emp FROM empleado WHERE id_emp = '$idemp' ");
+		$result = $sql->fetch_row();
+		return $result[0]." ".$result[1];
+	}
+
 }
 
 ?>
