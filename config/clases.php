@@ -11,7 +11,7 @@ class move
         $idasig=self::crearFolio();
         $datos = $_SESSION['tablaEquipoTemp'];
         $iduser = $_SESSION['loginUser']['id_usuario'];
-        $tipomov = 'SALIDA';
+        $tipomov = 'ASIGNACION';
         $bandera='YES';
         $r=0;
 

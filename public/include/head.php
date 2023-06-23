@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Soporte</title>
+<title>SIDCED</title>
 <!-- <link rel="icon" type="image/ico" href="../../assets/img/red_hotel.ico"> -->
 <link rel="shortcut icon" href="../../assets/img/favicon.png" />
 

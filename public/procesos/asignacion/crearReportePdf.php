@@ -18,7 +18,7 @@ function file_get_contents_curl($url) {
     return $data;
 }
 
- $html=file_get_contents("http://localhost/soporte_els/public/views/fichas/fichaAsignacionPdf.php?idmov=".$id);
+ $html=file_get_contents("http://localhost/almacentic/public/views/fichas/fichaMovimiento.php?idmov=".$id);
 
 
  
@@ -36,4 +36,4 @@ $pdf->load_html(utf8_decode($html));
 $pdf->render();
  
 // Enviamos el fichero PDF al navegador.
-$pdf->stream('Ficha_de_Asignacion.pdf');
+$pdf->stream("FichaMovimiento.pdf", array("Attachment" => false));

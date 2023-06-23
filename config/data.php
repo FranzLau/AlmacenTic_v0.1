@@ -53,6 +53,13 @@ class data
 		return $result[0]." ".$result[1];
 	}
 
+	public function nomUsuario($iduser){
+		require 'conexion.php';
+		$sql = $con->query("SELECT nom_usuario FROM usuario WHERE id_usuario = '$iduser' ");
+		$result = $sql->fetch_row();
+		return $result[0];
+	}
+
 }
 
 ?>
