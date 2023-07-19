@@ -26,12 +26,10 @@ ob_start();
    require '../../../config/conexion.php';
    require '../../../config/data.php';
 
-   //$idmov = $_GET['idmov'];
-   //<link href="../../../assets/css/sb-admin-1.css" rel="stylesheet">
-
+   $idmove = $_GET['idmov'];
    $obj = new data();
 
-   $sql = $con->query("SELECT mov.id_mov,mov.id_usuario,mov.id_emp,mov.id_sede,mov.fecha_mov,mov.cantidad_equipo,mov.tipo_mov,mov.detalles_mov,mov.grupo_mov,eq.tcod_equipo,eq.cod_equipo,eq.nom_equipo,eq.serie_equipo,eq.marca_equipo FROM movimiento AS mov INNER JOIN equipo AS eq ON mov.id_mov=eq.id_equipo AND mov.id_mov='2'");
+   $sql = $con->query("SELECT mov.id_mov,mov.id_usuario,mov.id_emp,mov.id_sede,mov.fecha_mov,mov.cantidad_equipo,mov.tipo_mov,mov.detalles_mov,mov.grupo_mov,eq.tcod_equipo,eq.cod_equipo,eq.nom_equipo,eq.serie_equipo,eq.marca_equipo FROM movimiento AS mov INNER JOIN equipo AS eq ON mov.id_mov=eq.id_equipo AND mov.id_mov='$idmove'");
 
    $ver = $sql->fetch_row();
 
@@ -60,14 +58,14 @@ ob_start();
         <div class="row" style="margin-bottom: 20px;">
             <div class="col-sm-12">
                 <div class="text-center">
-                    <h6 class="font-weight-bold" style="font-size: .9em;">MOVILIZACION DE EQUIPOS DE COMPUTO/RADIOCOMUNICACIONES</h6>
+                    <h6 class="font-weight-bold" style="font-size: .9em;text-decoration: underline;">MOVILIZACION DE EQUIPOS DE COMPUTO/RADIOCOMUNICACIONES</h6>
                 </div>
             </div>
         </div>
         <div class="row" style="margin-bottom: 10px;">
             <div class="col-sm-12">
                 <h6>FECHA: <?php echo $fecha ?></h6>
-                <div class="card" style="font-size: .7em;">
+                <div class="card" style="font-size: .7em;border: 1px solid #d0d3d4; padding: 10px;">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-xs-8">
@@ -102,7 +100,7 @@ ob_start();
                         </tr>
                     </thead>
                     <?php
-                        $sql = $con->query("SELECT mov.id_mov,mov.id_usuario,mov.id_emp,mov.id_sede,mov.fecha_mov,mov.cantidad_equipo,mov.tipo_mov,mov.detalles_mov,mov.grupo_mov,mov.etiqueta_mov,eq.tcod_equipo,eq.cod_equipo,eq.nom_equipo,eq.serie_equipo,eq.marca_equipo FROM movimiento AS mov INNER JOIN equipo AS eq ON mov.id_mov=eq.id_equipo AND mov.id_mov='2'");
+                        $sql = $con->query("SELECT mov.id_mov,mov.id_usuario,mov.id_emp,mov.id_sede,mov.fecha_mov,mov.cantidad_equipo,mov.tipo_mov,mov.detalles_mov,mov.grupo_mov,mov.etiqueta_mov,eq.tcod_equipo,eq.cod_equipo,eq.nom_equipo,eq.serie_equipo,eq.marca_equipo FROM movimiento AS mov INNER JOIN equipo AS eq ON mov.id_mov=eq.id_equipo AND mov.id_mov='$idmove'");
                         while ($mostrar = $sql->fetch_row()):
                     ?>
                         <tbody>
@@ -122,30 +120,28 @@ ob_start();
             </div>
         </div>
 
-        <div class="row" style="padding-right: 60px;font-size: .8em;margin-top: 15px;">
-            <div class="col-xs-3 text-center pt-4">
-                <div class="mt-5"></div>
+        <div class="row" style="padding-right: 60px;font-size: .8em;margin-top: 25px;">
+            <div class="col-xs-3 text-center" style="margin-top: 50px; width: 147px;">
                 <hr>
                 <p>V B S.G. Tecnologia de Informacion y Comunicaciones</p>
             </div>
-            <div class="col-xs-3 text-center pt-4">
-                <div class="mt-5"></div>
+            <div class="col-xs-3 text-center" style="margin-top: 50px; width: 147px;">
                 <hr>
                 <p>Soporte Tecnico</p>
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-3" style="border: 1px solid #d0d3d4; width: 147px; padding-bottom: 20px;">
                 <div class="card">
                     <div class="section">
                         <p>Entregue Conforme:</p>
-                        <p>Nombre:</p>
+                        <p style="margin-top: 45px;">Nombre:</p>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-3" style="border: 1px solid #d0d3d4; width: 147px; padding-bottom: 20px;">
                 <div class="card">
                     <div class="card-body">
                         <p>Recibi Conforme:</p>
-                        <p class="mt-5">Nombre:</p>
+                        <p style="margin-top: 45px;">Nombre:</p>
                     </div>
                 </div>
             </div>

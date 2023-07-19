@@ -26,11 +26,11 @@
         <td><?php echo $obj->nomEmp( $verMoves[3]) ?></td>
         <td><?php echo $obj->nomSede( $verMoves[4]) ?></td>
         <td>
-            <a href="../procesos/asignacion/crearReportePdf.php?idmov=<?php echo $verMoves[0] ?>" target="_blank" class="btn-link-delete" title="Reporte">
+            <!--<a href="../procesos/asignacion/crearReportePdf.php?idmov=<?php echo $verMoves[0] ?>" target="_blank" class="btn-link-delete" title="Reporte">
               <i class="fa-solid fa-file-pdf"></i> FICHA
-            </a>
-            <a href="../views/fichas/fichaMovimiento.php" class="btn-link-delete ml-2" target="_blank" title="Reporte">
-              <i class="fa-solid fa-file-pdf"></i> REPORTE
+            </a>-->
+            <a href="../views/fichas/fichaMovimiento.php?idmov=<?php echo $verMoves[0] ?>" class="btn-link-delete ml-2" target="_blank" title="Reporte">
+              <i class="fa-solid fa-file-pdf"></i> Print Ficha
             </a>
         </td>
       </tr>
