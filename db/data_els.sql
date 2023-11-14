@@ -60,3 +60,20 @@ INSERT INTO area (nom_area) VALUES ('ORGANO DE CONTROL INSTITUCIONAL');
 -- Estructura de tabla para la tabla `CARGO`
 --
 INSERT INTO cargo (nom_cargo) VALUES ('');
+
+--
+-- Estructura de tabla para la tabla `ROL`
+--
+INSERT INTO rol (nom_rol,desc_rol) VALUES ('Admin','Administrador del sistema');
+INSERT INTO rol (nom_rol,desc_rol) VALUES ('Operador','Operador del sistema');
+INSERT INTO rol (nom_rol,desc_rol) VALUES ('Cliente','Cliente del sistema');
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+INSERT INTO usuario (id_rol,nom_usuario,pass_usuario,estado_usuario,fecha_captura) VALUES ('1','tsoporte7','admin','1','2023-11-14');
+
+--
+-- Estructura de tabla para la tabla `sedes`
+--
+INSERT INTO sede (nom_cargo) VALUES ('');
