@@ -56,7 +56,6 @@ create table categoria(
     id_categoria int auto_increment,
     nom_categoria varchar(50),
     desc_categoria varchar(100),
-    fecha_captura date,
     primary key(id_categoria)
 );
 
