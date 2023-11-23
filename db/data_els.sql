@@ -67,6 +67,14 @@ INSERT INTO area (nom_area) VALUES ('ORGANO DE CONTROL INSTITUCIONAL');
 INSERT INTO cargo (nom_cargo) VALUES ('Gerente General');
 INSERT INTO cargo (nom_cargo) VALUES ('Asistente de Gerencia');
 INSERT INTO cargo (nom_cargo) VALUES ('Especialista de Redes y Comunicaciones');
+INSERT INTO cargo (nom_cargo) VALUES ('Analista de infraestructura TIC');
+INSERT INTO cargo (nom_cargo) VALUES ('Analista de Oepraciones TIC');
+INSERT INTO cargo (nom_cargo) VALUES ('');
+INSERT INTO cargo (nom_cargo) VALUES ('');
+INSERT INTO cargo (nom_cargo) VALUES ('');
+INSERT INTO cargo (nom_cargo) VALUES ('');
+INSERT INTO cargo (nom_cargo) VALUES ('');
+INSERT INTO cargo (nom_cargo) VALUES ('');
 --
 -- Estructura de tabla para la tabla `empleado`
 --
